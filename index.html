@@ -1,1 +1,90 @@
-"Hello World" 
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="content-language" content="pt-br" />
+	
+	<meta name="description" content="" />
+
+	<title>Dayman Novaes</title>
+
+	<script 
+  		src="external/components/platform/platform.js">
+	</script>
+	<link rel="import" href="external/components/core-toolbar/core-toolbar.html">
+	<link rel="import" href="external/components/core-header-panel/core-header-panel.html">
+	<link rel="import" href="external/components/core-icons/core-icons.html">
+	<link rel="import" href="external/components/paper-icon-button/paper-icon-button.html">
+	<link rel="import" href="external/components/paper-button/paper-button.html">
+
+	<script src="external/jquery/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+	
+		<link type="text/css" rel="stylesheet" href="css/main.css">
+	</style>
+</head>
+
+<body fullbleed unresolved>
+	<core-header-panel>
+		<core-toolbar id="mainheader">
+			<paper-icon-button id="navicon" icon="apps" onclick="hoverall()"></paper-icon-button>
+			
+			<span flex>Dayman Novaes <span style="color:white"> | daymannovaes@gmail.com</span></span>
+			<paper-icon-button id="searchbutton" icon="search"></paper-icon-button>
+		</core-toolbar>
+
+		<p id="socials">
+			<span class="title">Contato</span>
+			
+			<a href="https://facebook.com/daymannovaes" target="_blank">
+				<paper-button id="fb" label="Facebook" class="social"></paper-button>
+			</a>
+			<a href="https://plus.google.com/101254290747851126754/about" target="_blank">
+				<paper-button id="google" label="Goggle+" class="social"></paper-button>
+			</a>
+
+			<a href="https://github.com/daymannovaes" target="_blank">
+				<paper-button id="git" label="GitHub" class="social"></paper-button>
+			</a>
+			<a href="https://twitter.com/daymannovaes" target="_blank">
+				<paper-button id="twitter" label="Twitter" class="social"></paper-button>
+			</a>
+
+		</p>
+
+		<p id="projects">
+			<span class="title">Projetos</span>
+
+			<span class="column c-3">
+				<span onmouseover="show('bussola')" onmouseout="hide('bussola')">
+					<a href="http://enem.dayman.me" target="_blank">
+						<paper-button id="bussola" label="Bússola do Enem" class="project"></paper-button>
+					</a>
+				</span>
+				<span onmouseover="show('mongoui')" onmouseout="hide('mongoui')">
+					<a href="https://github.com/Daymannovaes/MongoUI" target="_blank">
+						<paper-button id="mongoui" label="Mongo User Interface" class="project"></paper-button>
+					</a>
+				</span>
+				<span onmouseover="show('keybindjs')" onmouseout="hide('keybindjs')">
+					<a href="https://github.com/Daymannovaes/KeybindJS" target="_blank">
+						<paper-button id="keybindjs" label="KeybindJS" class="project"></paper-button>
+					</a>
+				</span>
+			</span>
+			<span class="column c-7">
+				<span for="bussola">Guia de estudos para o Enem, baseado no edital.</span>
+				<span for="mongoui">A Web interface for MongoDB.</span>
+				<span for="keybindjs">A JavaScript Framework to capture keyboard events e trigger functions.</span>
+				
+			</span>
+		</p>
+
+		<span id="clock-container"></span>
+	</core-header-panel>
+
+	<script type="text/javascript">
+	$("#clock-container").load("clock.html")
+	</script>
+</body>
+</html>
