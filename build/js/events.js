@@ -3,7 +3,7 @@
 	var $header = $("header");
 
 	$(document).mousemove(function (event) {
-		var $background = $header.find("background");
+		var $background = $header.find(".background");
 
 		$background.css({
 			top: -5400 + event.pageY,
