@@ -24,7 +24,7 @@ var writeTo = function(text, element, ms, clear, callback) {
 
 var writeDeveloper = function() {
 		$(".tick").hide();
-		writeTo("Developer.", $("#developer"), 60, true, function() {
+		writeTo("./developer", $("#developer"), 60, true, function() {
 			$(".tick").show();
 		});
 	};

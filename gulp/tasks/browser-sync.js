@@ -5,7 +5,7 @@ var browserSync = require('browser-sync').create();
 
 gulp.task('browser-sync', function() {
 	var files = [
-		".html",
+		"index.html",
 		"js/**/*.js",
 		"css/**/*.css",
 		"img/**/*"
