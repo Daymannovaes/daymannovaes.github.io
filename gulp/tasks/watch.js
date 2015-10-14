@@ -9,6 +9,6 @@ gulp.task("index", function() {
 
 module.exports = gulp.task("watch", function () {
   gulp.watch("index.html", ["index"]);
-  gulp.watch("./src/js/**/*.js", ["babel"]);
-  gulp.watch("./src/css/**/*.css", ["sass"]);
+  gulp.watch("./src/jsx/**/*.js", ["babel"]);
+  gulp.watch("./src/sass/**/*.css", ["sass"]);
 });
