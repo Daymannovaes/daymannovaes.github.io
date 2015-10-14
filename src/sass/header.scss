@@ -1,0 +1,16 @@
+header {
+    .background {
+      height: 4000px;
+      width: 4000px;
+      border-radius: 50%;
+      border: 4000px solid rgba(34, 34, 34, 0);
+      position: absolute;
+      top: -4000px;
+      left: -4000px;
+      z-index: -1;
+      background: radial-gradient(#1b83cd 0%, #0768AD 70%); }
+
+    .foreground {
+      background-color: transparent;
+    }
+}

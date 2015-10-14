@@ -1,32 +1,17 @@
 body {
     font-family: sans-serif;
 }
-
 @viewport {
-	zoom: 1.0;
-	width: extend-to-zoom;
+    zoom: 1.0;
+    width: extend-to-zoom;
 }
 @-ms-viewport {
     width: extend-to-zoom;
     zoom: 1.0;
 }
 
-#background {
-    height: 4000px;
-    width: 4000px;
-    border-radius: 50%;
-    border: 4000px solid rgba(34, 34, 34, 0);
-    position: absolute;
-    top: -4000px;
-    left: -4000px;
+@import "header.scss";
 
-    z-index: -1;
-    background: radial-gradient(rgb(27, 131, 205) 0%, #0768AD 70%);
-}
-
-#foreground {
-	background-color: transparent;
-}
 
 .full-screen {
     position: absolute;

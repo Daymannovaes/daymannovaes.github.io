@@ -9,7 +9,7 @@ body {
   width: extend-to-zoom;
   zoom: 1.0; }
 
-#background {
+header .background {
   height: 4000px;
   width: 4000px;
   border-radius: 50%;
@@ -20,7 +20,7 @@ body {
   z-index: -1;
   background: radial-gradient(#1b83cd 0%, #0768AD 70%); }
 
-#foreground {
+header .foreground {
   background-color: transparent; }
 
 .full-screen {
