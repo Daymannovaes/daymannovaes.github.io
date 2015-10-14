@@ -22,11 +22,14 @@ var writeTo = function(text, element, ms, clear, callback) {
 	}
 };
 
-$(document).ready(function() {
-	setTimeout(function() {
+var writeDeveloper = function() {
 		$(".tick").hide();
 		writeTo("Developer.", $("#developer"), 60, true, function() {
 			$(".tick").show();
 		});
-	}, 2000);
+	};
+
+var devTimeout;
+$(document).ready(function() {
+	devTimeout = setTimeout(writeDeveloper, 2000)
 });
