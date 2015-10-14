@@ -11,9 +11,6 @@ gulp.task('browser-sync', function() {
 		"img/**/*"
 	];
 
-	gulp.src("index.html")
-    .pipe(gulp.dest("build"));
-
     browserSync.init(files, {
         server: {
             baseDir: "./build"
