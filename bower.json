@@ -1,17 +1,9 @@
 {
-  "name": "dayman.me",
-  "version": "0.0.0",
+  "name": "dayman.io",
+  "homepage": "dayman.io",
   "authors": [
     "Dayman Novaes <daymannovaes@gmail.com>"
   ],
-  "description": "Presentation Page",
-  "keywords": [
-    "Dayman",
-    "Dayman.me",
-    "Bussola do Enem",
-    "MongoUI",
-    "KeybindJS"
-  ],
-  "license": "MIT",
-  "homepage": "dayman.me"
+  "devDependencies": {
+  }
 }
