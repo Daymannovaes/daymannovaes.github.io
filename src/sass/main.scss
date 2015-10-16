@@ -1,50 +1,64 @@
 body {
     font-family: sans-serif;
 }
-
 @viewport {
-	zoom: 1.0;
-	width: extend-to-zoom;
+    zoom: 1.0;
+    width: extend-to-zoom;
 }
 @-ms-viewport {
     width: extend-to-zoom;
     zoom: 1.0;
 }
 
-#background {
-    height: 4000px;
-    width: 4000px;
-    border-radius: 50%;
-    border: 4000px solid rgba(34, 34, 34, 0);
-    position: absolute;
-    top: -4000px;
-    left: -4000px;
-
-    z-index: -1;
-    background: radial-gradient(rgb(27, 131, 205) 0%, #0768AD 70%);
+.background {
+	height: 4000px;
+	width: 4000px;
+	border-radius: 50%;
+	border: 4000px solid rgba(34, 34, 34, 0);
+	position: absolute;
+	top: -4000px;
+	left: -4000px;
+	z-index: -1;
 }
 
-#foreground {
-	background-color: transparent;
-}
+@import "header.scss";
+@import "util.scss";
+
 
 .full-screen {
-    position: absolute;
     top: 0;
     left: 0;
     height: 100vh;
     width: 100%;
 }
 
+section.full-screen {
+	@extend .full-screen;
+	@extend .-overflow-hidden;
+
+	position: absolute;
+}
+
 .flex {
 	display: flex;
+
+	&.flex--vcenter {
+		align-items: center;
+	}
+	&.flex--hcenter {
+		justify-content: center;
+	}
+	&.flex--center {
+		@extend .flex--vcenter;
+		@extend .flex--hcenter;
+	}
+	&.flex--horizontal {
+	    flex-direction: column;
+	}
 }
-.flex--center {
-	align-items: center;
-    justify-content: center;
-}
-.flex--horizontal {
-    flex-direction: column;
+
+h2.title {
+	text-transform: uppercase;
 }
 
 .tick {

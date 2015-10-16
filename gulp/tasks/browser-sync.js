@@ -13,7 +13,7 @@ gulp.task('browser-sync', function() {
 
     browserSync.init(files, {
         server: {
-            baseDir: "./"
+            baseDir: "./build"
         }
     });
 });
