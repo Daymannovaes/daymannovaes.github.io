@@ -12,21 +12,29 @@
 	</head>
 	<body>
 		<header>
-			<div class="full-screen -overflow-hiddean">
+			<section class="full-screen">
 				<div class="background"></div>
-			</div>
+			</section>
 			
 			<div class="full-screen -background-transparent">
-				<div class="flex flex--center flex--horizontal full-screen" style="color: #FFF;">
-					<h2 style="text-transform: uppercase;">Dayman Novaes</h2>
+				<div class="flex flex--center flex--horizontal full-screen">
+					<h2 class="title">Dayman Novaes</h2>
 					<div>
 						<!-- <i class="fa fa-terminal" style=" position: relative; top: 2px; cursor: pointer;" onclick="clearTimeout(devTimeout);writeDeveloper();"></i> -->
-						root@dayman.io: ~$  <a href="https://github.com/daymannovaes" style="color: #FFF;" id="developer-text"></a>
+						root@dayman.io: ~$  <a href="https://github.com/daymannovaes" class="-text-white" id="developer-text"></a>
 						<span class="tick">_</span>
 					</div>
 				</div>
 			</div>
 		</header>
+		<section>
+			<div class="flex flex--center flex--horizontal full-screen">
+				<h2 class="title">
+					<span id="project-text">Projetos</span>
+					<span class="tick">_</span>
+				</h2>
+			</div>
+		</section>
 
 
 		<script src="bower_components/jquery/dist/jquery.js"></script>
@@ -36,7 +44,7 @@
 		<script>
 			(function() {
 				if(window.location.search.indexOf("me=true") != -1) return;
-				
+
 				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
