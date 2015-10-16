@@ -95,9 +95,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 	var handleWriteProject = function handleWriteProject(element, ms) {
 		var $projectText = element || $header.find("#project-text");
 
-		clearTimeout(window.devTimeout);
+		clearTimeout(window.projTimeout);
 
-		window.devTimeout = setTimeout(function () {
+		window.projTimeout = setTimeout(function () {
 			writeProject($projectText);
 		}, ms || 2000);
 	};

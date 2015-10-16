@@ -77,9 +77,9 @@
 	var handleWriteProject = (element, ms) => {
 		let $projectText = element || $header.find("#project-text");
 
-		clearTimeout(window.devTimeout);
+		clearTimeout(window.projTimeout);
 
-		window.devTimeout = setTimeout(() => {
+		window.projTimeout = setTimeout(() => {
 			writeProject($projectText);
 		}, ms || 2000);
 	};
