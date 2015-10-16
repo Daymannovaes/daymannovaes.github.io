@@ -8,11 +8,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 	var $header = $("header");
 
 	var ScrollHandler = (function () {
-		function ScrollHandler(queryElement, fn) {
+		function ScrollHandler(queryElement, fn, context) {
 			_classCallCheck(this, ScrollHandler);
 
 			this.queryElement = queryElement;
 			this.fn = fn;
+			this.context = context || document;
 		}
 
 		_createClass(ScrollHandler, [{
@@ -30,7 +31,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 		}, {
 			key: "element",
 			get: function get() {
-				return $header.find(this.queryElement);
+				return $(this.queryElement, this.context);
 			}
 		}, {
 			key: "isVisible",
@@ -76,13 +77,41 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 		}, ms || 2000);
 	};
 
+	var writeProject = function writeProject($projectText) {
+		var $tick = $projectText.parent().find(".tick");
+
+		$tick.hide();
+		Util.tickWrite({
+			text: "nothing here yet",
+			element: $projectText,
+			ms: 60,
+			clear: true,
+			callback: function callback() {
+				$tick.show();
+			}
+		});
+	};
+
+	var handleWriteProject = function handleWriteProject(element, ms) {
+		var $projectText = element || $header.find("#project-text");
+
+		clearTimeout(window.devTimeout);
+
+		window.devTimeout = setTimeout(function () {
+			writeProject($projectText);
+		}, ms || 2000);
+	};
+
 	var Scroll = {};
 	Scroll.writeDeveloper = new ScrollHandler("#developer-text", handleWriteDeveloper);
+	Scroll.writeProject = new ScrollHandler("#project-text", handleWriteProject);
 
 	$(document).ready(function () {
 		Scroll.writeDeveloper.execute(Scroll.writeDeveloper.element, 2000);
+		Scroll.writeProject.execute(Scroll.writeProject.element, 1200);
 	});
 	$(document).scroll(function () {
 		Scroll.writeDeveloper.execute(Scroll.writeDeveloper.element, 800);
+		Scroll.writeProject.execute(Scroll.writeProject.element, 800);
 	});
 })(jQuery, window.Util);
