@@ -32,6 +32,9 @@ header .background {
 .-text-white, header {
   color: white; }
 
+.-text-black {
+  color: #333; }
+
 .full-screen, section.full-screen {
   top: 0;
   left: 0;

@@ -64,7 +64,7 @@
 
 		$tick.hide();
 		Util.tickWrite({
-			text: "nothing here yet",
+			text: "daymannovaes@gmail.com",
 			element: $projectText,
 			ms: 60,
 			clear: true,

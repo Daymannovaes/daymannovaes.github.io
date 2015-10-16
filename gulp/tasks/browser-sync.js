@@ -14,6 +14,7 @@ gulp.task('browser-sync', function() {
     browserSync.init(files, {
         server: {
             baseDir: "./build"
-        }
+        },
+        startPath: "?me=true"
     });
 });
