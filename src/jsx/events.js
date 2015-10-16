@@ -1,8 +1,27 @@
 "use strict";
-
 (($, Util) => {
-	
 	var $header = $("header");
+	class ScrollHandler {
+		constructor(queryElement, fn) {
+			this.queryElement = queryElement;
+			this.fn = fn;
+		}
+
+		get element() {
+			return $header.find(this.queryElement);	
+		}
+
+		get isVisible() {
+			return Util.$isVisible(this.element);
+		}
+
+		execute(...args) {
+			if(!this.executed && this.isVisible) {
+				this.fn.apply(this, args);
+				this.executed = true;
+			}
+		}
+	}
 
 	$(document).mousemove((event) => {
 		let $background = $header.find(".background");
@@ -28,36 +47,23 @@
 		});
 	};
 
-	var handleWriteDeveloper = () => {
-		let $developerText = $header.find("#developer-text");
+	var handleWriteDeveloper = (element, ms) => {
+		let $developerText = element || $header.find("#developer-text");
 
-		if(Util.$isVisible($developerText)) {
-			clearTimeout(window.devTimeout);
+		clearTimeout(window.devTimeout);
 
-			window.devTimeout = setTimeout(() => {
-				writeDeveloper($developerText);
-			}, 2000);
-		}
+		window.devTimeout = setTimeout(() => {
+			writeDeveloper($developerText);
+		}, ms || 2000);
 	};
 
 	var Scroll = {};
+	Scroll.writeDeveloper = new ScrollHandler("#developer-text", handleWriteDeveloper);
 
-	Scroll.writeDeveloper = {
-		executed: false,
-		_element: $header.find("#developer-text"),
-		element: () => Scroll.writeDeveloper._element.length == 0 ? $header.find("#developer-text") : Scroll.writeDeveloper._element,
-		isVisible: () => Util.$isVisible(Scroll.writeDeveloper.element()),
-		fn: () => {
-			if(!Scroll.writeDeveloper.executed && Scroll.writeDeveloper.isVisible()) {
-				handleWriteDeveloper();
-				Scroll.writeDeveloper.executed = true;
-			}
-		}
-	};
 	$(document).ready(() => {
-		Scroll.writeDeveloper.fn();
+		Scroll.writeDeveloper.execute(Scroll.writeDeveloper.element, 2000);
 	});
 	$(document).scroll(() => {
-		Scroll.writeDeveloper.fn();
+		Scroll.writeDeveloper.execute(Scroll.writeDeveloper.element, 800);
 	});
 })(jQuery, window.Util);
