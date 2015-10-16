@@ -23,6 +23,13 @@ header .background {
 header .foreground {
   background-color: transparent; }
 
+.-overflow-hidden {
+  overflow: hidden; }
+
+.-background-transparent {
+  background-color: transparent;
+  background: transparent; }
+
 .full-screen {
   position: absolute;
   top: 0;

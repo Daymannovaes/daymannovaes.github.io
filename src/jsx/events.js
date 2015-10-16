@@ -1,5 +1,7 @@
 "use strict";
+
 (($, Util) => {
+	
 	var $header = $("header");
 
 	$(document).mousemove((event) => {
@@ -38,8 +40,24 @@
 		}
 	};
 
-	$(document).ready(handleWriteDeveloper);
+	var Scroll = {};
+
+	Scroll.writeDeveloper = {
+		executed: false,
+		_element: $header.find("#developer-text"),
+		element: () => Scroll.writeDeveloper._element.length == 0 ? $header.find("#developer-text") : Scroll.writeDeveloper._element,
+		isVisible: () => Util.$isVisible(Scroll.writeDeveloper.element()),
+		fn: () => {
+			if(!Scroll.writeDeveloper.executed && Scroll.writeDeveloper.isVisible()) {
+				handleWriteDeveloper();
+				Scroll.writeDeveloper.executed = true;
+			}
+		}
+	};
+	$(document).ready(() => {
+		Scroll.writeDeveloper.fn();
+	});
 	$(document).scroll(() => {
-		handleWriteDeveloper();
+		Scroll.writeDeveloper.fn();
 	});
 })(jQuery, window.Util);

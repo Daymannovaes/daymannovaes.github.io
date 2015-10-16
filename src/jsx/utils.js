@@ -4,22 +4,23 @@
 	var Util = {};
 
 	Util.tickWrite = ({text, element, ms, clear, callback}) => {
+		let writeRecursive = (character) => {
+			element.text(element.text().toString() + character.toString());
+
+			if(i == text.length-1)
+				(typeof callback == "function") && callback();
+			else {
+				i++;
+				Util.tickWriteTimeout = setTimeout(writeRecursive.bind(this, text[i]), ms);
+			}
+		};
+		let i = 0;
+
 		element = $(element);
 		clear && element.text("");
 
-		for(var i in text) {
-			let character = text[i];
+		Util.tickWriteTimeout = setTimeout(writeRecursive.bind(this, text[i]), ms);
 
-			setTimeout(
-				(function({character, i}) {
-					element.text(element.text().toString() + character.toString());
-
-					if(i == text.length-1 && typeof callback == "function")
-						callback();
-				}).bind(this, {character, i}),
-				ms * i
-			);
-		}
 	};
 
 	Util.$isVisible = (element) => {

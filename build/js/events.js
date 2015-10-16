@@ -1,5 +1,7 @@
 "use strict";
+
 (function ($, Util) {
+
 	var $header = $("header");
 
 	$(document).mousemove(function (event) {
@@ -38,8 +40,28 @@
 		}
 	};
 
-	$(document).ready(handleWriteDeveloper);
+	var Scroll = {};
+
+	Scroll.writeDeveloper = {
+		executed: false,
+		_element: $header.find("#developer-text"),
+		element: function element() {
+			return Scroll.writeDeveloper._element.length == 0 ? $header.find("#developer-text") : Scroll.writeDeveloper._element;
+		},
+		isVisible: function isVisible() {
+			return Util.$isVisible(Scroll.writeDeveloper.element());
+		},
+		fn: function fn() {
+			if (!Scroll.writeDeveloper.executed && Scroll.writeDeveloper.isVisible()) {
+				handleWriteDeveloper();
+				Scroll.writeDeveloper.executed = true;
+			}
+		}
+	};
+	$(document).ready(function () {
+		Scroll.writeDeveloper.fn();
+	});
 	$(document).scroll(function () {
-		handleWriteDeveloper();
+		Scroll.writeDeveloper.fn();
 	});
 })(jQuery, window.Util);

@@ -10,21 +10,20 @@
 		var clear = _ref.clear;
 		var callback = _ref.callback;
 
+		var writeRecursive = function writeRecursive(character) {
+			element.text(element.text().toString() + character.toString());
+
+			if (i == text.length - 1) typeof callback == "function" && callback();else {
+				i++;
+				Util.tickWriteTimeout = setTimeout(writeRecursive.bind(undefined, text[i]), ms);
+			}
+		};
+		var i = 0;
+
 		element = $(element);
 		clear && element.text("");
 
-		for (var i in text) {
-			var character = text[i];
-
-			setTimeout((function (_ref2) {
-				var character = _ref2.character;
-				var i = _ref2.i;
-
-				element.text(element.text().toString() + character.toString());
-
-				if (i == text.length - 1 && typeof callback == "function") callback();
-			}).bind(undefined, { character: character, i: i }), ms * i);
-		}
+		Util.tickWriteTimeout = setTimeout(writeRecursive.bind(undefined, text[i]), ms);
 	};
 
 	Util.$isVisible = function (element) {
