@@ -1,63 +1,28 @@
 "use strict";
-(($, Util) => {
+
+(($, Util, ScrollHandler, TickHandler) => {
 	var $header = $("header");
 
-	class ScrollHandler {
-		constructor(queryElement, fn, context) {
-			this.queryElement = queryElement;
-			this.fn = fn;
-			this.context = context || document;
-		}
-
-		get element() {
-			return $(this.queryElement, this.context);
-		}
-
-		get isVisible() {
-			return Util.$isVisible(this.element);
-		}
-
-		execute(...args) {
-			if(!this.executed && this.isVisible) {
-				this.fn.apply(this, args);
-				this.executed = true;
-			}
-		}
-	}
-
 	$(document).mousemove((event) => {
-		let $background = $header.find(".background");
+		let $background = $(".background__color");
 
-		$background.css({
-			top: -5400 + event.pageY,
-			left: -4700 + event.pageX
+		$background.each(function() {
+			$(this).css({
+				top: -5400 + event.pageY - $(this).data("offsetTop"),
+				left: -4700 + event.pageX
+			});
 		});
 	});
+	var setOffsetBackground = () => {
+		let $background = $(".background__color");
 
-	var writeDeveloper = ($developerText) => {
-		let $tick = $header.find(".tick");
-
-		$tick.hide();
-		Util.tickWrite({
-			text: "./developer",
-			element: $developerText,
-			ms: 60,
-			clear: true,
-			callback: function() {
-				$tick.show();
-			}
+		$background.each(function() {
+			let $parent = $(this).parent();
+			$(this).data("offsetTop", $parent.offset().top);
 		});
-	};
 
-	var handleWriteDeveloper = (element, ms) => {
-		let $developerText = element || $header.find("#developer-text");
-
-		clearTimeout(window.devTimeout);
-
-		window.devTimeout = setTimeout(() => {
-			writeDeveloper($developerText);
-		}, ms || 2000);
-	};
+		setOffsetBackground = () => {};
+	}
 
 	var writeProject = ($projectText) => {
 		let $tick = $projectText.parent().find(".tick");
@@ -84,16 +49,23 @@
 		}, ms || 2000);
 	};
 
+	var Tick = {};
+	Tick.developer = new TickHandler("#developer-text", "./developer", $header);
+	Tick.developer = new TickHandler("#developer-text", "./developer", $header);
+
 	var Scroll = {};
-	Scroll.writeDeveloper = new ScrollHandler("#developer-text", handleWriteDeveloper);
+	Scroll.writeDeveloper = new ScrollHandler(Tick.developer.element, Tick.developer.execute);
 	Scroll.writeProject = new ScrollHandler("#project-text", handleWriteProject);
 
+
 	$(document).ready(() => {
-		Scroll.writeDeveloper.execute(Scroll.writeDeveloper.element, 2000);
-		Scroll.writeProject.execute(Scroll.writeProject.element, 1200);
+		setOffsetBackground();
+
+		Scroll.writeDeveloper.execute(2000);
+		Scroll.writeProject.execute(1200);
 	});
 	$(document).scroll(() => {
-		Scroll.writeDeveloper.execute(Scroll.writeDeveloper.element, 800);
-		Scroll.writeProject.execute(Scroll.writeProject.element, 800);
+		Scroll.writeDeveloper.execute(800);
+		Scroll.writeProject.execute(800);
 	});
-})(jQuery, window.Util);
+})(jQuery, window.Util, window.ScrollHandler, window.TickHandler);

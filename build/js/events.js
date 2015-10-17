@@ -1,80 +1,27 @@
 "use strict";
 
-var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-(function ($, Util) {
+(function ($, Util, ScrollHandler, TickHandler) {
 	var $header = $("header");
 
-	var ScrollHandler = (function () {
-		function ScrollHandler(queryElement, fn, context) {
-			_classCallCheck(this, ScrollHandler);
-
-			this.queryElement = queryElement;
-			this.fn = fn;
-			this.context = context || document;
-		}
-
-		_createClass(ScrollHandler, [{
-			key: "execute",
-			value: function execute() {
-				if (!this.executed && this.isVisible) {
-					for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-						args[_key] = arguments[_key];
-					}
-
-					this.fn.apply(this, args);
-					this.executed = true;
-				}
-			}
-		}, {
-			key: "element",
-			get: function get() {
-				return $(this.queryElement, this.context);
-			}
-		}, {
-			key: "isVisible",
-			get: function get() {
-				return Util.$isVisible(this.element);
-			}
-		}]);
-
-		return ScrollHandler;
-	})();
-
 	$(document).mousemove(function (event) {
-		var $background = $header.find(".background");
+		var $background = $(".background__color");
 
-		$background.css({
-			top: -5400 + event.pageY,
-			left: -4700 + event.pageX
+		$background.each(function () {
+			$(this).css({
+				top: -5400 + event.pageY - $(this).data("offsetTop"),
+				left: -4700 + event.pageX
+			});
 		});
 	});
+	var _setOffsetBackground = function setOffsetBackground() {
+		var $background = $(".background__color");
 
-	var writeDeveloper = function writeDeveloper($developerText) {
-		var $tick = $header.find(".tick");
-
-		$tick.hide();
-		Util.tickWrite({
-			text: "./developer",
-			element: $developerText,
-			ms: 60,
-			clear: true,
-			callback: function callback() {
-				$tick.show();
-			}
+		$background.each(function () {
+			var $parent = $(this).parent();
+			$(this).data("offsetTop", $parent.offset().top);
 		});
-	};
 
-	var handleWriteDeveloper = function handleWriteDeveloper(element, ms) {
-		var $developerText = element || $header.find("#developer-text");
-
-		clearTimeout(window.devTimeout);
-
-		window.devTimeout = setTimeout(function () {
-			writeDeveloper($developerText);
-		}, ms || 2000);
+		_setOffsetBackground = function () {};
 	};
 
 	var writeProject = function writeProject($projectText) {
@@ -102,16 +49,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 		}, ms || 2000);
 	};
 
+	var Tick = {};
+	Tick.developer = new TickHandler("#developer-text", "./developer", $header);
+	Tick.developer = new TickHandler("#developer-text", "./developer", $header);
+
 	var Scroll = {};
-	Scroll.writeDeveloper = new ScrollHandler("#developer-text", handleWriteDeveloper);
+	Scroll.writeDeveloper = new ScrollHandler(Tick.developer.element, Tick.developer.execute);
 	Scroll.writeProject = new ScrollHandler("#project-text", handleWriteProject);
 
 	$(document).ready(function () {
-		Scroll.writeDeveloper.execute(Scroll.writeDeveloper.element, 2000);
-		Scroll.writeProject.execute(Scroll.writeProject.element, 1200);
+		_setOffsetBackground();
+
+		Scroll.writeDeveloper.execute(2000);
+		Scroll.writeProject.execute(1200);
 	});
 	$(document).scroll(function () {
-		Scroll.writeDeveloper.execute(Scroll.writeDeveloper.element, 800);
-		Scroll.writeProject.execute(Scroll.writeProject.element, 800);
+		Scroll.writeDeveloper.execute(800);
+		Scroll.writeProject.execute(800);
 	});
-})(jQuery, window.Util);
+})(jQuery, window.Util, window.ScrollHandler, window.TickHandler);

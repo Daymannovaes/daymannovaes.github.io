@@ -12,11 +12,11 @@
 	</head>
 	<body>
 		<header>
-			<section class="full-screen">
-				<div class="background"></div>
+			<section class="background full-screen">
+				<div class="background__color"></div>
 			</section>
 			
-			<div class="full-screen -background-transparent">
+			<div class="full-screen">
 				<div class="flex flex--center flex--horizontal full-screen">
 					<h2 class="title">Dayman Novaes</h2>
 					<div>
@@ -27,7 +27,12 @@
 				</div>
 			</div>
 		</header>
+
 		<section>
+			<section class="background full-screen">
+				<div class="background__color"></div>
+			</section>
+
 			<div class="flex flex--center flex--horizontal full-screen">
 				<h2 class="title">
 					<a class="-text-black" id="project-text" href="mailto:daymannovaes@gmail.com"></a>
@@ -37,8 +42,16 @@
 		</section>
 
 
+		<!-- LIBS  -->
 		<script src="build/bower_components/jquery/dist/jquery.js"></script>
+
 		<script src="build/js/utils.js"></script>
+		
+		<!-- CLASSES  -->
+		<script src="build/js/classes/ScrollHandler.js"></script>
+		<script src="build/js/classes/TickHandler.js"></script>
+
+		<!-- SCRIPTS  -->
 		<script src="build/js/events.js"></script>
 
 		<script>

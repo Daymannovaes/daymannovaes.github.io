@@ -1,5 +1,7 @@
 body {
     font-family: sans-serif;
+    margin: 0;
+    padding: 0;
 }
 @viewport {
     zoom: 1.0;
@@ -10,24 +12,11 @@ body {
     zoom: 1.0;
 }
 
-.background {
-	height: 4000px;
-	width: 4000px;
-	border-radius: 50%;
-	border: 4000px solid rgba(34, 34, 34, 0);
-	position: absolute;
-	top: -4000px;
-	left: -4000px;
-	z-index: -1;
-}
-
 @import "header.scss";
 @import "util.scss";
 
 
 .full-screen {
-    top: 0;
-    left: 0;
     height: 100vh;
     width: 100%;
 }
@@ -37,6 +26,24 @@ section.full-screen {
 	@extend .-overflow-hidden;
 
 	position: absolute;
+}
+
+section.background {
+	z-index: -1;
+
+	.background__color {
+		height: 4000px;
+		width: 4000px;
+		border-radius: 50%;
+		border: 4000px solid rgba(34, 34, 34, 0);
+		position: absolute;
+		top: -4000px;
+		left: -4000px;
+		z-index: -1;
+	}
+}
+.next-background__color {
+	background: radial-gradient(#F92525 0%, #C50707 70%);
 }
 
 .flex {

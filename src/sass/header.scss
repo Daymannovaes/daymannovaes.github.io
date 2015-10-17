@@ -1,8 +1,7 @@
 header {
 	@extend .-text-white;
 
-	.background {
-		@extend .background;
+	.background__color {
 		background: radial-gradient(#1b83cd 0%, #0768AD 70%);
 	}
 }
