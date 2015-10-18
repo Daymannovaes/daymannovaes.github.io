@@ -256,11 +256,11 @@ h1.title, h2.title, h3.title, h4.title, h5.title, h6.title {
   position: relative;
   font-size: 30px;
   cursor: pointer;
-  -webkit-animation: arrow-down 1000ms ease 0s infinite;
-  -moz-animation: arrow-down 1000ms ease 0s infinite;
-  -ms-animation: arrow-down 1000ms ease 0s infinite;
-  -o-animation: arrow-down 1000ms ease 0s infinite;
-  animation: arrow-down 1000ms ease 0s infinite; }
+  -webkit-animation: arrow-down 1500ms ease 0s infinite;
+  -moz-animation: arrow-down 1500ms ease 0s infinite;
+  -ms-animation: arrow-down 1500ms ease 0s infinite;
+  -o-animation: arrow-down 1500ms ease 0s infinite;
+  animation: arrow-down 1500ms ease 0s infinite; }
   .arrow-down:before {
     content: "\f078"; }
 
