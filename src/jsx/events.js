@@ -42,6 +42,11 @@
 
 	var Scroll = {};
 	Scroll.writeDeveloper = new ScrollHandler(Tick.developer.element, Tick.developer.execute);
+
+	var $me = $("#me").find(".profile-container");
+	Scroll.pulseMe = new ScrollHandler($me, function(element, ms) {
+		setTimeout(() => $me.addClass("pulse"), ms || 800);
+	});
 	//Scroll.writeProject = new ScrollHandler("#project-text", handleWriteProject);
 
 
@@ -50,11 +55,14 @@
 		handleScrollTo();
 
 		Scroll.writeDeveloper.execute(2000);
+		Scroll.pulseMe.execute(100);
 		//Scroll.writeProject.execute(1200);
 	});
 	$(document).scroll(() => {
 		Scroll.writeDeveloper.execute(800);
 		//Scroll.writeProject.execute(800);
+
+		Scroll.pulseMe.execute(400);
 	});
 
 	var Events = {};

@@ -35,6 +35,13 @@
 	-o-animation: $args;
 	animation: $args;      
 }
+@mixin filter($args...) {
+	-webkit-filter: $args;
+	-moz-filter: $args;
+	-ms-filter: $args;
+	-o-filter: $args;
+	filter: $args;      
+}
 @mixin opacity($opacity) {
 	opacity: $opacity;
 	$opacity-ie: $opacity * 100;

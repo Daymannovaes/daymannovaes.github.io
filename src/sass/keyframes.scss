@@ -4,13 +4,13 @@
 	}
 	@-moz-keyframes $animation-name {
 		@content;
-	}  
+	}	
 	@-ms-keyframes $animation-name {
 		@content;
 	}
 	@-o-keyframes $animation-name {
 		@content;
-	}  
+	}	
 	@keyframes $animation-name {
 		@content;
 	}
@@ -23,7 +23,7 @@
 }
 
 @include keyframes(arrow-down) {
-    from { @include opacity(1); top: 0; }
-    50% { @include opacity(.4); top: -8px; transform: scale(0.8) }
-    to { @include opacity(1); top: 0; }
+	from { @include opacity(1); top: 0; }
+	50% { @include opacity(.4); top: -8px; transform: scale(0.8) }
+	to { @include opacity(1); top: 0; }
 }
