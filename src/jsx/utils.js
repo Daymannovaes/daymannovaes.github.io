@@ -19,7 +19,7 @@
 		element = $(element);
 		clear && element.text("");
 
-		Util.tickWriteTimeout = setTimeout(writeRecursive.bind(this, text[i]), ms);
+		return setTimeout(writeRecursive.bind(this, text[i]), ms);
 
 	};
 

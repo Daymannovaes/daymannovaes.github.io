@@ -5,8 +5,8 @@
 
 		<meta name="viewport" content="initial-scale=1">
 
-		<!-- <link rel="stylesheet" type="text/css" href="build/bower_components/bootstrap/dist/css/bootstrap.min.css"> -->
-		<link rel="stylesheet" type="text/css" href="build/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" type="text/css" href="build/bower_components/bootstrap/custom/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="build/bower_components/bootstrap/custom/css/bootstrap-theme.min.css">
 		<link rel="stylesheet" type="text/css" href="build/bower_components/fontawesome/css/font-awesome.css">
 
 		<link rel="stylesheet" type="text/css" href="build/css/animate.css">
@@ -23,8 +23,7 @@
 				<div class="flex flex--center flex--horizontal full-screen">
 					<h1 class="title">Dayman Novaes</h1>
 					<div>
-						<!-- <i class="fa fa-terminal" style=" position: relative; top: 2px; cursor: pointer;" onclick="clearTimeout(devTimeout);writeDeveloper();"></i> -->
-						root@dayman.io: ~$  <a href="https://github.com/daymannovaes" class="-text-white" id="developer-text"></a>
+						<span onclick="Events.writeDeveloper(null, 1);">root@dayman.io: ~$</span>  <a href="https://github.com/daymannovaes" class="-text-white" id="developer-text"></a>
 						<span class="tick">_</span>
 					</div>
 
@@ -37,19 +36,8 @@
 		</header>
 
 		<section id="me">
-			<div class="full-screen">
-				<div class="flex flex--center flex--horizontal full-screen">
-					<h1 class="title">Dayman Novaes</h1>
-					<div>
-						<!-- <i class="fa fa-terminal" style=" position: relative; top: 2px; cursor: pointer;" onclick="clearTimeout(devTimeout);writeDeveloper();"></i> -->
-						root@dayman.io: ~$  <a href="https://github.com/daymannovaes" class="-text-white" id="developer-text"></a>
-						<span class="tick">_</span>
-					</div>
-
-					<div class="arrow-down-container">
-						<i class="arrow-down"></i>
-					</div>
-				</div>
+			<div class="flex flex--center flex--horizontal half-screen">
+				
 			</div>
 		</section>
 
@@ -57,6 +45,7 @@
 		<!-- LIBS  -->
 		<script src="build/bower_components/jquery/dist/jquery.js"></script>
 		<script src="build/bower_components/jquery/dist/jquery-ui.js"></script>
+		<script src="build/bower_components/bootstrap/custom/js/bootstrap.min.js"></script>
 
 		<script src="build/js/utils.js"></script>
 

@@ -56,4 +56,9 @@
 		Scroll.writeDeveloper.execute(800);
 		//Scroll.writeProject.execute(800);
 	});
+
+	var Events = {};
+	Events.writeDeveloper = Tick.developer.execute;
+
+	window.Events = Events;
 })(jQuery, window.Util, window.ScrollHandler, window.TickHandler);

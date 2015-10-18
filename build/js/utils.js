@@ -23,7 +23,7 @@
 		element = $(element);
 		clear && element.text("");
 
-		Util.tickWriteTimeout = setTimeout(writeRecursive.bind(undefined, text[i]), ms);
+		return setTimeout(writeRecursive.bind(undefined, text[i]), ms);
 	};
 
 	Util.$isVisible = function (element) {

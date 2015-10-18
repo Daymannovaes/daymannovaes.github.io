@@ -200,6 +200,10 @@ header .arrow-down-container {
   height: 100vh;
   width: 100%; }
 
+.half-screen {
+  height: 50vh;
+  width: 100%; }
+
 section.full-screen {
   position: absolute; }
 

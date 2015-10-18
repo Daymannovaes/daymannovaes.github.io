@@ -6,13 +6,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 (function (tickWrite) {
 	var TickHandler = (function () {
-		function TickHandler(queryElement, text, context, tickTimeout) {
+		function TickHandler(queryElement, text, context, tickMs) {
 			_classCallCheck(this, TickHandler);
 
 			this.queryElement = queryElement;
 			this.text = text;
 			this.context = context || document;
-			this.tickTimeout = tickTimeout || 60;
+			this.tickMs = tickMs || 60;
 		}
 
 		_createClass(TickHandler, [{
@@ -33,10 +33,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 					this.$tick.hide();
 
-					tickWrite({
+					this.tickTimeout = tickWrite({
 						text: this.text,
 						element: this.element,
-						ms: this.tickTimeout,
+						ms: this.tickMs,
 						clear: true,
 						callback: function callback() {
 							_this.$tick.show();
@@ -51,6 +51,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 				return function (element, ms) {
 					clearTimeout(_this2.timeout);
+					clearTimeout(_this2.tickTimeout);
 
 					_this2.timeout = setTimeout(function () {
 						_this2._execute(_this2.element);

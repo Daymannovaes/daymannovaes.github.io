@@ -2,11 +2,11 @@
 
 (function(tickWrite) {
 	class TickHandler {
-		constructor(queryElement, text, context, tickTimeout) {
+		constructor(queryElement, text, context, tickMs) {
 			this.queryElement = queryElement;
 			this.text = text;
 			this.context = context || document;
-			this.tickTimeout = tickTimeout || 60;
+			this.tickMs = tickMs || 60;
 		}
 
 
@@ -22,10 +22,10 @@
 			return function() {
 				this.$tick.hide();
 
-				tickWrite({
+				this.tickTimeout = tickWrite({
 					text: this.text,
 					element: this.element,
-					ms: this.tickTimeout,
+					ms: this.tickMs,
 					clear: true,
 					callback: () => {
 						this.$tick.show();
@@ -37,6 +37,7 @@
 		get execute() {
 			return (element, ms) => {
 				clearTimeout(this.timeout);
+				clearTimeout(this.tickTimeout);
 
 				this.timeout = setTimeout(() => {
 					this._execute(this.element);
