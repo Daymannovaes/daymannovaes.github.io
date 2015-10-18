@@ -30,6 +30,12 @@ header .background__color {
 header .title {
   font-size: 1.5em; }
 
+header .arrow-down-container {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center; }
+
 @-webkit-keyframes tick {
   from {
     opacity: 0;
@@ -102,87 +108,92 @@ header .title {
 
 @-webkit-keyframes arrow-down {
   from {
-    opacity: 0.4;
-    filter: alpha(opacity=40);
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
-    top: 0; }
-  50% {
     opacity: 1;
     filter: alpha(opacity=100);
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-    top: -10px; }
-  to {
+    top: 0; }
+  50% {
     opacity: 0.4;
     filter: alpha(opacity=40);
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    top: -8px;
+    transform: scale(0.8); }
+  to {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     top: 0; } }
 
 @-moz-keyframes arrow-down {
   from {
-    opacity: 0.4;
-    filter: alpha(opacity=40);
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
-    top: 0; }
-  50% {
     opacity: 1;
     filter: alpha(opacity=100);
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-    top: -10px; }
-  to {
+    top: 0; }
+  50% {
     opacity: 0.4;
     filter: alpha(opacity=40);
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    top: -8px;
+    transform: scale(0.8); }
+  to {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     top: 0; } }
 
 @-ms-keyframes arrow-down {
   from {
-    opacity: 0.4;
-    filter: alpha(opacity=40);
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
-    top: 0; }
-  50% {
     opacity: 1;
     filter: alpha(opacity=100);
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-    top: -10px; }
-  to {
+    top: 0; }
+  50% {
     opacity: 0.4;
     filter: alpha(opacity=40);
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    top: -8px;
+    transform: scale(0.8); }
+  to {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     top: 0; } }
 
 @-o-keyframes arrow-down {
   from {
-    opacity: 0.4;
-    filter: alpha(opacity=40);
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
-    top: 0; }
-  50% {
     opacity: 1;
     filter: alpha(opacity=100);
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-    top: -10px; }
-  to {
+    top: 0; }
+  50% {
     opacity: 0.4;
     filter: alpha(opacity=40);
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    top: -8px;
+    transform: scale(0.8); }
+  to {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     top: 0; } }
 
 @keyframes arrow-down {
   from {
-    opacity: 0.4;
-    filter: alpha(opacity=40);
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
-    top: 0; }
-  50% {
     opacity: 1;
     filter: alpha(opacity=100);
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-    top: -10px; }
-  to {
+    top: 0; }
+  50% {
     opacity: 0.4;
     filter: alpha(opacity=40);
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    top: -8px;
+    transform: scale(0.8); }
+  to {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     top: 0; } }
 
 .full-screen, section.full-screen {
@@ -225,3 +236,23 @@ h1.title, h2.title, h3.title, h4.title, h5.title, h6.title {
   -ms-animation: tick 1000ms cubic-bezier(0, 1, 0, 1) infinite;
   -o-animation: tick 1000ms cubic-bezier(0, 1, 0, 1) infinite;
   animation: tick 1000ms cubic-bezier(0, 1, 0, 1) infinite; }
+
+.fa, .arrow-down {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.arrow-down {
+  position: relative;
+  font-size: 30px;
+  cursor: pointer;
+  -webkit-animation: arrow-down 1000ms ease 0s infinite;
+  -moz-animation: arrow-down 1000ms ease 0s infinite;
+  -ms-animation: arrow-down 1000ms ease 0s infinite;
+  -o-animation: arrow-down 1000ms ease 0s infinite;
+  animation: arrow-down 1000ms ease 0s infinite; }
+  .arrow-down:before {
+    content: "\f078"; }

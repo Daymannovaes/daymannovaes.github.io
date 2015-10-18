@@ -74,3 +74,26 @@ h1, h2, h3, h4, h5, h6 {
 .tick {
 	@include animation(tick 1000ms cubic-bezier(0, 1, 0, 1) infinite);
 }
+
+.fa {
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.arrow-down {
+	@extend .fa;
+
+	&:before {
+		content: "\f078";
+	}
+
+	position: relative;
+	font-size: 30px;
+	cursor: pointer;
+
+	@include animation(arrow-down 1000ms ease 0s infinite);
+}

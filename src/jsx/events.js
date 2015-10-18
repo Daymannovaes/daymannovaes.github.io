@@ -22,31 +22,19 @@
 		});
 
 		setOffsetBackground = () => {};
-	}
-
-	var writeProject = ($projectText) => {
-		let $tick = $projectText.parent().find(".tick");
-
-		$tick.hide();
-		Util.tickWrite({
-			text: "daymannovaes@gmail.com",
-			element: $projectText,
-			ms: 60,
-			clear: true,
-			callback: function() {
-				$tick.show();
-			}
-		});
 	};
 
-	var handleWriteProject = (element, ms) => {
-		let $projectText = element || $header.find("#project-text");
+	var handleScrollTo = () => {
+		let $scrollers = $("[data-scroll-to]");
 
-		clearTimeout(window.projTimeout);
+		$scrollers.click(function(event) {
+			let offsetTop = $($(this).data("scroll-to")).offset().top;
 
-		window.projTimeout = setTimeout(() => {
-			writeProject($projectText);
-		}, ms || 2000);
+			event.preventDefault();
+			$('html, body').animate({
+				scrollTop: offsetTop
+			}, 1000, "easeInOutQuint");
+		});
 	};
 
 	var Tick = {};
@@ -54,17 +42,18 @@
 
 	var Scroll = {};
 	Scroll.writeDeveloper = new ScrollHandler(Tick.developer.element, Tick.developer.execute);
-	Scroll.writeProject = new ScrollHandler("#project-text", handleWriteProject);
+	//Scroll.writeProject = new ScrollHandler("#project-text", handleWriteProject);
 
 
 	$(document).ready(() => {
 		setOffsetBackground();
+		handleScrollTo();
 
 		Scroll.writeDeveloper.execute(2000);
-		Scroll.writeProject.execute(1200);
+		//Scroll.writeProject.execute(1200);
 	});
 	$(document).scroll(() => {
 		Scroll.writeDeveloper.execute(800);
-		Scroll.writeProject.execute(800);
+		//Scroll.writeProject.execute(800);
 	});
 })(jQuery, window.Util, window.ScrollHandler, window.TickHandler);
