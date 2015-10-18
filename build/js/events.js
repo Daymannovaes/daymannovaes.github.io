@@ -51,7 +51,6 @@
 
 	var Tick = {};
 	Tick.developer = new TickHandler("#developer-text", "./developer", $header);
-	Tick.developer = new TickHandler("#developer-text", "./developer", $header);
 
 	var Scroll = {};
 	Scroll.writeDeveloper = new ScrollHandler(Tick.developer.element, Tick.developer.execute);

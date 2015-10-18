@@ -1,0 +1,29 @@
+@mixin keyframes($animation-name) {
+	@-webkit-keyframes $animation-name {
+		@content;
+	}
+	@-moz-keyframes $animation-name {
+		@content;
+	}  
+	@-ms-keyframes $animation-name {
+		@content;
+	}
+	@-o-keyframes $animation-name {
+		@content;
+	}  
+	@keyframes $animation-name {
+		@content;
+	}
+}
+
+@include keyframes(tick) {
+	from { @include opacity(0) }
+	50% { @include opacity(1) }
+	to { @include opacity(0) }
+}
+
+@include keyframes(arrow-down) {
+    from { @include opacity(.4); top: 0; }
+    50% { @include opacity(1); top: -10px }
+    to { @include opacity(.4); top: 0; }
+}
