@@ -13,6 +13,36 @@
 .-text-black {
 	color: #333;
 }
+.-text-serif {
+	font-family: serif;
+}
+
+.-rounded {
+	border-radius: 50%;
+}
+
+.-inline {
+	display: inline;
+}
+.-inline-block {
+	display: inline-block;
+}
+
+.-max-hpercent {
+	height: 100%;
+}
+.-max-wpercent {
+	width: 100%;
+}
+.-max-percent {
+	@extend .-max-hpercent;
+	@extend .-max-vpercent;
+}
+
+.-clear-bezel {
+	margin: 0 !important;
+	padding: 0 !important;
+}
 
 @mixin transition($args...) {
 	-webkit-transition: $args;

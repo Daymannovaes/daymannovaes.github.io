@@ -5,8 +5,7 @@
 
 		<meta name="viewport" content="initial-scale=1">
 
-		<link rel="stylesheet" type="text/css" href="build/bower_components/bootstrap/custom/css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="build/bower_components/bootstrap/custom/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" type="text/css" href="build/bower_components/bootstrap-4/dist/css/bootstrap-flex.css">
 		<link rel="stylesheet" type="text/css" href="build/bower_components/fontawesome/css/font-awesome.css">
 
 		<link rel="stylesheet" type="text/css" href="build/css/animate.css">
@@ -14,7 +13,7 @@
 		<link rel="stylesheet" type="text/css" href="build/css/main.css">
 	</head>
 	<body>
-		<header>
+		<header class="content-box">
 			<section class="background full-screen">
 				<div class="background__color"></div>
 			</section>
@@ -37,19 +36,52 @@
 
 		<section id="me">
 			<div class="half-screen border-box">
-				<div class="row">
-					<div class="col-md-3">
-						<div class="profile-container animated">
-							<div class="profile me"></div>
+				<div class="container -max-hpercent">
+					<div class="row -max-hpercent">
+						<div class="col-md-3 flex flex--vcenter flex--md-center">
+							<div class="profile-container animated">
+								<div class="profile me"></div>
+							</div>
 						</div>
-					</div>
-					<div class="col-md-9">
-						<strong>Name</strong>
-						<p>Dayman Novaes</p>
-						<strong>Email</strong>
-						<p><a class="clear" href="mailto:daymannovaes@gmail.com">daymannovaes@gmail.com</a></p>
-						<strong>Linkedin</strong>
-						<p><a class="clear" href="https://linkedin.com/in/daymannovaes">https://linkedin.com/in/daymannovaes</a></p>
+						<div di class="col-md-9 flex flex--vcenter flex--md-center">
+							<div>
+								<p><big><big>Hi<span class="-text-serif">,</span> </big></big>I<span class="-text-serif">&#8217;</span>m a developer passionate about <strong>technology</strong> since the first time I met it.</p>
+								<p>Always searching and researching the new tech inovations and new development-related tools<span class="-text-serif">,</span> I <strong>strongly</strong> believe that <strong class="creativity">creativity</strong><span class="-text-serif">,</span> <strong>knowledge</strong> and <strong>method</strong> are the keys to a excellence work.</p>
+								<div class="p">
+									Check out how my 
+									<ul class="list-inline -inline list-menu">
+										<li class="list-menu-item list-education">
+											<a href="#education" class="clear clear--all">education</a>
+										</li>
+										<li class="list-menu-item list-projects">
+											<a href="#projects" class="clear clear--all">projects</a>
+										</li>
+										<li class="list-menu-item list-experience">
+											<a href="#experience" class="clear clear--all">experience</a>
+										</li>
+										<li class="-clear-bezel" style="border:0;">&</li>
+										<li class="list-menu-item list-skills">
+											<a href="#skills" class="clear clear--all">skills</a>
+										</li>
+									</ul>
+									contributed to my personal and vocational training.
+								</div>
+							</div>
+							<div style="display:none">
+								<div class="rounded-cup -inline-block">
+									<span>Education</span>
+								</div>
+								<div class="rounded-cup -inline-block">
+									<span>Projects</span>
+								</div>
+								<div class="rounded-cup -inline-block">
+									<span>Experience</span>
+								</div>
+								<div class="rounded-cup -inline-block">
+									<span>Skills</span>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -64,7 +96,6 @@
 		<!-- LIBS  -->
 		<script src="build/bower_components/jquery/dist/jquery.js"></script>
 		<script src="build/bower_components/jquery/dist/jquery-ui.js"></script>
-		<script src="build/bower_components/bootstrap/custom/js/bootstrap.min.js"></script>
 
 		<script src="build/js/utils.js"></script>
 

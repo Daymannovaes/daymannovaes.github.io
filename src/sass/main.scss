@@ -15,7 +15,18 @@ body {
 @import "util.scss";
 @import "section.scss";
 @import "keyframes.scss";
+@import "menu.scss";
 
+h1, h2, h3, h4, h5, h6 {
+	&.title {
+		text-transform: uppercase;
+	}
+}
+
+p, .p {
+    font-size: 1.1rem;
+    line-height: 1.4em;
+}
 
 .full-screen {
     height: 100vh;
@@ -52,6 +63,9 @@ section.background {
 }
 
 .flex {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
 
 	&.flex--vcenter {
@@ -66,12 +80,6 @@ section.background {
 	}
 	&.flex--horizontal {
 	    flex-direction: column;
-	}
-}
-
-h1, h2, h3, h4, h5, h6 {
-	&.title {
-		text-transform: uppercase;
 	}
 }
 
@@ -103,9 +111,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .profile {
-	border-radius: 50%;
-	width: 250px;
-	height: 250px;
+	@extend .-rounded;
+	@extend .-max-percent;
 
 	&.me {
 		background-image: url(/build/img/me.jpg);
@@ -114,14 +121,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .profile-container {
-	@extend .profile;
+	@extend .-rounded;
 
-	position: relative;
-	top: -6px;
-	left: -6px;
-	border: 2px solid #BAB5A8;
+	width: 250px;
+	height: 250px;
+
+	border: 2px solid #D0CFCC;
 	padding: 2px;
-	transition: 200ms all ease;
+	@include transition(200ms all ease);
 	@include filter(brightness(90%));
 
 	&:hover {
@@ -134,18 +141,10 @@ h1, h2, h3, h4, h5, h6 {
     animation-duration: 500ms;
 }
 
-.border-box, .border-box .row {
-	@for $i from 1 through 12 {
-		.col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i} {
-			-webkit-box-sizing: border-box;
-			-moz-box-sizing: border-box;
-			box-sizing: border-box;
-		}
-	}
-
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+.content-box {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
 }
 
 a.clear {
@@ -155,4 +154,34 @@ a.clear {
 	&:not(.clear--all):hover {
 		text-decoration: underline;
 	}
+}
+
+.rounded-cup {
+	@extend .-rounded;
+	min-width: 50px;
+	min-height: 50px;
+	max-width: 250px;
+	max-height: 250px;
+
+	width: 100px;
+	height: 100px;
+
+	line-height: 100px;
+	text-align: center;
+
+	border: 3px solid;
+	border-bottom: 30px solid;
+
+	border-color: #777;
+}
+.rounded-cup-watch:hover {
+    border-color: #777;
+    border-left: 10px solid #777;
+    border-right: 0px solid #777;
+    border-top: 6px solid #777;
+    border-bottom: 24px solid #777;
+}
+
+.creativity {
+	color: #032842;
 }
