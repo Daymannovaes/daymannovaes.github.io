@@ -225,47 +225,33 @@ body > section {
   border-bottom: 2px solid #FF6C6C;
   padding: 0;
   margin: 0 5px;
-  color: #777; }
+  color: #777;
+  -webkit-transition: 200ms all ease;
+  -moz-transition: 200ms all ease;
+  -ms-transition: 200ms all ease;
+  -o-transition: 200ms all ease;
+  transition: 200ms all ease;
+  cursor: pointer; }
 
 .list-menu .list-education {
-  border-bottom-color: #7795b4;
-  -webkit-transition: 200ms all ease;
-  -moz-transition: 200ms all ease;
-  -ms-transition: 200ms all ease;
-  -o-transition: 200ms all ease;
-  transition: 200ms all ease; }
+  border-bottom-color: #34495e; }
   .list-menu .list-education:hover {
-    border-bottom-color: #34495e; }
+    border-bottom-color: #7795b4; }
 
 .list-menu .list-projects {
-  border-bottom-color: #65ead0;
-  -webkit-transition: 200ms all ease;
-  -moz-transition: 200ms all ease;
-  -ms-transition: 200ms all ease;
-  -o-transition: 200ms all ease;
-  transition: 200ms all ease; }
+  border-bottom-color: #16a085; }
   .list-menu .list-projects:hover {
-    border-bottom-color: #16a085; }
+    border-bottom-color: #65ead0; }
 
 .list-menu .list-experience {
-  border-bottom-color: #a8ebc4;
-  -webkit-transition: 200ms all ease;
-  -moz-transition: 200ms all ease;
-  -ms-transition: 200ms all ease;
-  -o-transition: 200ms all ease;
-  transition: 200ms all ease; }
+  border-bottom-color: #2ecc71; }
   .list-menu .list-experience:hover {
-    border-bottom-color: #2ecc71; }
+    border-bottom-color: #a8ebc4; }
 
 .list-menu .list-skills {
-  border-bottom-color: #b6daf2;
-  -webkit-transition: 200ms all ease;
-  -moz-transition: 200ms all ease;
-  -ms-transition: 200ms all ease;
-  -o-transition: 200ms all ease;
-  transition: 200ms all ease; }
+  border-bottom-color: #3498db; }
   .list-menu .list-skills:hover {
-    border-bottom-color: #3498db; }
+    border-bottom-color: #b6daf2; }
 
 h1.title, h2.title, h3.title, h4.title, h5.title, h6.title {
   text-transform: uppercase; }
