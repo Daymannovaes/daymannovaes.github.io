@@ -5,33 +5,34 @@ $skills-color: #3498db;
 
 .list-menu {
 	li {
-	    border-bottom: 2px solid #FF6C6C;
 	    padding: 0;
 	    margin: 0 5px;
-	    color: #777;
-	    @include transition(200ms all ease);
 	    cursor: pointer;
+	    a {
+	    	@include transition(200ms all ease);
+	    	border-bottom: 2px solid;
+	    }
 	}
 
-	.list-education {
+	.list-education a {
 		border-bottom-color: $education-color;
 		&:hover {
 			border-bottom-color: lighten($education-color, 30%);
 		}
 	}
-	.list-projects {
+	.list-projects a {
 		border-bottom-color: $projects-color;
 		&:hover {
 			border-bottom-color: lighten($projects-color, 30%);
 		}
 	}
-	.list-experience {
+	.list-experience a {
 		border-bottom-color: $experience-color;
 		&:hover {
 			border-bottom-color: lighten($experience-color, 30%);
 		}
 	}
-	.list-skills {
+	.list-skills a {
 		border-bottom-color: $skills-color;
 		&:hover {
 			border-bottom-color: lighten($skills-color, 30%);

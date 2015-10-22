@@ -9,9 +9,13 @@ gulp.task("index", function() {
 });
 
 module.exports = gulp.task("watch", function () {
-  gulp.watch("index.html", ["index"]);
-  gulp.watch("./src/jsx/**/*.js", ["babel"]);
-  gulp.watch("./src/sass/**/*.scss", ["sass"]);
+	gulp.watch("index.html", ["index"]);
+	gulp.watch("./src/jsx/**/*.js", ["babel"]);
+	gulp.watch("./src/sass/**/*.scss", function(event, cb) {
+		setTimeout(function(){
+			gulp.start("sass");
+		}, 1000);
+	});
 });
 
 function onError(err) {
