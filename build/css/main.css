@@ -5652,7 +5652,7 @@ a.bg-danger:hover {
   padding: 0 !important; }
 
 header .background__color {
-  background: radial-gradient(#1b83cd 0%, #0768AD 70%); }
+  background: radial-gradient(#1b83cd 0%, #0D4E7B 100%); }
 
 header .title {
   font-size: 1.5em; }
@@ -5662,9 +5662,6 @@ header .arrow-down-container {
   bottom: 20px;
   width: 100%;
   text-align: center; }
-
-body > section {
-  padding: 30px; }
 
 @-webkit-keyframes tick {
   from {
@@ -5892,13 +5889,9 @@ section.full-screen {
 section.background {
   z-index: -1; }
   section.background .background__color {
-    height: 4000px;
-    width: 4000px;
-    border-radius: 50%;
-    border: 4000px solid rgba(34, 34, 34, 0);
-    position: absolute;
-    top: -4000px;
-    left: -4000px;
+    height: 2700px;
+    width: 2700px;
+    position: relative;
     z-index: -1; }
 
 .next-background__color {

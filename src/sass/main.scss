@@ -50,13 +50,9 @@ section.background {
 	z-index: -1;
 
 	.background__color {
-		height: 4000px;
-		width: 4000px;
-		border-radius: 50%;
-		border: 4000px solid rgba(34, 34, 34, 0);
-		position: absolute;
-		top: -4000px;
-		left: -4000px;
+		height: 2700px;
+		width: 2700px;
+		position: relative;
 		z-index: -1;
 	}
 }

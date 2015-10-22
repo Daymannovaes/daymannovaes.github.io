@@ -2,7 +2,7 @@ header {
 	@extend .-text-white;
 
 	.background__color {
-		background: radial-gradient(#1b83cd 0%, #0768AD 70%);
+		background: radial-gradient(#1b83cd 0%, #0D4E7B 100%);
 	}
 
 	.title {
@@ -15,8 +15,4 @@ header {
 			width: 100%;
 			text-align: center;
 	}
-}
-
-body > section {
-	padding: 30px;
 }

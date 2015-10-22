@@ -3,14 +3,17 @@
 (function ($, Util, ScrollHandler, TickHandler) {
 	var $header = $("header");
 
-	$(document).mousemove(function (event) {
-		var $background = $(".background__color");
 
-		$background.each(function () {
-			$(this).css({
-				top: -5400 + event.pageY - $(this).data("offsetTop"),
-				left: -4700 + event.pageX
-			});
+	var mult = 3;
+	var windowH = $(window).height();
+	var windowW = $(window).width();
+	var backgroundSize = mult * Math.max(windowH, windowW);
+	$("section.background").parent().mousemove(function (event) {
+		var $background = $(this).find(".background__color");
+
+		$background.css({
+			top: -windowH + event.pageY - $background.data("offsetTop"),
+			left: -windowW + event.pageX
 		});
 	});
 	var _setOffsetBackground = function setOffsetBackground() {
@@ -18,6 +21,11 @@
 
 		$background.each(function () {
 			var $parent = $(this).parent();
+			$(this).css({
+				width: backgroundSize,
+				height: backgroundSize,
+				border: backgroundSize + "px solid transparent"
+			})
 			$(this).data("offsetTop", $parent.offset().top);
 		});
 
