@@ -41,6 +41,10 @@ p, .p {
     height: 50vh;
     width: 100%;
 }
+.min-half-screen {
+    mmin-height: 50vh;
+    width: 100%;
+}
 .screen-30 {
     height: 30vh;
     width: 100%;
@@ -76,6 +80,12 @@ section.background {
 		@extend .flex--vcenter;
 		@extend .flex--hcenter;
 	}
+	&.flex--md-center {
+		@media (max-width: 61.9em) { 
+			@extend .flex--center;
+			width: 100%;
+		}
+	}
 	&.flex--horizontal {
 	    flex-direction: column;
 	}
@@ -110,8 +120,22 @@ section.background {
 .profile-container {
 	@extend .-rounded;
 
-	width: 250px;
-	height: 250px;
+	@media (min-width: 34em) {
+		width: 200px;
+		height: 200px;
+	}
+	@media (min-width: 48em) {
+		width: 150px;
+		height: 150px;
+	}
+	@media (min-width: 62em) {
+		width: 200px;
+		height: 200px;
+	}
+	@media (min-width: 75em) {
+		width: 250px;
+		height: 250px;
+	}
 
 	border: 2px solid #D0CFCC;
 	padding: 2px;

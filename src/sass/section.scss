@@ -24,6 +24,10 @@ section {
 		color: #FFF;
 		margin-left: 50px;
 		margin-bottom: 0;
+		
+		@media (max-width: 47.9em) { 
+			margin-left: 10px;
+		}
 	}
 
 	.content {
@@ -31,6 +35,10 @@ section {
 
 		padding: 50px 0;
 	}
+}
+
+#me {
+	margin: 50px 0;
 }
 
 #education-header {

@@ -5671,9 +5671,15 @@ section h2 {
   color: #FFF;
   margin-left: 50px;
   margin-bottom: 0; }
+  @media (max-width: 47.9em) {
+    section h2 {
+      margin-left: 10px; } }
 
 section .content {
   padding: 50px 0; }
+
+#me {
+  margin: 50px 0; }
 
 #education-header {
   border-bottom: 3px solid #34495e; }
@@ -5919,6 +5925,10 @@ p, .p {
   height: 50vh;
   width: 100%; }
 
+.min-half-screen {
+  mmin-height: 50vh;
+  width: 100%; }
+
 .screen-30 {
   height: 30vh;
   width: 100%; }
@@ -5937,10 +5947,13 @@ section.background {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
-  .flex.flex--vcenter, .flex.flex--center {
+  .flex.flex--vcenter, .flex.flex--center, .flex.flex--md-center {
     align-items: center; }
-  .flex.flex--hcenter, .flex.flex--center {
+  .flex.flex--hcenter, .flex.flex--center, .flex.flex--md-center {
     justify-content: center; }
+  @media (max-width: 61.9em) {
+    .flex.flex--md-center {
+      width: 100%; } }
   .flex.flex--horizontal {
     flex-direction: column; }
 
@@ -5971,8 +5984,6 @@ section.background {
   background-size: contain; }
 
 .profile-container {
-  width: 250px;
-  height: 250px;
   border: 2px solid #D0CFCC;
   padding: 2px;
   -webkit-transition: 200ms all ease;
@@ -5985,6 +5996,22 @@ section.background {
   -ms-filter: brightness(90%);
   -o-filter: brightness(90%);
   filter: brightness(90%); }
+  @media (min-width: 34em) {
+    .profile-container {
+      width: 200px;
+      height: 200px; } }
+  @media (min-width: 48em) {
+    .profile-container {
+      width: 150px;
+      height: 150px; } }
+  @media (min-width: 62em) {
+    .profile-container {
+      width: 200px;
+      height: 200px; } }
+  @media (min-width: 75em) {
+    .profile-container {
+      width: 250px;
+      height: 250px; } }
   .profile-container:hover {
     -webkit-filter: brightness(100%);
     -moz-filter: brightness(100%);
