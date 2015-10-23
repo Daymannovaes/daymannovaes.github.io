@@ -10,9 +10,58 @@ header {
 	}
 
 	.arrow-down-container {
-		    position: absolute;
+			position: absolute;
 			bottom: 20px;
 			width: 100%;
 			text-align: center;
+	}
+}
+
+section {
+	h2 {
+		font-family: 'Lora', serif;
+		font-size: 4em;
+		color: #FFF;
+		margin-left: 50px;
+		margin-bottom: 0;
+	}
+
+	.content {
+		@extend .container;
+
+		padding: 50px 0;
+	}
+}
+
+#education-header {
+	border-bottom: 3px solid #34495e;
+
+	.background__color {
+		background: radial-gradient(#34495e 0%, #168DA0 100%);
+		border: 3000px solid transparent !important;
+	}
+}
+#project-header {
+	border-bottom: 3px solid #16a085;
+
+	.background__color {
+		background: radial-gradient(#16a085 0%, #3B809A 100%);
+		border: 3000px solid transparent !important;
+	}
+}
+#experience-header {
+	border-bottom: 3px solid #2ecc71;
+
+	.background__color {
+		background: radial-gradient(#2ecc71 0%, #23BB9F 100%);
+		border: 3000px solid transparent !important;
+	}
+}
+#skill-header {
+	border-bottom: 3px solid #3498db;
+
+	.background__color {
+		background: radial-gradient(#3498db 0%, #2ECC92 100%);
+		border: 3000px solid transparent !important;
 	}
 }

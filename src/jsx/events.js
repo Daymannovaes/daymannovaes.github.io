@@ -3,20 +3,28 @@
 (($, Util, ScrollHandler, TickHandler) => {
 	var $header = $("header");
 
-	$(document).mousemove((event) => {
-		let $background = $(".background__color");
+	var mult = 3;
+	var windowH = $(window).height();
+	var windowW = $(window).width();
+	var backgroundSize = mult * Math.max(windowW, windowW);
+	$("section.background").parent().mousemove(function(event) {
+		let $background = $(this).find(".background__color");
 
-		$background.each(function() {
-			$(this).css({
-				top: -5400 + event.pageY - $(this).data("offsetTop"),
-				left: -4700 + event.pageX
-			});
+		$background.css({
+			top: -windowH + event.pageY - $background.data("offsetTop"),
+			left: -windowW + event.pageX
 		});
 	});
 	var setOffsetBackground = () => {
 		let $background = $(".background__color");
 
 		$background.each(function() {
+			$(this).css({
+				width: backgroundSize,
+				height: backgroundSize,
+				border: backgroundSize + "px solid transparent"
+			});
+
 			let $parent = $(this).parent();
 			$(this).data("offsetTop", $parent.offset().top);
 		});

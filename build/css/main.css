@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Lora:400,700);
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
   font-family: sans-serif;
@@ -570,28 +571,29 @@ pre {
   max-height: 340px;
   overflow-y: scroll; }
 
-.container {
+.container, section .content {
   margin-right: auto;
   margin-left: auto;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem; }
   .container:before,
-  .container:after {
+  section .content:before,
+  .container:after, section .content:after {
     content: " ";
     display: table; }
-  .container:after {
+  .container:after, section .content:after {
     clear: both; }
   @media (min-width: 34em) {
-    .container {
+    .container, section .content {
       max-width: 34rem; } }
   @media (min-width: 48em) {
-    .container {
+    .container, section .content {
       max-width: 45rem; } }
   @media (min-width: 62em) {
-    .container {
+    .container, section .content {
       max-width: 60rem; } }
   @media (min-width: 75em) {
-    .container {
+    .container, section .content {
       max-width: 72.25rem; } }
 
 .container-fluid {
@@ -4121,7 +4123,7 @@ a.bg-danger:hover {
 .fa-chevron-up:before {
   content: ""; }
 
-.fa-chevron-down:before {
+.fa-chevron-down:before, .arrow-down:before {
   content: ""; }
 
 .fa-retweet:before {
@@ -5616,7 +5618,7 @@ a.bg-danger:hover {
 .fa-fonticons:before {
   content: ""; }
 
-.-overflow-hidden, section.full-screen {
+.-overflow-hidden, section.background {
   overflow: hidden; }
 
 .-background-transparent {
@@ -5662,6 +5664,40 @@ header .arrow-down-container {
   bottom: 20px;
   width: 100%;
   text-align: center; }
+
+section h2 {
+  font-family: 'Lora', serif;
+  font-size: 4em;
+  color: #FFF;
+  margin-left: 50px;
+  margin-bottom: 0; }
+
+section .content {
+  padding: 50px 0; }
+
+#education-header {
+  border-bottom: 3px solid #34495e; }
+  #education-header .background__color {
+    background: radial-gradient(#34495e 0%, #168DA0 100%);
+    border: 3000px solid transparent !important; }
+
+#project-header {
+  border-bottom: 3px solid #16a085; }
+  #project-header .background__color {
+    background: radial-gradient(#16a085 0%, #3B809A 100%);
+    border: 3000px solid transparent !important; }
+
+#experience-header {
+  border-bottom: 3px solid #2ecc71; }
+  #experience-header .background__color {
+    background: radial-gradient(#2ecc71 0%, #23BB9F 100%);
+    border: 3000px solid transparent !important; }
+
+#skill-header {
+  border-bottom: 3px solid #3498db; }
+  #skill-header .background__color {
+    background: radial-gradient(#3498db 0%, #2ECC92 100%);
+    border: 3000px solid transparent !important; }
 
 @-webkit-keyframes tick {
   from {
@@ -5875,7 +5911,7 @@ p, .p {
   font-size: 1.1rem;
   line-height: 1.4em; }
 
-.full-screen, section.full-screen {
+.full-screen {
   height: 100vh;
   width: 100%; }
 
@@ -5883,19 +5919,18 @@ p, .p {
   height: 50vh;
   width: 100%; }
 
-section.full-screen {
-  position: absolute; }
+.screen-30 {
+  height: 30vh;
+  width: 100%; }
 
 section.background {
-  z-index: -1; }
+  z-index: -1;
+  position: absolute; }
   section.background .background__color {
     height: 2700px;
     width: 2700px;
     position: relative;
     z-index: -1; }
-
-.next-background__color {
-  background: radial-gradient(#F92525 0%, #C50707 70%); }
 
 .flex {
   display: -webkit-box;
@@ -5920,13 +5955,16 @@ section.background {
   position: relative;
   font-size: 30px;
   cursor: pointer;
+  -webkit-transition: 200ms all ease;
+  -moz-transition: 200ms all ease;
+  -ms-transition: 200ms all ease;
+  -o-transition: 200ms all ease;
+  transition: 200ms all ease;
   -webkit-animation: arrow-down 1500ms ease 0s infinite;
   -moz-animation: arrow-down 1500ms ease 0s infinite;
   -ms-animation: arrow-down 1500ms ease 0s infinite;
   -o-animation: arrow-down 1500ms ease 0s infinite;
   animation: arrow-down 1500ms ease 0s infinite; }
-  .arrow-down:before {
-    content: "\f078"; }
 
 .profile.me {
   background-image: url(/build/img/me.jpg);

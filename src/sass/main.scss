@@ -1,9 +1,12 @@
+@import url(https://fonts.googleapis.com/css?family=Lora:400,700);
+
 @import "build/bower_components/bootstrap-4/scss/bootstrap-flex.scss";
 @import "build/bower_components/fontawesome/scss/font-awesome.scss";
 @import "src/sass/util.scss";
 @import "src/sass/section.scss";
 @import "src/sass/keyframes.scss";
 @import "src/sass/menu.scss";
+
 
 body {
     font-family: sans-serif;
@@ -38,16 +41,16 @@ p, .p {
     height: 50vh;
     width: 100%;
 }
-
-section.full-screen {
-	@extend .full-screen;
-	@extend .-overflow-hidden;
-
-	position: absolute;
+.screen-30 {
+    height: 30vh;
+    width: 100%;
 }
 
 section.background {
+	@extend .-overflow-hidden;
+
 	z-index: -1;
+	position: absolute;
 
 	.background__color {
 		height: 2700px;
@@ -55,9 +58,6 @@ section.background {
 		position: relative;
 		z-index: -1;
 	}
-}
-.next-background__color {
-	background: radial-gradient(#F92525 0%, #C50707 70%);
 }
 
 .flex {
@@ -87,15 +87,13 @@ section.background {
 
 .arrow-down {
 	@extend .fa;
-
-	&:before {
-		content: "\f078";
-	}
+	@extend .fa-chevron-down;
 
 	position: relative;
 	font-size: 30px;
 	cursor: pointer;
 
+	@include transition(200ms all ease);
 	@include animation(arrow-down 1500ms ease 0s infinite);
 }
 

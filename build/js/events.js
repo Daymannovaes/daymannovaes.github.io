@@ -3,11 +3,10 @@
 (function ($, Util, ScrollHandler, TickHandler) {
 	var $header = $("header");
 
-
 	var mult = 3;
 	var windowH = $(window).height();
 	var windowW = $(window).width();
-	var backgroundSize = mult * Math.max(windowH, windowW);
+	var backgroundSize = mult * Math.max(windowW, windowW);
 	$("section.background").parent().mousemove(function (event) {
 		var $background = $(this).find(".background__color");
 
@@ -20,12 +19,13 @@
 		var $background = $(".background__color");
 
 		$background.each(function () {
-			var $parent = $(this).parent();
 			$(this).css({
 				width: backgroundSize,
 				height: backgroundSize,
 				border: backgroundSize + "px solid transparent"
-			})
+			});
+
+			var $parent = $(this).parent();
 			$(this).data("offsetTop", $parent.offset().top);
 		});
 
