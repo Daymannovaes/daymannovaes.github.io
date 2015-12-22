@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "My home page",
   "devDependencies": {
+    "babel-polyfill": "^6.0.16",
     "browser-sync": "^2.9.11",
     "gulp": "^3.9.0",
     "gulp-babel": "^5.2.1",

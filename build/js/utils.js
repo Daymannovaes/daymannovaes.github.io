@@ -9,13 +9,14 @@
 		var ms = _ref.ms;
 		var clear = _ref.clear;
 		var callback = _ref.callback;
+		var obj = _ref.obj;
 
 		var writeRecursive = function writeRecursive(character) {
 			element.text(element.text().toString() + character.toString());
 
 			if (i == text.length - 1) typeof callback == "function" && callback();else {
 				i++;
-				Util.tickWriteTimeout = setTimeout(writeRecursive.bind(undefined, text[i]), ms);
+				(!obj || !obj.clear) && setTimeout(writeRecursive.bind(undefined, text[i]), ms);
 			}
 		};
 		var i = 0;
@@ -23,7 +24,7 @@
 		element = $(element);
 		clear && element.text("");
 
-		return setTimeout(writeRecursive.bind(undefined, text[i]), ms);
+		return (!obj || !obj.clear) && setTimeout(writeRecursive.bind(undefined, text[i]), ms);
 	};
 
 	Util.$isVisible = function (element) {
@@ -35,6 +36,15 @@
 		    elementHeight = $(element).height();
 
 		return y < vpH + st && y > st - elementHeight;
+	};
+
+	Util.$isOnTop = function (element, offset) {
+		offset = offset || 0;
+		var st = $(window).scrollTop(),
+		    // Scroll Top
+		y = $(element).offset().top;
+
+		return st + offset >= y;
 	};
 
 	window.Util = Util;

@@ -7,6 +7,14 @@
 			this.text = text;
 			this.context = context || document;
 			this.tickMs = tickMs || 60;
+
+			this.obj = {clear:false};
+		}
+
+		get clear() {
+			return function() {
+				this.obj.clear = true;
+			};
 		}
 
 
@@ -29,19 +37,24 @@
 					clear: true,
 					callback: () => {
 						this.$tick.show();
-					}
+					},
+					obj: this.obj
 				});
 			}
 		}
 
 		get execute() {
-			return (element, ms) => {
+			return (element, ms, obj) => {
+				this.obj = obj || this.obj;
+
 				clearTimeout(this.timeout);
 				clearTimeout(this.tickTimeout);
 
 				this.timeout = setTimeout(() => {
 					this._execute(this.element);
 				}, ms || 2000);
+
+				return this.timeout;
 			}
 		}
 	}

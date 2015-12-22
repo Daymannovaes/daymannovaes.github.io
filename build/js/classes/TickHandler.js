@@ -13,9 +13,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 			this.text = text;
 			this.context = context || document;
 			this.tickMs = tickMs || 60;
+
+			this.obj = { clear: false };
 		}
 
 		_createClass(TickHandler, [{
+			key: "clear",
+			get: function get() {
+				return function () {
+					this.obj.clear = true;
+				};
+			}
+		}, {
 			key: "element",
 			get: function get() {
 				return $(this.queryElement, this.context);
@@ -40,7 +49,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 						clear: true,
 						callback: function callback() {
 							_this.$tick.show();
-						}
+						},
+						obj: this.obj
 					});
 				};
 			}
@@ -49,13 +59,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 			get: function get() {
 				var _this2 = this;
 
-				return function (element, ms) {
+				return function (element, ms, obj) {
+					_this2.obj = obj || _this2.obj;
+
 					clearTimeout(_this2.timeout);
 					clearTimeout(_this2.tickTimeout);
 
 					_this2.timeout = setTimeout(function () {
 						_this2._execute(_this2.element);
 					}, ms || 2000);
+
+					return _this2.timeout;
 				};
 			}
 		}]);

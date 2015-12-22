@@ -17,13 +17,15 @@ header {
 	}
 }
 
-section {
-	h2 {
+section, #fixed-header {
+	h2, h3 {
 		font-family: 'Lora', serif;
 		font-size: 4em;
 		color: #FFF;
 		margin-left: 50px;
 		margin-bottom: 0;
+
+		@include transition(200ms all ease);
 		
 		@media (max-width: 47.9em) { 
 			margin-left: 10px;
@@ -41,7 +43,7 @@ section {
 	margin: 50px 0;
 }
 
-#education-header {
+#education-header, .education-header {
 	border-bottom: 3px solid #34495e;
 
 	.background__color {
@@ -49,7 +51,7 @@ section {
 		border: 3000px solid transparent !important;
 	}
 }
-#project-header {
+#project-header, .project-header {
 	border-bottom: 3px solid #16a085;
 
 	.background__color {
@@ -57,7 +59,7 @@ section {
 		border: 3000px solid transparent !important;
 	}
 }
-#experience-header {
+#experience-header, .experience-header {
 	border-bottom: 3px solid #2ecc71;
 
 	.background__color {
@@ -65,11 +67,34 @@ section {
 		border: 3000px solid transparent !important;
 	}
 }
-#skill-header {
+#skill-header, .skill-header {
 	border-bottom: 3px solid #3498db;
 
 	.background__color {
 		background: radial-gradient(#3498db 0%, #2ECC92 100%);
 		border: 3000px solid transparent !important;
+	}
+}
+
+#fixed-header {
+	top: 0;
+	left: 0;
+	position: fixed !important;
+	display: none;
+	z-index: 1000;
+
+	.background__color {
+		@include transition(200ms all);
+		@include animation(background 1s ease infinite);
+	}
+	h2 {
+		font-size: 3em;
+	}
+	h3 {
+		font-size: 2em;
+	}
+
+	&.visible {
+		display: flex;
 	}
 }

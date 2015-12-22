@@ -49,6 +49,14 @@ p, .p {
     height: 30vh;
     width: 100%;
 }
+.screen-20 {
+    height: 20vh;
+    width: 100%;
+}
+.screen-10 {
+    height: 10vh;
+    width: 100%;
+}
 
 section.background {
 	@extend .-overflow-hidden;
@@ -165,6 +173,9 @@ a.clear {
 	&:not(.clear--all):hover {
 		text-decoration: underline;
 	}
+}
+a.not-clear {
+	text-decoration: underline;
 }
 
 .rounded-cup {

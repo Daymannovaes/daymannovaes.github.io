@@ -10,6 +10,9 @@
 .-text-white {
 	color: white;
 }
+.-text-white-hover:hover {
+	@extend .-text-white;
+}
 .-text-black {
 	color: #333;
 }
@@ -42,6 +45,10 @@
 .-clear-bezel {
 	margin: 0 !important;
 	padding: 0 !important;
+}
+
+.-pointer {
+	cursor: pointer;
 }
 
 @mixin transition($args...) {

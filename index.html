@@ -19,17 +19,29 @@
 				<div class="flex flex--center flex--horizontal full-screen">
 					<h1 class="title">Dayman Novaes</h1>
 					<div>
-						<span onclick="Events.writeDeveloper(null, 1);">root@dayman.io: ~$</span>  <a href="https://github.com/daymannovaes" class="-text-white" id="developer-text"></a>
+						<span onclick="Events.writeDeveloper.clear();Events.writeDeveloper.execute(null, 1, {clear:false});">root@dayman.io: ~$</span>  <a href="https://github.com/daymannovaes" class="-text-white -text-white-hover not-clear" id="developer-text"></a>
 						<span class="tick">_</span>
 					</div>
 
-					<div class="arrow-down-container" data-scroll-to="#me">
+					<div class="arrow-down-container" data-scroll-to="#me" data-offset="-48">
 						<i class="arrow-down"></i>
 					</div>
 				</div>
 			</div>
 
 		</header>
+
+
+		<div id="fixed-header" class="section-header flex flex--vcenter screen-10 visible">
+			<section class="background screen-10 content-box">
+				<div class="background__color next-background__color" data-type="client"></div>
+			</section>
+			<h3 class="-pointer" data-ms="700" data-offset="10" data-scroll-to>
+				<i id="fixed-header-icon" class="fa"></i>
+				<span id="fixed-header-text"></span>
+				<span class="tick">_</span>
+			</h3>
+		</div>
 
 		<!-- INTRO SECTION -->
 		<section id="me">
@@ -49,17 +61,17 @@
 									Check out how my 
 									<ul class="list-inline -inline list-menu">
 										<li class="list-menu-item list-education">
-											<a href="#education" class="clear clear--all">education</a>
+											<a href="#education" data-scroll-to="#education" data-ms="700" data-offset="2" class="clear clear--all">education</a>
 										</li>
 										<li class="list-menu-item list-projects">
-											<a href="#projects" class="clear clear--all">projects</a>
+											<a href="#projects" data-scroll-to="#projects" data-ms="700" data-offset="2" class="clear clear--all">projects</a>
 										</li>
 										<li class="list-menu-item list-experience">
-											<a href="#experience" class="clear clear--all">experience</a>
+											<a href="#experience" data-scroll-to="#experience" data-ms="700" data-offset="2" class="clear clear--all">experience</a>
 										</li>
 										<li class="-clear-bezel" style="border:0;">&</li>
 										<li class="list-menu-item list-skills">
-											<a href="#skills" class="clear clear--all">skills</a>
+											<a href="#skills" data-scroll-to="#skills" data-ms="700" data-offset="2" class="clear clear--all">skills</a>
 										</li>
 									</ul>
 									contributed to my personal and vocational training.
@@ -87,7 +99,7 @@
 
 		<!-- EDUCATION SECTION -->
 		<section id="education">
-			<div id="education-header" class="flex flex--vcenter screen-30">
+			<div id="education-header" class="section-header flex flex--vcenter screen-30" data-icon="fa-graduation-cap">
 				<section class="background screen-30 content-box">
 					<div class="background__color next-background__color"></div>
 				</section>
@@ -104,8 +116,8 @@
 
 
 		<!-- PROJECT SECTION -->
-		<section id="project">
-			<div id="project-header" class="flex flex--vcenter screen-30">
+		<section id="projects">
+			<div id="project-header" class="section-header flex flex--vcenter screen-30" data-icon="fa-rocket">
 				<section class="background screen-30 content-box">
 					<div class="background__color next-background__color"></div>
 				</section>
@@ -123,7 +135,7 @@
 
 		<!-- EXPERIENCE SECTION -->
 		<section id="experience">
-			<div id="experience-header" class="flex flex--vcenter screen-30">
+			<div id="experience-header" class="section-header flex flex--vcenter screen-30" data-icon="fa-flask">
 				<section class="background screen-30 content-box">
 					<div class="background__color next-background__color"></div>
 				</section>
@@ -140,8 +152,8 @@
 		</section>
 
 		<!-- SKILL SECTION -->
-		<section id="skill">
-			<div id="skill-header" class="flex flex--vcenter screen-30">
+		<section id="skills">
+			<div id="skill-header" class="section-header flex flex--vcenter screen-30" data-icon="fa-gavel">
 				<section class="background screen-30 content-box">
 					<div class="background__color next-background__color"></div>
 				</section>
@@ -165,7 +177,7 @@
 		<!-- LIBS  -->
 		<script src="build/bower_components/jquery/dist/jquery.js"></script>
 		<script src="build/bower_components/jquery/dist/jquery-ui.js"></script>
-
+		<script src="build/bower_components/babel-polyfill/dist/polyfill.min.js"></script>
 		<script src="build/js/utils.js"></script>
 
 		<!-- CLASSES  -->

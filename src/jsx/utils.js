@@ -3,7 +3,7 @@
 (($) => {
 	var Util = {};
 
-	Util.tickWrite = ({text, element, ms, clear, callback}) => {
+	Util.tickWrite = ({text, element, ms, clear, callback, obj}) => {
 		let writeRecursive = (character) => {
 			element.text(element.text().toString() + character.toString());
 
@@ -11,7 +11,7 @@
 				(typeof callback == "function") && callback();
 			else {
 				i++;
-				Util.tickWriteTimeout = setTimeout(writeRecursive.bind(this, text[i]), ms);
+				(!obj || !obj.clear) && setTimeout(writeRecursive.bind(this, text[i]), ms);
 			}
 		};
 		let i = 0;
@@ -19,7 +19,7 @@
 		element = $(element);
 		clear && element.text("");
 
-		return setTimeout(writeRecursive.bind(this, text[i]), ms);
+		return (!obj || !obj.clear) && setTimeout(writeRecursive.bind(this, text[i]), ms);
 
 	};
 
@@ -30,6 +30,14 @@
 	        elementHeight = $(element).height();
 
 	    return ((y < (vpH + st)) && (y > (st - elementHeight)));
+	}
+
+	Util.$isOnTop = (element, offset) => {
+		offset = offset || 0;
+	    var st = $(window).scrollTop(), // Scroll Top
+	        y = $(element).offset().top;
+
+	    return st + offset >= y;	
 	}
 
 	window.Util = Util;
