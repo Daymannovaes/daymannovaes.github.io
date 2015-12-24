@@ -129,14 +129,11 @@
 		Scroll.writeDeveloper.execute(2000);
 		Scroll.pulseMe.execute(100);
 		Tick.construction.execute(100);
-		//Scroll.writeProject.execute(1200);
 	});
 	$(document).scroll(() => {
 		didScroll = true;
 
 		Scroll.writeDeveloper.execute(800);
-		//Scroll.writeProject.execute(800);
-
 		Scroll.pulseMe.execute(400);
 	});
 
