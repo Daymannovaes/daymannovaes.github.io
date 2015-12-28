@@ -3601,19 +3601,19 @@ a.bg-danger:hover {
     display: none !important; } }
 
 /*!
- *  Font Awesome 4.4.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 /* FONT PATH
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("../fonts/fontawesome-webfont.eot?v=4.4.0");
-  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.4.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.4.0") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.4.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.4.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.4.0#fontawesomeregular") format("svg");
+  src: url("../fonts/fontawesome-webfont.eot?v=4.5.0");
+  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.5.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.5.0") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.5.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.5.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
-.fa, .arrow-down {
+.fa, .arrow-down, .component-battery-life, .component-battery-life-0, .component-battery-life-1, .component-battery-life-2, .component-battery-life-3, .component-battery-life-4, .battery-tick-1-2 {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -3670,10 +3670,10 @@ a.bg-danger:hover {
 .fa-pull-right {
   float: right; }
 
-.fa.fa-pull-left, .fa-pull-left.arrow-down {
+.fa.fa-pull-left, .fa-pull-left.arrow-down, .fa-pull-left.component-battery-life, .fa-pull-left.component-battery-life-0, .fa-pull-left.component-battery-life-1, .fa-pull-left.component-battery-life-2, .fa-pull-left.component-battery-life-3, .fa-pull-left.component-battery-life-4, .fa-pull-left.battery-tick-1-2 {
   margin-right: .3em; }
 
-.fa.fa-pull-right, .fa-pull-right.arrow-down {
+.fa.fa-pull-right, .fa-pull-right.arrow-down, .fa-pull-right.component-battery-life, .fa-pull-right.component-battery-life-0, .fa-pull-right.component-battery-life-1, .fa-pull-right.component-battery-life-2, .fa-pull-right.component-battery-life-3, .fa-pull-right.component-battery-life-4, .fa-pull-right.battery-tick-1-2 {
   margin-left: .3em; }
 
 /* Deprecated as of 4.4.0 */
@@ -3683,10 +3683,10 @@ a.bg-danger:hover {
 .pull-left {
   float: left; }
 
-.fa.pull-left, .pull-left.arrow-down {
+.fa.pull-left, .pull-left.arrow-down, .pull-left.component-battery-life, .pull-left.component-battery-life-0, .pull-left.component-battery-life-1, .pull-left.component-battery-life-2, .pull-left.component-battery-life-3, .pull-left.component-battery-life-4, .pull-left.battery-tick-1-2 {
   margin-right: .3em; }
 
-.fa.pull-right, .pull-right.arrow-down {
+.fa.pull-right, .pull-right.arrow-down, .pull-right.component-battery-life, .pull-right.component-battery-life-0, .pull-right.component-battery-life-1, .pull-right.component-battery-life-2, .pull-right.component-battery-life-3, .pull-right.component-battery-life-4, .pull-right.battery-tick-1-2 {
   margin-left: .3em; }
 
 .fa-spin {
@@ -5426,22 +5426,27 @@ a.bg-danger:hover {
   content: ""; }
 
 .fa-battery-4:before,
+.component-battery-life-4:before,
 .fa-battery-full:before {
   content: ""; }
 
 .fa-battery-3:before,
+.component-battery-life-3:before,
 .fa-battery-three-quarters:before {
   content: ""; }
 
 .fa-battery-2:before,
+.component-battery-life-2:before,
 .fa-battery-half:before {
   content: ""; }
 
 .fa-battery-1:before,
+.component-battery-life-1:before,
 .fa-battery-quarter:before {
   content: ""; }
 
 .fa-battery-0:before,
+.component-battery-life-0:before,
 .fa-battery-empty:before {
   content: ""; }
 
@@ -5619,6 +5624,66 @@ a.bg-danger:hover {
 .fa-fonticons:before {
   content: ""; }
 
+.fa-reddit-alien:before {
+  content: ""; }
+
+.fa-edge:before {
+  content: ""; }
+
+.fa-credit-card-alt:before {
+  content: ""; }
+
+.fa-codiepie:before {
+  content: ""; }
+
+.fa-modx:before {
+  content: ""; }
+
+.fa-fort-awesome:before {
+  content: ""; }
+
+.fa-usb:before {
+  content: ""; }
+
+.fa-product-hunt:before {
+  content: ""; }
+
+.fa-mixcloud:before {
+  content: ""; }
+
+.fa-scribd:before {
+  content: ""; }
+
+.fa-pause-circle:before {
+  content: ""; }
+
+.fa-pause-circle-o:before {
+  content: ""; }
+
+.fa-stop-circle:before {
+  content: ""; }
+
+.fa-stop-circle-o:before {
+  content: ""; }
+
+.fa-shopping-bag:before {
+  content: ""; }
+
+.fa-shopping-basket:before {
+  content: ""; }
+
+.fa-hashtag:before {
+  content: ""; }
+
+.fa-bluetooth:before {
+  content: ""; }
+
+.fa-bluetooth-b:before {
+  content: ""; }
+
+.fa-percent:before {
+  content: ""; }
+
 .-overflow-hidden, section.background {
   overflow: hidden; }
 
@@ -5632,10 +5697,13 @@ a.bg-danger:hover {
 .-text-black {
   color: #333; }
 
+.-text-gray, .normal {
+  color: #777; }
+
 .-text-serif {
   font-family: serif; }
 
-.-rounded, .profile, .profile-container, .rounded-cup {
+.-rounded, .profile, .map-container, .profile-container {
   border-radius: 50%; }
 
 .-inline {
@@ -5657,6 +5725,32 @@ a.bg-danger:hover {
 .-pointer {
   cursor: pointer; }
 
+.-small, .-small-1 {
+  font-size: 80% !important; }
+
+.-small-2 {
+  font-size: 64% !important; }
+
+.-small-3 {
+  font-size: 51.2% !important; }
+
+.-small-4 {
+  font-size: 40.9% !important; }
+
+.-small-5 {
+  font-size: 32.7% !important; }
+
+.has-subtitle {
+  margin-bottom: 15px; }
+
+@media (max-width: 61.9em) {
+  .padding-md-down, .component-aside {
+    margin-bottom: 30px; } }
+
+@media (min-width: 62em) {
+  .padding-md-up {
+    margin-bottom: 30px; } }
+
 header .background__color {
   background: radial-gradient(#1b83cd 0%, #0D4E7B 100%); }
 
@@ -5669,7 +5763,7 @@ header .arrow-down-container {
   width: 100%;
   text-align: center; }
 
-section h2, section h3, #fixed-header h2, #fixed-header h3 {
+section h2, section > h3, #fixed-header h2, #fixed-header > h3 {
   font-family: 'Lora', serif;
   font-size: 4em;
   color: #FFF;
@@ -5681,11 +5775,12 @@ section h2, section h3, #fixed-header h2, #fixed-header h3 {
   -o-transition: 200ms all ease;
   transition: 200ms all ease; }
   @media (max-width: 47.9em) {
-    section h2, section h3, #fixed-header h2, #fixed-header h3 {
+    section h2, section > h3, #fixed-header h2, #fixed-header > h3 {
       margin-left: 10px; } }
 
 section .content, #fixed-header .content {
-  padding: 50px 0; }
+  padding: 50px 0;
+  padding-top: 11vh; }
 
 #me {
   margin: 50px 0; }
@@ -5938,6 +6033,46 @@ section .content, #fixed-header .content {
   to {
     background-position: 0% 50%; } }
 
+@-webkit-keyframes battery-tick {
+  from {
+    content: "\f243"; }
+  50% {
+    content: "\f242"; }
+  to {
+    content: "\f243"; } }
+
+@-moz-keyframes battery-tick {
+  from {
+    content: "\f243"; }
+  50% {
+    content: "\f242"; }
+  to {
+    content: "\f243"; } }
+
+@-ms-keyframes battery-tick {
+  from {
+    content: "\f243"; }
+  50% {
+    content: "\f242"; }
+  to {
+    content: "\f243"; } }
+
+@-o-keyframes battery-tick {
+  from {
+    content: "\f243"; }
+  50% {
+    content: "\f242"; }
+  to {
+    content: "\f243"; } }
+
+@keyframes battery-tick {
+  from {
+    content: "\f243"; }
+  50% {
+    content: "\f242"; }
+  to {
+    content: "\f243"; } }
+
 .list-menu li {
   padding: 0;
   margin: 0 5px;
@@ -5969,6 +6104,12 @@ section .content, #fixed-header .content {
   border-bottom-color: #3498db; }
   .list-menu .list-skills a:hover {
     border-bottom-color: #b6daf2; }
+
+.gmap_canvas {
+  border-radius: 50%; }
+  .gmap_canvas img {
+    max-width: none !important;
+    background: none !important; }
 
 body {
   font-family: sans-serif;
@@ -6023,19 +6164,19 @@ section.background {
     position: relative;
     z-index: -1; }
 
-.flex {
+.flex, .component-aside {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
-  .flex.flex--vcenter, .flex.flex--center, .flex.flex--md-center {
+  .flex.flex--vcenter, .flex.flex--center, .flex.flex--md-center, .component-aside, .flex--center.component-aside {
     align-items: center; }
-  .flex.flex--hcenter, .flex.flex--center, .flex.flex--md-center {
+  .flex.flex--hcenter, .flex.flex--center, .flex.flex--md-center, .component-aside, .flex--center.component-aside {
     justify-content: center; }
   @media (max-width: 61.9em) {
-    .flex.flex--md-center {
+    .flex.flex--md-center, .component-aside {
       width: 100%; } }
-  .flex.flex--horizontal {
+  .flex.flex--horizontal, .flex--horizontal.component-aside {
     flex-direction: column; }
 
 .tick {
@@ -6064,7 +6205,7 @@ section.background {
   background-image: url(/build/img/me.jpg);
   background-size: contain; }
 
-.profile-container {
+.profile-container-styles, .map-container, .profile-container {
   border: 2px solid #D0CFCC;
   padding: 2px;
   -webkit-transition: 200ms all ease;
@@ -6077,34 +6218,42 @@ section.background {
   -ms-filter: brightness(90%);
   -o-filter: brightness(90%);
   filter: brightness(90%); }
-  @media (max-width: 33.99em) {
-    .profile-container {
-      width: 100px;
-      height: 100px;
-      float: left;
-      margin-right: 10px; } }
-  @media (min-width: 34em) {
-    .profile-container {
-      width: 200px;
-      height: 200px; } }
-  @media (min-width: 48em) {
-    .profile-container {
-      width: 150px;
-      height: 150px; } }
-  @media (min-width: 62em) {
-    .profile-container {
-      width: 200px;
-      height: 200px; } }
-  @media (min-width: 75em) {
-    .profile-container {
-      width: 250px;
-      height: 250px; } }
-  .profile-container:hover {
+  .profile-container-styles:hover, .map-container:hover, .profile-container:hover {
     -webkit-filter: brightness(100%);
     -moz-filter: brightness(100%);
     -ms-filter: brightness(100%);
     -o-filter: brightness(100%);
     filter: brightness(100%); }
+
+.map-container {
+  margin: 0 auto; }
+
+@media (max-width: 33.99em) {
+  .profile-container {
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin-right: 10px; } }
+
+@media (min-width: 34em) {
+  .profile-container {
+    width: 200px;
+    height: 200px; } }
+
+@media (min-width: 48em) {
+  .profile-container {
+    width: 150px;
+    height: 150px; } }
+
+@media (min-width: 62em) {
+  .profile-container {
+    width: 200px;
+    height: 200px; } }
+
+@media (min-width: 75em) {
+  .profile-container {
+    width: 250px;
+    height: 250px; } }
 
 .animated {
   -webkit-animation-duration: 500ms;
@@ -6124,25 +6273,29 @@ a.clear {
 a.not-clear {
   text-decoration: underline; }
 
-.rounded-cup {
-  min-width: 50px;
-  min-height: 50px;
-  max-width: 250px;
-  max-height: 250px;
-  width: 100px;
-  height: 100px;
-  line-height: 100px;
-  text-align: center;
-  border: 3px solid;
-  border-bottom: 30px solid;
-  border-color: #777; }
-
-.rounded-cup-watch:hover {
-  border-color: #777;
-  border-left: 10px solid #777;
-  border-right: 0px solid #777;
-  border-top: 6px solid #777;
-  border-bottom: 24px solid #777; }
-
 .creativity {
   color: #032842; }
+
+.normal {
+  font-size: 1rem; }
+
+.normal__icon, .component-battery-life, .component-battery-life-0, .component-battery-life-1, .component-battery-life-2, .component-battery-life-3, .component-battery-life-4 {
+  position: relative;
+  top: -1px;
+  color: #666; }
+
+.component-battery-life:hover, .component-battery-life-0:hover, .component-battery-life-1:hover, .component-battery-life-2:hover, .component-battery-life-3:hover, .component-battery-life-4:hover {
+  -webkit-transition: 2000ms color;
+  -moz-transition: 2000ms color;
+  -ms-transition: 2000ms color;
+  -o-transition: 2000ms color;
+  transition: 2000ms color;
+  color: #000; }
+
+.battery-tick-1-2:before {
+  content: " ";
+  -webkit-animation: battery-tick 3000ms infinite;
+  -moz-animation: battery-tick 3000ms infinite;
+  -ms-animation: battery-tick 3000ms infinite;
+  -o-animation: battery-tick 3000ms infinite;
+  animation: battery-tick 3000ms infinite; }

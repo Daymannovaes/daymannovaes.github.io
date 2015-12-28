@@ -16,6 +16,9 @@
 .-text-black {
 	color: #333;
 }
+.-text-gray {
+	color: #777;
+}
 .-text-serif {
 	font-family: serif;
 }
@@ -49,6 +52,37 @@
 
 .-pointer {
 	cursor: pointer;
+}
+
+.-small, .-small-1 {
+    font-size: 80% !important;
+}
+.-small-2 {
+    font-size: 64% !important;
+}
+.-small-3 {
+    font-size: 51.2% !important;
+}
+.-small-4 {
+    font-size: 40.9% !important;
+}
+.-small-5 {
+    font-size: 32.7% !important;
+}
+
+.has-subtitle {
+	margin-bottom: 15px;
+}
+
+.padding-md-down {
+	@media (max-width: 61.9em) {
+    	margin-bottom: 30px;
+	}
+}
+.padding-md-up {
+	@media (min-width: 62em) {
+    	margin-bottom: 30px;
+	}
 }
 
 @mixin transition($args...) {

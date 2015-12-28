@@ -18,7 +18,7 @@ header {
 }
 
 section, #fixed-header {
-	h2, h3 {
+	h2, > h3 {
 		font-family: 'Lora', serif;
 		font-size: 4em;
 		color: #FFF;
@@ -36,6 +36,7 @@ section, #fixed-header {
 		@extend .container;
 
 		padding: 50px 0;
+		padding-top: 11vh;
 	}
 }
 
