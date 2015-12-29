@@ -124,6 +124,22 @@ section.background {
 		background-image: url(/build/img/me.jpg);
 		background-size: contain;
 	}
+	&.img-bussola {
+		background-image: url(/build/img/bussola.png);
+		background-size: cover;
+	}
+	&.img-getup {
+		background-image: url(/build/img/getup.png);
+		background-size: cover;
+	}
+	&.img-stock {
+		background-image: url(/build/img/stock.gif);
+		background-size: cover;
+	}
+	&.img-mongo {
+		background-image: url(/build/img/mongo.png);
+		background-size: cover;
+	}
 }
 
 .profile-container-styles {
@@ -139,10 +155,8 @@ section.background {
 .map-container {
 	@extend .-rounded;
 	@extend .profile-container-styles;
-
-	margin: 0 auto;
 }
-.profile-container {
+.profile-container, .img-container {
 	@extend .-rounded;
 	@extend .profile-container-styles;
 
@@ -169,7 +183,9 @@ section.background {
 		width: 250px;
 		height: 250px;
 	}
+
 }
+
 
 .animated {
     -webkit-animation-duration: 500ms;
@@ -247,7 +263,7 @@ $component-battery-life: "component-battery-life";
 
 	&:before {
 		content: " ";
-		@include animation(battery-tick 3000ms infinite);
+		@include animation(battery-tick 2500ms infinite);
 	}
 }
 

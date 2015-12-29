@@ -5703,7 +5703,7 @@ a.bg-danger:hover {
 .-text-serif {
   font-family: serif; }
 
-.-rounded, .profile, .map-container, .profile-container {
+.-rounded, .profile, .map-container, .profile-container, .img-container {
   border-radius: 50%; }
 
 .-inline {
@@ -6205,7 +6205,23 @@ section.background {
   background-image: url(/build/img/me.jpg);
   background-size: contain; }
 
-.profile-container-styles, .map-container, .profile-container {
+.profile.img-bussola {
+  background-image: url(/build/img/bussola.png);
+  background-size: cover; }
+
+.profile.img-getup {
+  background-image: url(/build/img/getup.png);
+  background-size: cover; }
+
+.profile.img-stock {
+  background-image: url(/build/img/stock.gif);
+  background-size: cover; }
+
+.profile.img-mongo {
+  background-image: url(/build/img/mongo.png);
+  background-size: cover; }
+
+.profile-container-styles, .map-container, .profile-container, .img-container {
   border: 2px solid #D0CFCC;
   padding: 2px;
   -webkit-transition: 200ms all ease;
@@ -6218,40 +6234,37 @@ section.background {
   -ms-filter: brightness(90%);
   -o-filter: brightness(90%);
   filter: brightness(90%); }
-  .profile-container-styles:hover, .map-container:hover, .profile-container:hover {
+  .profile-container-styles:hover, .map-container:hover, .profile-container:hover, .img-container:hover {
     -webkit-filter: brightness(100%);
     -moz-filter: brightness(100%);
     -ms-filter: brightness(100%);
     -o-filter: brightness(100%);
     filter: brightness(100%); }
 
-.map-container {
-  margin: 0 auto; }
-
 @media (max-width: 33.99em) {
-  .profile-container {
+  .profile-container, .img-container {
     width: 100px;
     height: 100px;
     float: left;
     margin-right: 10px; } }
 
 @media (min-width: 34em) {
-  .profile-container {
+  .profile-container, .img-container {
     width: 200px;
     height: 200px; } }
 
 @media (min-width: 48em) {
-  .profile-container {
+  .profile-container, .img-container {
     width: 150px;
     height: 150px; } }
 
 @media (min-width: 62em) {
-  .profile-container {
+  .profile-container, .img-container {
     width: 200px;
     height: 200px; } }
 
 @media (min-width: 75em) {
-  .profile-container {
+  .profile-container, .img-container {
     width: 250px;
     height: 250px; } }
 
@@ -6294,8 +6307,8 @@ a.not-clear {
 
 .battery-tick-1-2:before {
   content: " ";
-  -webkit-animation: battery-tick 3000ms infinite;
-  -moz-animation: battery-tick 3000ms infinite;
-  -ms-animation: battery-tick 3000ms infinite;
-  -o-animation: battery-tick 3000ms infinite;
-  animation: battery-tick 3000ms infinite; }
+  -webkit-animation: battery-tick 2500ms infinite;
+  -moz-animation: battery-tick 2500ms infinite;
+  -ms-animation: battery-tick 2500ms infinite;
+  -o-animation: battery-tick 2500ms infinite;
+  animation: battery-tick 2500ms infinite; }
