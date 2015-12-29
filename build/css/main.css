@@ -5777,6 +5777,9 @@ section h2, section > h3, #fixed-header h2, #fixed-header > h3 {
   @media (max-width: 47.9em) {
     section h2, section > h3, #fixed-header h2, #fixed-header > h3 {
       margin-left: 10px; } }
+  @media (max-width: 33.99em) {
+    section h2, section > h3, #fixed-header h2, #fixed-header > h3 {
+      font-size: 3em; } }
 
 section .content, #fixed-header .content {
   padding: 50px 0;
@@ -6145,7 +6148,8 @@ p, .p {
 
 .screen-30 {
   height: 30vh;
-  width: 100%; }
+  width: 100%;
+  max-height: 500px; }
 
 .screen-20 {
   height: 20vh;
@@ -6153,7 +6157,8 @@ p, .p {
 
 .screen-10 {
   height: 10vh;
-  width: 100%; }
+  width: 100%;
+  max-height: 170px; }
 
 section.background {
   z-index: -1;
@@ -6220,6 +6225,22 @@ section.background {
 .profile.img-mongo {
   background-image: url(/build/img/mongo.png);
   background-size: cover; }
+
+.profile.img-tracksale {
+  background-image: url(/build/img/tracksale.png);
+  background-size: cover; }
+
+.profile.img-ijunior {
+  background-image: url(/build/img/ijunior.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+.profile.img-teknisa {
+  background-image: url(/build/img/teknisa.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%; }
 
 .profile-container-styles, .map-container, .profile-container, .img-container {
   border: 2px solid #D0CFCC;
@@ -6312,3 +6333,27 @@ a.not-clear {
   -ms-animation: battery-tick 2500ms infinite;
   -o-animation: battery-tick 2500ms infinite;
   animation: battery-tick 2500ms infinite; }
+
+.container-max {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem; }
+  .container-max:before,
+  .container-max:after {
+    content: " ";
+    display: table; }
+  .container-max:after {
+    clear: both; }
+  @media (min-width: 34em) {
+    .container-max {
+      width: 34rem; } }
+  @media (min-width: 48em) {
+    .container-max {
+      width: 45rem; } }
+  @media (min-width: 62em) {
+    .container-max {
+      width: 60rem; } }
+  @media (min-width: 75em) {
+    .container-max {
+      width: 72.25rem; } }

@@ -49,6 +49,7 @@ p, .p {
 .screen-30 {
     height: 30vh;
     width: 100%;
+    max-height: 500px;
 }
 .screen-20 {
     height: 20vh;
@@ -57,6 +58,7 @@ p, .p {
 .screen-10 {
     height: 10vh;
     width: 100%;
+    max-height: 170px;
 }
 
 section.background {
@@ -139,6 +141,22 @@ section.background {
 	&.img-mongo {
 		background-image: url(/build/img/mongo.png);
 		background-size: cover;
+	}
+	&.img-tracksale {
+		background-image: url(/build/img/tracksale.png);
+		background-size: cover;
+	}
+	&.img-ijunior {
+		background-image: url(/build/img/ijunior.png);
+		background-size: contain;
+	    background-repeat: no-repeat;
+	    background-position: 50%;
+	}
+	&.img-teknisa {
+		background-image: url(/build/img/teknisa.png);
+		background-size: contain;
+	    background-repeat: no-repeat;
+	    background-position: 50%;
 	}
 }
 
@@ -273,4 +291,17 @@ $component-battery-life: "component-battery-life";
 	@extend .flex--md-center;
 
 	@extend .padding-md-down;
+}
+
+
+
+.container-max {
+  @include make-container();
+
+  // For each breakpoint, define the maximum width of the container in a media query
+  @each $breakpoint, $container-max-width in $container-max-widths {
+    @include media-breakpoint-up($breakpoint) {
+      width: $container-max-width;
+    }
+  }
 }

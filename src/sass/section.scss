@@ -30,6 +30,9 @@ section, #fixed-header {
 		@media (max-width: 47.9em) { 
 			margin-left: 10px;
 		}
+		@media (max-width: 33.99em) {
+			font-size: 3em;
+		}
 	}
 
 	.content {
