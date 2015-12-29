@@ -2,6 +2,9 @@
   "name": "dayman.io",
   "version": "1.0.0",
   "description": "My home page",
+  "scripts": {
+    "start": "gulp"
+  },
   "devDependencies": {
     "babel-polyfill": "^6.0.16",
     "browser-sync": "^2.9.11",
