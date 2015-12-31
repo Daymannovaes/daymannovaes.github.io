@@ -6119,6 +6119,9 @@ section .content, #fixed-header .content {
   .gmap_canvas img {
     max-width: none !important;
     background: none !important; }
+  @media (max-width: 33.9em) {
+    .gmap_canvas {
+      pointer-events: none; } }
 
 body {
   font-family: sans-serif;
