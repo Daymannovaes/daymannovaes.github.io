@@ -87,8 +87,15 @@
 				fixedHeader.removeClass("education-header project-header experience-header skill-header");
 				fixedHeader.addClass("visible").addClass($toTop[0].id);
 				fixedHeader.fadeIn(100);
-				fixedHeaderIcon.removeClass("fa-rocket fa-graduation-cap fa-flask fa-gavel");
-				fixedHeaderIcon.addClass($toTop.data("icon"));
+				if ($toTop.data("svg")) {
+					fixedHeaderIcon.hide();
+					fixedHeader.find($toTop.data("svg")).show();
+				} else {
+					fixedHeader.find("svg").hide();
+					fixedHeaderIcon.show();
+					fixedHeaderIcon.removeClass("fa-rocket fa-graduation-cap fa-flask fa-gavel");
+					fixedHeaderIcon.addClass($toTop.data("icon"));
+				}
 
 				fixedHeader.find("h3").data("scroll-to", "#" + $toTop[0].id);
 
