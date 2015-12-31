@@ -5703,7 +5703,7 @@ a.bg-danger:hover {
 .-text-serif {
   font-family: serif; }
 
-.-rounded, .profile, .map-container, .profile-container, .img-container {
+.-rounded, .profile, .map-container, .profile-container, .img-container, .img-container-small, .component-skill--javascript .component-skill-img, .component-skill--java .component-skill-img, .component-skill--c .component-skill-img, .component-skill--php .component-skill-img, .component-skill--html5 .component-skill-img, .component-skill--css3 .component-skill-img, .component-skill--angular .component-skill-img, .component-skill--node .component-skill-img, .component-skill--android .component-skill-img, .component-skill--bower .component-skill-img {
   border-radius: 50%; }
 
 .-inline {
@@ -5743,7 +5743,10 @@ a.bg-danger:hover {
 .has-subtitle {
   margin-bottom: 15px; }
 
-@media (max-width: 61.9em) {
+.padding {
+  margin-bottom: 30px; }
+
+@media (max-width: 61.99em) {
   .padding-md-down, .component-aside {
     margin-bottom: 30px; } }
 
@@ -6242,7 +6245,43 @@ section.background {
   background-repeat: no-repeat;
   background-position: 50%; }
 
-.profile-container-styles, .map-container, .profile-container, .img-container {
+.profile.img-javascript {
+  background-image: url(/build/img/javascript-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+.profile.img-java {
+  background-image: url(/build/img/java-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+.profile.img-c {
+  background-image: url(/build/img/c-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+.profile.img-php {
+  background-image: url(/build/img/php-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+.profile.img-HTML5 {
+  background-image: url(/build/img/HTML5-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+.profile.img-css3 {
+  background-image: url(/build/img/css3-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+.profile-container-styles, .map-container, .profile-container, .img-container, .img-container-small, .component-skill--javascript .component-skill-img, .component-skill--java .component-skill-img, .component-skill--c .component-skill-img, .component-skill--php .component-skill-img, .component-skill--html5 .component-skill-img, .component-skill--css3 .component-skill-img, .component-skill--angular .component-skill-img, .component-skill--node .component-skill-img, .component-skill--android .component-skill-img, .component-skill--bower .component-skill-img {
   border: 2px solid #D0CFCC;
   padding: 2px;
   -webkit-transition: 200ms all ease;
@@ -6255,7 +6294,7 @@ section.background {
   -ms-filter: brightness(90%);
   -o-filter: brightness(90%);
   filter: brightness(90%); }
-  .profile-container-styles:hover, .map-container:hover, .profile-container:hover, .img-container:hover {
+  .profile-container-styles:hover, .map-container:hover, .profile-container:hover, .img-container:hover, .img-container-small:hover, .component-skill--javascript .component-skill-img:hover, .component-skill--java .component-skill-img:hover, .component-skill--c .component-skill-img:hover, .component-skill--php .component-skill-img:hover, .component-skill--html5 .component-skill-img:hover, .component-skill--css3 .component-skill-img:hover, .component-skill--angular .component-skill-img:hover, .component-skill--node .component-skill-img:hover, .component-skill--android .component-skill-img:hover, .component-skill--bower .component-skill-img:hover {
     -webkit-filter: brightness(100%);
     -moz-filter: brightness(100%);
     -ms-filter: brightness(100%);
@@ -6289,6 +6328,21 @@ section.background {
     width: 250px;
     height: 250px; } }
 
+.img-container-small, .component-skill--javascript .component-skill-img, .component-skill--java .component-skill-img, .component-skill--c .component-skill-img, .component-skill--php .component-skill-img, .component-skill--html5 .component-skill-img, .component-skill--css3 .component-skill-img, .component-skill--angular .component-skill-img, .component-skill--node .component-skill-img, .component-skill--android .component-skill-img, .component-skill--bower .component-skill-img {
+  border: none;
+  padding: 0;
+  display: inline-block; }
+  @media (max-width: 33.99em) {
+    .img-container-small, .component-skill--javascript .component-skill-img, .component-skill--java .component-skill-img, .component-skill--c .component-skill-img, .component-skill--php .component-skill-img, .component-skill--html5 .component-skill-img, .component-skill--css3 .component-skill-img, .component-skill--angular .component-skill-img, .component-skill--node .component-skill-img, .component-skill--android .component-skill-img, .component-skill--bower .component-skill-img {
+      width: 60px;
+      height: 60px;
+      float: left;
+      margin-right: 10px; } }
+  @media (min-width: 34em) {
+    .img-container-small, .component-skill--javascript .component-skill-img, .component-skill--java .component-skill-img, .component-skill--c .component-skill-img, .component-skill--php .component-skill-img, .component-skill--html5 .component-skill-img, .component-skill--css3 .component-skill-img, .component-skill--angular .component-skill-img, .component-skill--node .component-skill-img, .component-skill--android .component-skill-img, .component-skill--bower .component-skill-img {
+      width: 30px;
+      height: 30px; } }
+
 .animated {
   -webkit-animation-duration: 500ms;
   animation-duration: 500ms; }
@@ -6317,6 +6371,111 @@ a.not-clear {
   position: relative;
   top: -1px;
   color: #666; }
+
+.skill-title, .component-skill--javascript .component-skill-title, .component-skill--java .component-skill-title, .component-skill--c .component-skill-title, .component-skill--php .component-skill-title, .component-skill--html5 .component-skill-title, .component-skill--css3 .component-skill-title, .component-skill--angular .component-skill-title, .component-skill--node .component-skill-title, .component-skill--android .component-skill-title, .component-skill--bower .component-skill-title {
+  color: #777;
+  position: relative;
+  top: -8px; }
+
+@media (min-width: 34em) {
+  .component-skill--javascript .component-skill-title:before {
+    content: "Javascript"; } }
+
+.component-skill--javascript .component-skill-img {
+  background-image: url(/build/img/javascript-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+@media (min-width: 34em) {
+  .component-skill--java .component-skill-title:before {
+    content: "Java"; } }
+
+.component-skill--java .component-skill-img {
+  background-image: url(/build/img/java-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+@media (min-width: 34em) {
+  .component-skill--c .component-skill-title:before {
+    content: "C/C++"; } }
+
+.component-skill--c .component-skill-img {
+  background-image: url(/build/img/c-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+@media (min-width: 34em) {
+  .component-skill--php .component-skill-title:before {
+    content: "PHP"; } }
+
+.component-skill--php .component-skill-img {
+  background-image: url(/build/img/php-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+@media (min-width: 34em) {
+  .component-skill--html5 .component-skill-title:before {
+    content: "HTML5"; } }
+
+.component-skill--html5 .component-skill-img {
+  background-image: url(/build/img/html5-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+@media (min-width: 34em) {
+  .component-skill--css3 .component-skill-title:before {
+    content: "CSS3"; } }
+
+.component-skill--css3 .component-skill-img {
+  background-image: url(/build/img/css3-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+@media (min-width: 34em) {
+  .component-skill--angular .component-skill-title:before {
+    content: "Angular.js"; } }
+
+.component-skill--angular .component-skill-img {
+  background-image: url(/build/img/angular-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+@media (min-width: 34em) {
+  .component-skill--node .component-skill-title:before {
+    content: "Node.js"; } }
+
+.component-skill--node .component-skill-img {
+  background-image: url(/build/img/node-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+@media (min-width: 34em) {
+  .component-skill--android .component-skill-title:before {
+    content: "Android"; } }
+
+.component-skill--android .component-skill-img {
+  background-image: url(/build/img/android-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+@media (min-width: 34em) {
+  .component-skill--bower .component-skill-title:before {
+    content: "Bower"; } }
+
+.component-skill--bower .component-skill-img {
+  background-image: url(/build/img/bower-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%; }
 
 .component-battery-life:hover, .component-battery-life-0:hover, .component-battery-life-1:hover, .component-battery-life-2:hover, .component-battery-life-3:hover, .component-battery-life-4:hover {
   -webkit-transition: 2000ms color;

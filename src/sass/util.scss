@@ -74,8 +74,11 @@
 	margin-bottom: 15px;
 }
 
+.padding {
+	margin-bottom: 30px;
+}
 .padding-md-down {
-	@media (max-width: 61.9em) {
+	@media (max-width: 61.99em) {
     	margin-bottom: 30px;
 	}
 }

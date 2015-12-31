@@ -110,7 +110,6 @@
 
 	var Tick = {};
 	Tick.developer = new TickHandler("#developer-text", "./developer", $header);
-	Tick.construction = new TickHandler("#under-construction .text", "this site is under construction", document, 30);
 
 	// Scroll is defined in events/scroll.js
 	Scroll.writeDeveloper = new ScrollHandler(Tick.developer.element, Tick.developer.execute);
@@ -136,8 +135,6 @@
 		Scroll.pulseMe.execute(100);
 		Scroll.pulseCefet.execute(100);
 		Scroll.pulseUfmg.execute(100);
-
-		Tick.construction.execute(100);
 	});
 	$(document).scroll(function () {
 		didScroll = true;

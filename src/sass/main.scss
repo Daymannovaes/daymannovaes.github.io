@@ -158,6 +158,42 @@ section.background {
 	    background-repeat: no-repeat;
 	    background-position: 50%;
 	}
+	&.img-javascript {
+		background-image: url(/build/img/javascript-logo.png);
+		background-size: contain;
+	    background-repeat: no-repeat;
+	    background-position: 50%;
+	}
+	&.img-java {
+		background-image: url(/build/img/java-logo.png);
+		background-size: contain;
+	    background-repeat: no-repeat;
+	    background-position: 50%;
+	}
+	&.img-c {
+		background-image: url(/build/img/c-logo.png);
+		background-size: contain;
+	    background-repeat: no-repeat;
+	    background-position: 50%;
+	}
+	&.img-php {
+		background-image: url(/build/img/php-logo.png);
+		background-size: contain;
+	    background-repeat: no-repeat;
+	    background-position: 50%;
+	}
+	&.img-HTML5 {
+		background-image: url(/build/img/HTML5-logo.png);
+		background-size: contain;
+	    background-repeat: no-repeat;
+	    background-position: 50%;
+	}
+	&.img-css3 {
+		background-image: url(/build/img/css3-logo.png);
+		background-size: contain;
+	    background-repeat: no-repeat;
+	    background-position: 50%;
+	}
 }
 
 .profile-container-styles {
@@ -201,7 +237,27 @@ section.background {
 		width: 250px;
 		height: 250px;
 	}
+}
+.img-container-small {
+	@extend .-rounded;
+	@extend .profile-container-styles;
 
+	@media (max-width: 33.99em) {
+		width: 60px;
+		height: 60px;
+
+		float: left;
+		margin-right: 10px;
+	}
+	@media (min-width: 34em) {
+		width: 30px;
+		height: 30px;
+	}
+
+	border: none;
+	padding: 0;
+
+	display: inline-block;
 }
 
 
@@ -243,6 +299,50 @@ a.not-clear {
 	
 	color: #666;
 }
+
+$skills: (
+	javascript: Javascript,
+	java: Java,
+	c: "C/C++",
+	php: PHP,
+	html5: HTML5,
+	css3: CSS3,
+
+	angular: "Angular.js",
+	node: "Node.js",
+	android: Android,
+	bower: Bower
+);
+
+.skill-title {
+    color: #777;
+    position: relative;
+    top: -8px;
+}
+@each $skill, $l in $skills {
+	.component-skill--#{$skill} {
+
+		.component-skill-title {
+			@extend .skill-title;
+
+			@media (min-width: 34em) {
+				&:before {
+					content: '#{$l}';
+				}
+			}
+		}
+
+		.component-skill-img {
+			@extend .img-container-small;
+
+			background-image: url(/build/img/#{$skill}-logo.png);
+			background-size: contain;
+		    background-repeat: no-repeat;
+		    background-position: 50%;
+		}
+	}
+}
+
 
 $component-battery-life: "component-battery-life";
 .#{$component-battery-life} {
