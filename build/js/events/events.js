@@ -79,7 +79,7 @@
 
 		var $toTop = $();
 		$(".section-header").each(function () {
-			if (Util.$isOnTop($(this))) $toTop = $(this);
+			if (Util.$isOnTop($(this), fixedHeader.height() * 1.2)) $toTop = $(this);
 		});
 		if ($toTop[0] && Util.$isOnTop($toTop, -$toTop.height())) {
 			if ($toTop[0] != $inTop[0]) {
