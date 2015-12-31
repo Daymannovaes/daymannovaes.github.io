@@ -249,6 +249,10 @@ section.background {
 		float: left;
 		margin-right: 10px;
 	}
+	@media (min-width: 73em) {
+		width: 60px;
+		height: 60px;
+	}
 	@media (min-width: 34em) {
 		width: 30px;
 		height: 30px;
@@ -311,7 +315,27 @@ $skills: (
 	angular: "Angular.js",
 	node: "Node.js",
 	android: Android,
-	bower: Bower
+	polymer: "Polymer.js",
+	jquery: Jquery,
+	underscore: Underscore,
+
+	bower: Bower,
+	babel: "Babel.js",
+	yeoman: Yeoman,
+	gulp: Gulp,
+	less: Less,
+	sass: Sass,
+	grunt: Grunt,
+	karma: "Karma.js",
+	jenkins: Jenkins,
+	jade: Jade,
+	mocha: Mocha,
+	github: GitHub,
+
+	arduino: Arduino,
+	spark: Spark,
+	bootstrap: Bootstrap,
+	mongo: MongoDB
 );
 
 .skill-title {

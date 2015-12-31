@@ -5703,7 +5703,7 @@ a.bg-danger:hover {
 .-text-serif {
   font-family: serif; }
 
-.-rounded, .profile, .map-container, .profile-container, .img-container, .img-container-small, .component-skill--javascript .component-skill-img, .component-skill--java .component-skill-img, .component-skill--c .component-skill-img, .component-skill--php .component-skill-img, .component-skill--html5 .component-skill-img, .component-skill--css3 .component-skill-img, .component-skill--angular .component-skill-img, .component-skill--node .component-skill-img, .component-skill--android .component-skill-img, .component-skill--bower .component-skill-img {
+.-rounded, .profile, .map-container, .profile-container, .img-container, .img-container-small, .component-skill--javascript .component-skill-img, .component-skill--java .component-skill-img, .component-skill--c .component-skill-img, .component-skill--php .component-skill-img, .component-skill--html5 .component-skill-img, .component-skill--css3 .component-skill-img, .component-skill--angular .component-skill-img, .component-skill--node .component-skill-img, .component-skill--android .component-skill-img, .component-skill--polymer .component-skill-img, .component-skill--jquery .component-skill-img, .component-skill--underscore .component-skill-img, .component-skill--bower .component-skill-img, .component-skill--babel .component-skill-img, .component-skill--yeoman .component-skill-img, .component-skill--gulp .component-skill-img, .component-skill--less .component-skill-img, .component-skill--sass .component-skill-img, .component-skill--grunt .component-skill-img, .component-skill--karma .component-skill-img, .component-skill--jenkins .component-skill-img, .component-skill--jade .component-skill-img, .component-skill--mocha .component-skill-img, .component-skill--github .component-skill-img, .component-skill--arduino .component-skill-img, .component-skill--spark .component-skill-img, .component-skill--bootstrap .component-skill-img, .component-skill--mongo .component-skill-img {
   border-radius: 50%; }
 
 .-inline {
@@ -5745,6 +5745,9 @@ a.bg-danger:hover {
 
 .padding {
   margin-bottom: 30px; }
+
+.padding-top {
+  margin-top: 30px; }
 
 @media (max-width: 61.99em) {
   .padding-md-down, .component-aside {
@@ -6281,7 +6284,7 @@ section.background {
   background-repeat: no-repeat;
   background-position: 50%; }
 
-.profile-container-styles, .map-container, .profile-container, .img-container, .img-container-small, .component-skill--javascript .component-skill-img, .component-skill--java .component-skill-img, .component-skill--c .component-skill-img, .component-skill--php .component-skill-img, .component-skill--html5 .component-skill-img, .component-skill--css3 .component-skill-img, .component-skill--angular .component-skill-img, .component-skill--node .component-skill-img, .component-skill--android .component-skill-img, .component-skill--bower .component-skill-img {
+.profile-container-styles, .map-container, .profile-container, .img-container, .img-container-small, .component-skill--javascript .component-skill-img, .component-skill--java .component-skill-img, .component-skill--c .component-skill-img, .component-skill--php .component-skill-img, .component-skill--html5 .component-skill-img, .component-skill--css3 .component-skill-img, .component-skill--angular .component-skill-img, .component-skill--node .component-skill-img, .component-skill--android .component-skill-img, .component-skill--polymer .component-skill-img, .component-skill--jquery .component-skill-img, .component-skill--underscore .component-skill-img, .component-skill--bower .component-skill-img, .component-skill--babel .component-skill-img, .component-skill--yeoman .component-skill-img, .component-skill--gulp .component-skill-img, .component-skill--less .component-skill-img, .component-skill--sass .component-skill-img, .component-skill--grunt .component-skill-img, .component-skill--karma .component-skill-img, .component-skill--jenkins .component-skill-img, .component-skill--jade .component-skill-img, .component-skill--mocha .component-skill-img, .component-skill--github .component-skill-img, .component-skill--arduino .component-skill-img, .component-skill--spark .component-skill-img, .component-skill--bootstrap .component-skill-img, .component-skill--mongo .component-skill-img {
   border: 2px solid #D0CFCC;
   padding: 2px;
   -webkit-transition: 200ms all ease;
@@ -6294,7 +6297,7 @@ section.background {
   -ms-filter: brightness(90%);
   -o-filter: brightness(90%);
   filter: brightness(90%); }
-  .profile-container-styles:hover, .map-container:hover, .profile-container:hover, .img-container:hover, .img-container-small:hover, .component-skill--javascript .component-skill-img:hover, .component-skill--java .component-skill-img:hover, .component-skill--c .component-skill-img:hover, .component-skill--php .component-skill-img:hover, .component-skill--html5 .component-skill-img:hover, .component-skill--css3 .component-skill-img:hover, .component-skill--angular .component-skill-img:hover, .component-skill--node .component-skill-img:hover, .component-skill--android .component-skill-img:hover, .component-skill--bower .component-skill-img:hover {
+  .profile-container-styles:hover, .map-container:hover, .profile-container:hover, .img-container:hover, .img-container-small:hover, .component-skill--javascript .component-skill-img:hover, .component-skill--java .component-skill-img:hover, .component-skill--c .component-skill-img:hover, .component-skill--php .component-skill-img:hover, .component-skill--html5 .component-skill-img:hover, .component-skill--css3 .component-skill-img:hover, .component-skill--angular .component-skill-img:hover, .component-skill--node .component-skill-img:hover, .component-skill--android .component-skill-img:hover, .component-skill--polymer .component-skill-img:hover, .component-skill--jquery .component-skill-img:hover, .component-skill--underscore .component-skill-img:hover, .component-skill--bower .component-skill-img:hover, .component-skill--babel .component-skill-img:hover, .component-skill--yeoman .component-skill-img:hover, .component-skill--gulp .component-skill-img:hover, .component-skill--less .component-skill-img:hover, .component-skill--sass .component-skill-img:hover, .component-skill--grunt .component-skill-img:hover, .component-skill--karma .component-skill-img:hover, .component-skill--jenkins .component-skill-img:hover, .component-skill--jade .component-skill-img:hover, .component-skill--mocha .component-skill-img:hover, .component-skill--github .component-skill-img:hover, .component-skill--arduino .component-skill-img:hover, .component-skill--spark .component-skill-img:hover, .component-skill--bootstrap .component-skill-img:hover, .component-skill--mongo .component-skill-img:hover {
     -webkit-filter: brightness(100%);
     -moz-filter: brightness(100%);
     -ms-filter: brightness(100%);
@@ -6328,18 +6331,22 @@ section.background {
     width: 250px;
     height: 250px; } }
 
-.img-container-small, .component-skill--javascript .component-skill-img, .component-skill--java .component-skill-img, .component-skill--c .component-skill-img, .component-skill--php .component-skill-img, .component-skill--html5 .component-skill-img, .component-skill--css3 .component-skill-img, .component-skill--angular .component-skill-img, .component-skill--node .component-skill-img, .component-skill--android .component-skill-img, .component-skill--bower .component-skill-img {
+.img-container-small, .component-skill--javascript .component-skill-img, .component-skill--java .component-skill-img, .component-skill--c .component-skill-img, .component-skill--php .component-skill-img, .component-skill--html5 .component-skill-img, .component-skill--css3 .component-skill-img, .component-skill--angular .component-skill-img, .component-skill--node .component-skill-img, .component-skill--android .component-skill-img, .component-skill--polymer .component-skill-img, .component-skill--jquery .component-skill-img, .component-skill--underscore .component-skill-img, .component-skill--bower .component-skill-img, .component-skill--babel .component-skill-img, .component-skill--yeoman .component-skill-img, .component-skill--gulp .component-skill-img, .component-skill--less .component-skill-img, .component-skill--sass .component-skill-img, .component-skill--grunt .component-skill-img, .component-skill--karma .component-skill-img, .component-skill--jenkins .component-skill-img, .component-skill--jade .component-skill-img, .component-skill--mocha .component-skill-img, .component-skill--github .component-skill-img, .component-skill--arduino .component-skill-img, .component-skill--spark .component-skill-img, .component-skill--bootstrap .component-skill-img, .component-skill--mongo .component-skill-img {
   border: none;
   padding: 0;
   display: inline-block; }
   @media (max-width: 33.99em) {
-    .img-container-small, .component-skill--javascript .component-skill-img, .component-skill--java .component-skill-img, .component-skill--c .component-skill-img, .component-skill--php .component-skill-img, .component-skill--html5 .component-skill-img, .component-skill--css3 .component-skill-img, .component-skill--angular .component-skill-img, .component-skill--node .component-skill-img, .component-skill--android .component-skill-img, .component-skill--bower .component-skill-img {
+    .img-container-small, .component-skill--javascript .component-skill-img, .component-skill--java .component-skill-img, .component-skill--c .component-skill-img, .component-skill--php .component-skill-img, .component-skill--html5 .component-skill-img, .component-skill--css3 .component-skill-img, .component-skill--angular .component-skill-img, .component-skill--node .component-skill-img, .component-skill--android .component-skill-img, .component-skill--polymer .component-skill-img, .component-skill--jquery .component-skill-img, .component-skill--underscore .component-skill-img, .component-skill--bower .component-skill-img, .component-skill--babel .component-skill-img, .component-skill--yeoman .component-skill-img, .component-skill--gulp .component-skill-img, .component-skill--less .component-skill-img, .component-skill--sass .component-skill-img, .component-skill--grunt .component-skill-img, .component-skill--karma .component-skill-img, .component-skill--jenkins .component-skill-img, .component-skill--jade .component-skill-img, .component-skill--mocha .component-skill-img, .component-skill--github .component-skill-img, .component-skill--arduino .component-skill-img, .component-skill--spark .component-skill-img, .component-skill--bootstrap .component-skill-img, .component-skill--mongo .component-skill-img {
       width: 60px;
       height: 60px;
       float: left;
       margin-right: 10px; } }
+  @media (min-width: 73em) {
+    .img-container-small, .component-skill--javascript .component-skill-img, .component-skill--java .component-skill-img, .component-skill--c .component-skill-img, .component-skill--php .component-skill-img, .component-skill--html5 .component-skill-img, .component-skill--css3 .component-skill-img, .component-skill--angular .component-skill-img, .component-skill--node .component-skill-img, .component-skill--android .component-skill-img, .component-skill--polymer .component-skill-img, .component-skill--jquery .component-skill-img, .component-skill--underscore .component-skill-img, .component-skill--bower .component-skill-img, .component-skill--babel .component-skill-img, .component-skill--yeoman .component-skill-img, .component-skill--gulp .component-skill-img, .component-skill--less .component-skill-img, .component-skill--sass .component-skill-img, .component-skill--grunt .component-skill-img, .component-skill--karma .component-skill-img, .component-skill--jenkins .component-skill-img, .component-skill--jade .component-skill-img, .component-skill--mocha .component-skill-img, .component-skill--github .component-skill-img, .component-skill--arduino .component-skill-img, .component-skill--spark .component-skill-img, .component-skill--bootstrap .component-skill-img, .component-skill--mongo .component-skill-img {
+      width: 60px;
+      height: 60px; } }
   @media (min-width: 34em) {
-    .img-container-small, .component-skill--javascript .component-skill-img, .component-skill--java .component-skill-img, .component-skill--c .component-skill-img, .component-skill--php .component-skill-img, .component-skill--html5 .component-skill-img, .component-skill--css3 .component-skill-img, .component-skill--angular .component-skill-img, .component-skill--node .component-skill-img, .component-skill--android .component-skill-img, .component-skill--bower .component-skill-img {
+    .img-container-small, .component-skill--javascript .component-skill-img, .component-skill--java .component-skill-img, .component-skill--c .component-skill-img, .component-skill--php .component-skill-img, .component-skill--html5 .component-skill-img, .component-skill--css3 .component-skill-img, .component-skill--angular .component-skill-img, .component-skill--node .component-skill-img, .component-skill--android .component-skill-img, .component-skill--polymer .component-skill-img, .component-skill--jquery .component-skill-img, .component-skill--underscore .component-skill-img, .component-skill--bower .component-skill-img, .component-skill--babel .component-skill-img, .component-skill--yeoman .component-skill-img, .component-skill--gulp .component-skill-img, .component-skill--less .component-skill-img, .component-skill--sass .component-skill-img, .component-skill--grunt .component-skill-img, .component-skill--karma .component-skill-img, .component-skill--jenkins .component-skill-img, .component-skill--jade .component-skill-img, .component-skill--mocha .component-skill-img, .component-skill--github .component-skill-img, .component-skill--arduino .component-skill-img, .component-skill--spark .component-skill-img, .component-skill--bootstrap .component-skill-img, .component-skill--mongo .component-skill-img {
       width: 30px;
       height: 30px; } }
 
@@ -6372,7 +6379,7 @@ a.not-clear {
   top: -1px;
   color: #666; }
 
-.skill-title, .component-skill--javascript .component-skill-title, .component-skill--java .component-skill-title, .component-skill--c .component-skill-title, .component-skill--php .component-skill-title, .component-skill--html5 .component-skill-title, .component-skill--css3 .component-skill-title, .component-skill--angular .component-skill-title, .component-skill--node .component-skill-title, .component-skill--android .component-skill-title, .component-skill--bower .component-skill-title {
+.skill-title, .component-skill--javascript .component-skill-title, .component-skill--java .component-skill-title, .component-skill--c .component-skill-title, .component-skill--php .component-skill-title, .component-skill--html5 .component-skill-title, .component-skill--css3 .component-skill-title, .component-skill--angular .component-skill-title, .component-skill--node .component-skill-title, .component-skill--android .component-skill-title, .component-skill--polymer .component-skill-title, .component-skill--jquery .component-skill-title, .component-skill--underscore .component-skill-title, .component-skill--bower .component-skill-title, .component-skill--babel .component-skill-title, .component-skill--yeoman .component-skill-title, .component-skill--gulp .component-skill-title, .component-skill--less .component-skill-title, .component-skill--sass .component-skill-title, .component-skill--grunt .component-skill-title, .component-skill--karma .component-skill-title, .component-skill--jenkins .component-skill-title, .component-skill--jade .component-skill-title, .component-skill--mocha .component-skill-title, .component-skill--github .component-skill-title, .component-skill--arduino .component-skill-title, .component-skill--spark .component-skill-title, .component-skill--bootstrap .component-skill-title, .component-skill--mongo .component-skill-title {
   color: #777;
   position: relative;
   top: -8px; }
@@ -6468,11 +6475,191 @@ a.not-clear {
   background-position: 50%; }
 
 @media (min-width: 34em) {
+  .component-skill--polymer .component-skill-title:before {
+    content: "Polymer.js"; } }
+
+.component-skill--polymer .component-skill-img {
+  background-image: url(/build/img/polymer-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+@media (min-width: 34em) {
+  .component-skill--jquery .component-skill-title:before {
+    content: "Jquery"; } }
+
+.component-skill--jquery .component-skill-img {
+  background-image: url(/build/img/jquery-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+@media (min-width: 34em) {
+  .component-skill--underscore .component-skill-title:before {
+    content: "Underscore"; } }
+
+.component-skill--underscore .component-skill-img {
+  background-image: url(/build/img/underscore-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+@media (min-width: 34em) {
   .component-skill--bower .component-skill-title:before {
     content: "Bower"; } }
 
 .component-skill--bower .component-skill-img {
   background-image: url(/build/img/bower-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+@media (min-width: 34em) {
+  .component-skill--babel .component-skill-title:before {
+    content: "Babel.js"; } }
+
+.component-skill--babel .component-skill-img {
+  background-image: url(/build/img/babel-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+@media (min-width: 34em) {
+  .component-skill--yeoman .component-skill-title:before {
+    content: "Yeoman"; } }
+
+.component-skill--yeoman .component-skill-img {
+  background-image: url(/build/img/yeoman-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+@media (min-width: 34em) {
+  .component-skill--gulp .component-skill-title:before {
+    content: "Gulp"; } }
+
+.component-skill--gulp .component-skill-img {
+  background-image: url(/build/img/gulp-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+@media (min-width: 34em) {
+  .component-skill--less .component-skill-title:before {
+    content: "Less"; } }
+
+.component-skill--less .component-skill-img {
+  background-image: url(/build/img/less-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+@media (min-width: 34em) {
+  .component-skill--sass .component-skill-title:before {
+    content: "Sass"; } }
+
+.component-skill--sass .component-skill-img {
+  background-image: url(/build/img/sass-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+@media (min-width: 34em) {
+  .component-skill--grunt .component-skill-title:before {
+    content: "Grunt"; } }
+
+.component-skill--grunt .component-skill-img {
+  background-image: url(/build/img/grunt-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+@media (min-width: 34em) {
+  .component-skill--karma .component-skill-title:before {
+    content: "Karma.js"; } }
+
+.component-skill--karma .component-skill-img {
+  background-image: url(/build/img/karma-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+@media (min-width: 34em) {
+  .component-skill--jenkins .component-skill-title:before {
+    content: "Jenkins"; } }
+
+.component-skill--jenkins .component-skill-img {
+  background-image: url(/build/img/jenkins-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+@media (min-width: 34em) {
+  .component-skill--jade .component-skill-title:before {
+    content: "Jade"; } }
+
+.component-skill--jade .component-skill-img {
+  background-image: url(/build/img/jade-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+@media (min-width: 34em) {
+  .component-skill--mocha .component-skill-title:before {
+    content: "Mocha"; } }
+
+.component-skill--mocha .component-skill-img {
+  background-image: url(/build/img/mocha-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+@media (min-width: 34em) {
+  .component-skill--github .component-skill-title:before {
+    content: "GitHub"; } }
+
+.component-skill--github .component-skill-img {
+  background-image: url(/build/img/github-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+@media (min-width: 34em) {
+  .component-skill--arduino .component-skill-title:before {
+    content: "Arduino"; } }
+
+.component-skill--arduino .component-skill-img {
+  background-image: url(/build/img/arduino-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+@media (min-width: 34em) {
+  .component-skill--spark .component-skill-title:before {
+    content: "Spark"; } }
+
+.component-skill--spark .component-skill-img {
+  background-image: url(/build/img/spark-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+@media (min-width: 34em) {
+  .component-skill--bootstrap .component-skill-title:before {
+    content: "Bootstrap"; } }
+
+.component-skill--bootstrap .component-skill-img {
+  background-image: url(/build/img/bootstrap-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+@media (min-width: 34em) {
+  .component-skill--mongo .component-skill-title:before {
+    content: "MongoDB"; } }
+
+.component-skill--mongo .component-skill-img {
+  background-image: url(/build/img/mongo-logo.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 50%; }
