@@ -1,7 +1,7 @@
 daymannovaes.github.io
 ======================
 
-#### Check it out http://dayman.io
+#### Check it out [dayman.io](http://dayman.io?from=github)
 
 built with
 * [Gulp](http://gulpjs.com/)
