@@ -6240,8 +6240,8 @@ section.background {
   background-image: url(/build/img/stock.gif);
   background-size: cover; }
 
-.profile.img-mongo {
-  background-image: url(/build/img/mongo.png);
+.profile.img-mongoui {
+  background-image: url(/build/img/mongoui.png);
   background-size: cover; }
 
 .profile.img-tracksale {
