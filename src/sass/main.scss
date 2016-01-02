@@ -8,7 +8,9 @@
 @import "src/sass/menu.scss";
 @import "src/sass/gmap.scss";
 
-
+html {
+	overflow-x: hidden;
+}
 body {
     font-family: sans-serif;
     margin: 0;

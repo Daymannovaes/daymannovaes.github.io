@@ -12,6 +12,7 @@ header {
 	.arrow-down-container {
 			position: absolute;
 			bottom: 20px;
+			left: 0;
 			width: 100%;
 			text-align: center;
 	}
@@ -79,6 +80,13 @@ section, #fixed-header {
 		border: 3000px solid transparent !important;
 	}
 }
+.section-header {
+	position: relative;
+	> section {
+		top: 0;
+	}
+}
+
 
 #fixed-header {
 	top: 0;

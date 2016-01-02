@@ -5766,6 +5766,7 @@ header .title {
 header .arrow-down-container {
   position: absolute;
   bottom: 20px;
+  left: 0;
   width: 100%;
   text-align: center; }
 
@@ -5817,6 +5818,11 @@ section .content, #fixed-header .content {
   #skill-header .background__color, .skill-header .background__color {
     background: radial-gradient(#3498db 0%, #2ECC92 100%);
     border: 3000px solid transparent !important; }
+
+.section-header {
+  position: relative; }
+  .section-header > section {
+    top: 0; }
 
 #fixed-header {
   top: 0;
@@ -6122,6 +6128,9 @@ section .content, #fixed-header .content {
   @media (max-width: 33.9em) {
     .gmap_canvas {
       pointer-events: none; } }
+
+html {
+  overflow-x: hidden; }
 
 body {
   font-family: sans-serif;
