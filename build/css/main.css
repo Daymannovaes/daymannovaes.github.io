@@ -5703,6 +5703,9 @@ a.bg-danger:hover {
 .-text-serif {
   font-family: serif; }
 
+.-text-crossed {
+  text-decoration: line-through; }
+
 .-rounded, .profile, .map-container, .profile-container, .img-container, .img-container-small, .component-skill--javascript .component-skill-img, .component-skill--java .component-skill-img, .component-skill--c .component-skill-img, .component-skill--php .component-skill-img, .component-skill--html5 .component-skill-img, .component-skill--css3 .component-skill-img, .component-skill--angular .component-skill-img, .component-skill--node .component-skill-img, .component-skill--android .component-skill-img, .component-skill--polymer .component-skill-img, .component-skill--jquery .component-skill-img, .component-skill--underscore .component-skill-img, .component-skill--bower .component-skill-img, .component-skill--babel .component-skill-img, .component-skill--yeoman .component-skill-img, .component-skill--gulp .component-skill-img, .component-skill--less .component-skill-img, .component-skill--sass .component-skill-img, .component-skill--grunt .component-skill-img, .component-skill--karma .component-skill-img, .component-skill--jenkins .component-skill-img, .component-skill--jade .component-skill-img, .component-skill--mocha .component-skill-img, .component-skill--github .component-skill-img, .component-skill--arduino .component-skill-img, .component-skill--spark .component-skill-img, .component-skill--bootstrap .component-skill-img, .component-skill--mongo .component-skill-img {
   border-radius: 50%; }
 
@@ -6150,7 +6153,9 @@ h1.title, h2.title, h3.title, h4.title, h5.title, h6.title {
 
 p, .p {
   font-size: 1.1rem;
-  line-height: 1.4em; }
+  line-height: 1.4em;
+  margin-top: 0;
+  margin-bottom: 1rem; }
 
 .full-screen {
   height: 100vh;
