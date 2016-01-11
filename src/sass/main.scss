@@ -147,6 +147,10 @@ section.background {
 		background-image: url(/build/img/mongoui.png);
 		background-size: cover;
 	}
+	&.img-nebulab {
+		background-image: url(/build/img/nebulab-logo.png);
+		background-size: cover;
+	}
 	&.img-tracksale {
 		background-image: url(/build/img/tracksale.png);
 		background-size: cover;
@@ -336,6 +340,7 @@ $skills: (
 	jade: Jade,
 	mocha: Mocha,
 	github: GitHub,
+	jekyll: Jekyll,
 
 	arduino: Arduino,
 	spark: Spark,
