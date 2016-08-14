@@ -45,7 +45,7 @@
 }
 .-max-percent {
 	@extend .-max-hpercent;
-	@extend .-max-vpercent;
+	@extend .-max-wpercent;
 }
 
 .-clear-bezel {
@@ -113,14 +113,14 @@
 	-moz-animation: $args;
 	-ms-animation: $args;
 	-o-animation: $args;
-	animation: $args;      
+	animation: $args;
 }
 @mixin filter($args...) {
 	-webkit-filter: $args;
 	-moz-filter: $args;
 	-ms-filter: $args;
 	-o-filter: $args;
-	filter: $args;      
+	filter: $args;
 }
 @mixin opacity($opacity) {
 	opacity: $opacity;

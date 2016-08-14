@@ -122,7 +122,8 @@ select {
   text-transform: none; }
 
 button,
-html input[type="button"], input[type="reset"],
+html input[type="button"],
+input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer; }
@@ -302,8 +303,7 @@ blockquote {
 a {
   color: #0275d8;
   text-decoration: none; }
-  a:focus,
-  a:hover {
+  a:focus, a:hover {
     color: #014c8c;
     text-decoration: underline; }
   a:focus {
@@ -458,8 +458,7 @@ mark,
 .dl-horizontal {
   margin-right: -1.875rem;
   margin-left: -1.875rem; }
-  .dl-horizontal:before,
-  .dl-horizontal:after {
+  .dl-horizontal:before, .dl-horizontal:after {
     content: " ";
     display: table; }
   .dl-horizontal:after {
@@ -521,7 +520,7 @@ mark,
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 0.25rem;
-  transition: all 0.2s ease-in-out;
+  transition: all .2s ease-in-out;
   display: inline-block;
   max-width: 100%;
   height: auto; }
@@ -536,14 +535,14 @@ samp {
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace; }
 
 code {
-  padding: 0.2rem 0.4rem;
+  padding: .2rem .4rem;
   font-size: 90%;
   color: #bd4147;
   background-color: #f7f7f9;
   border-radius: 0.25rem; }
 
 kbd {
-  padding: 0.2rem 0.4rem;
+  padding: .2rem .4rem;
   font-size: 90%;
   color: #fff;
   background-color: #333;
@@ -576,10 +575,7 @@ pre {
   margin-left: auto;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem; }
-  .container:before,
-  section .content:before,
-  #fixed-header .content:before,
-  .container:after, section .content:after, #fixed-header .content:after {
+  .container:before, section .content:before, #fixed-header .content:before, .container:after, section .content:after, #fixed-header .content:after {
     content: " ";
     display: table; }
   .container:after, section .content:after, #fixed-header .content:after {
@@ -602,8 +598,7 @@ pre {
   margin-left: auto;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem; }
-  .container-fluid:before,
-  .container-fluid:after {
+  .container-fluid:before, .container-fluid:after {
     content: " ";
     display: table; }
   .container-fluid:after {
@@ -1467,8 +1462,7 @@ pre {
   .form-control::placeholder {
     color: #999;
     opacity: 1; }
-  .form-control:disabled,
-  .form-control[readonly],
+  .form-control:disabled, .form-control[readonly],
   fieldset[disabled] .form-control {
     background-color: #eceeef;
     opacity: 1; }
@@ -1493,20 +1487,26 @@ pre {
   input[type="date"].input-sm,
   .input-group-sm input[type="date"].form-control,
   input[type="time"].input-sm,
-  .input-group-sm input[type="time"].form-control,
+  .input-group-sm
+  input[type="time"].form-control,
   input[type="datetime-local"].input-sm,
-  .input-group-sm input[type="datetime-local"].form-control,
+  .input-group-sm
+  input[type="datetime-local"].form-control,
   input[type="month"].input-sm,
-  .input-group-sm input[type="month"].form-control {
+  .input-group-sm
+  input[type="month"].form-control {
     line-height: 1.95rem; }
   input[type="date"].input-lg,
   .input-group-lg input[type="date"].form-control,
   input[type="time"].input-lg,
-  .input-group-lg input[type="time"].form-control,
+  .input-group-lg
+  input[type="time"].form-control,
   input[type="datetime-local"].input-lg,
-  .input-group-lg input[type="datetime-local"].form-control,
+  .input-group-lg
+  input[type="datetime-local"].form-control,
   input[type="month"].input-lg,
-  .input-group-lg input[type="month"].form-control {
+  .input-group-lg
+  input[type="month"].form-control {
     line-height: 3.29167rem; } }
 
 .form-control-static {
@@ -1514,8 +1514,7 @@ pre {
   padding-top: 0.4375rem;
   padding-bottom: 0.4375rem;
   margin-bottom: 0; }
-  .form-control-static.form-control-sm,
-  .form-control-static.form-control-lg {
+  .form-control-static.form-control-sm, .form-control-static.form-control-lg {
     padding-right: 0;
     padding-left: 0; }
 
@@ -1576,24 +1575,26 @@ pre {
   margin-top: 0;
   margin-left: .75rem; }
 
-input[type="radio"]:disabled,
-input[type="radio"].disabled,
+input[type="radio"]:disabled, input[type="radio"].disabled,
 fieldset[disabled] input[type="radio"],
 input[type="checkbox"]:disabled,
 input[type="checkbox"].disabled,
-fieldset[disabled] input[type="checkbox"] {
+fieldset[disabled]
+input[type="checkbox"] {
   cursor: not-allowed; }
 
 .radio-inline.disabled,
 fieldset[disabled] .radio-inline,
 .checkbox-inline.disabled,
-fieldset[disabled] .checkbox-inline {
+fieldset[disabled]
+.checkbox-inline {
   cursor: not-allowed; }
 
 .radio.disabled label,
 fieldset[disabled] .radio label,
 .checkbox.disabled label,
-fieldset[disabled] .checkbox label {
+fieldset[disabled]
+.checkbox label {
   cursor: not-allowed; }
 
 .form-control-success,
@@ -1735,26 +1736,18 @@ fieldset[disabled] .checkbox label {
   font-size: 1rem;
   line-height: 1.5;
   border-radius: 0.25rem; }
-  .btn:focus,
-  .btn.focus,
-  .btn:active:focus,
-  .btn:active.focus,
-  .btn.active:focus,
-  .btn.active.focus {
+  .btn:focus, .btn.focus, .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus {
     outline: thin dotted;
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
-  .btn:focus,
-  .btn:hover {
+  .btn:focus, .btn:hover {
     text-decoration: none; }
   .btn.focus {
     text-decoration: none; }
-  .btn:active,
-  .btn.active {
+  .btn:active, .btn.active {
     background-image: none;
     outline: 0; }
-  .btn.disabled,
-  .btn:disabled,
+  .btn.disabled, .btn:disabled,
   fieldset[disabled] .btn {
     cursor: not-allowed;
     opacity: .65; }
@@ -1767,10 +1760,7 @@ fieldset[disabled] a.btn {
   color: #fff;
   background-color: #0275d8;
   border-color: #0275d8; }
-  .btn-primary:focus,
-  .btn-primary.focus,
-  .btn-primary:active,
-  .btn-primary.active,
+  .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active,
   .open > .btn-primary.dropdown-toggle {
     color: #fff;
     background-color: #025aa5;
@@ -1779,20 +1769,15 @@ fieldset[disabled] a.btn {
     color: #fff;
     background-color: #025aa5;
     border-color: #01549b; }
-  .btn-primary:active,
-  .btn-primary.active,
+  .btn-primary:active, .btn-primary.active,
   .open > .btn-primary.dropdown-toggle {
     background-image: none; }
-  .btn-primary.disabled:focus,
-  .btn-primary.disabled.focus,
-  .btn-primary:disabled:focus,
-  .btn-primary:disabled.focus,
+  .btn-primary.disabled:focus, .btn-primary.disabled.focus, .btn-primary:disabled:focus, .btn-primary:disabled.focus,
   fieldset[disabled] .btn-primary:focus,
   fieldset[disabled] .btn-primary.focus {
     background-color: #0275d8;
     border-color: #0275d8; }
-  .btn-primary.disabled:hover,
-  .btn-primary:disabled:hover,
+  .btn-primary.disabled:hover, .btn-primary:disabled:hover,
   fieldset[disabled] .btn-primary:hover {
     background-color: #0275d8;
     border-color: #0275d8; }
@@ -1801,10 +1786,7 @@ fieldset[disabled] a.btn {
   color: #373a3c;
   background-color: #fff;
   border-color: #ccc; }
-  .btn-secondary:focus,
-  .btn-secondary.focus,
-  .btn-secondary:active,
-  .btn-secondary.active,
+  .btn-secondary:focus, .btn-secondary.focus, .btn-secondary:active, .btn-secondary.active,
   .open > .btn-secondary.dropdown-toggle {
     color: #373a3c;
     background-color: #e6e6e6;
@@ -1813,20 +1795,15 @@ fieldset[disabled] a.btn {
     color: #373a3c;
     background-color: #e6e6e6;
     border-color: #adadad; }
-  .btn-secondary:active,
-  .btn-secondary.active,
+  .btn-secondary:active, .btn-secondary.active,
   .open > .btn-secondary.dropdown-toggle {
     background-image: none; }
-  .btn-secondary.disabled:focus,
-  .btn-secondary.disabled.focus,
-  .btn-secondary:disabled:focus,
-  .btn-secondary:disabled.focus,
+  .btn-secondary.disabled:focus, .btn-secondary.disabled.focus, .btn-secondary:disabled:focus, .btn-secondary:disabled.focus,
   fieldset[disabled] .btn-secondary:focus,
   fieldset[disabled] .btn-secondary.focus {
     background-color: #fff;
     border-color: #ccc; }
-  .btn-secondary.disabled:hover,
-  .btn-secondary:disabled:hover,
+  .btn-secondary.disabled:hover, .btn-secondary:disabled:hover,
   fieldset[disabled] .btn-secondary:hover {
     background-color: #fff;
     border-color: #ccc; }
@@ -1835,10 +1812,7 @@ fieldset[disabled] a.btn {
   color: #fff;
   background-color: #5bc0de;
   border-color: #5bc0de; }
-  .btn-info:focus,
-  .btn-info.focus,
-  .btn-info:active,
-  .btn-info.active,
+  .btn-info:focus, .btn-info.focus, .btn-info:active, .btn-info.active,
   .open > .btn-info.dropdown-toggle {
     color: #fff;
     background-color: #31b0d5;
@@ -1847,20 +1821,15 @@ fieldset[disabled] a.btn {
     color: #fff;
     background-color: #31b0d5;
     border-color: #2aabd2; }
-  .btn-info:active,
-  .btn-info.active,
+  .btn-info:active, .btn-info.active,
   .open > .btn-info.dropdown-toggle {
     background-image: none; }
-  .btn-info.disabled:focus,
-  .btn-info.disabled.focus,
-  .btn-info:disabled:focus,
-  .btn-info:disabled.focus,
+  .btn-info.disabled:focus, .btn-info.disabled.focus, .btn-info:disabled:focus, .btn-info:disabled.focus,
   fieldset[disabled] .btn-info:focus,
   fieldset[disabled] .btn-info.focus {
     background-color: #5bc0de;
     border-color: #5bc0de; }
-  .btn-info.disabled:hover,
-  .btn-info:disabled:hover,
+  .btn-info.disabled:hover, .btn-info:disabled:hover,
   fieldset[disabled] .btn-info:hover {
     background-color: #5bc0de;
     border-color: #5bc0de; }
@@ -1869,10 +1838,7 @@ fieldset[disabled] a.btn {
   color: #fff;
   background-color: #5cb85c;
   border-color: #5cb85c; }
-  .btn-success:focus,
-  .btn-success.focus,
-  .btn-success:active,
-  .btn-success.active,
+  .btn-success:focus, .btn-success.focus, .btn-success:active, .btn-success.active,
   .open > .btn-success.dropdown-toggle {
     color: #fff;
     background-color: #449d44;
@@ -1881,20 +1847,15 @@ fieldset[disabled] a.btn {
     color: #fff;
     background-color: #449d44;
     border-color: #419641; }
-  .btn-success:active,
-  .btn-success.active,
+  .btn-success:active, .btn-success.active,
   .open > .btn-success.dropdown-toggle {
     background-image: none; }
-  .btn-success.disabled:focus,
-  .btn-success.disabled.focus,
-  .btn-success:disabled:focus,
-  .btn-success:disabled.focus,
+  .btn-success.disabled:focus, .btn-success.disabled.focus, .btn-success:disabled:focus, .btn-success:disabled.focus,
   fieldset[disabled] .btn-success:focus,
   fieldset[disabled] .btn-success.focus {
     background-color: #5cb85c;
     border-color: #5cb85c; }
-  .btn-success.disabled:hover,
-  .btn-success:disabled:hover,
+  .btn-success.disabled:hover, .btn-success:disabled:hover,
   fieldset[disabled] .btn-success:hover {
     background-color: #5cb85c;
     border-color: #5cb85c; }
@@ -1903,10 +1864,7 @@ fieldset[disabled] a.btn {
   color: #fff;
   background-color: #f0ad4e;
   border-color: #f0ad4e; }
-  .btn-warning:focus,
-  .btn-warning.focus,
-  .btn-warning:active,
-  .btn-warning.active,
+  .btn-warning:focus, .btn-warning.focus, .btn-warning:active, .btn-warning.active,
   .open > .btn-warning.dropdown-toggle {
     color: #fff;
     background-color: #ec971f;
@@ -1915,20 +1873,15 @@ fieldset[disabled] a.btn {
     color: #fff;
     background-color: #ec971f;
     border-color: #eb9316; }
-  .btn-warning:active,
-  .btn-warning.active,
+  .btn-warning:active, .btn-warning.active,
   .open > .btn-warning.dropdown-toggle {
     background-image: none; }
-  .btn-warning.disabled:focus,
-  .btn-warning.disabled.focus,
-  .btn-warning:disabled:focus,
-  .btn-warning:disabled.focus,
+  .btn-warning.disabled:focus, .btn-warning.disabled.focus, .btn-warning:disabled:focus, .btn-warning:disabled.focus,
   fieldset[disabled] .btn-warning:focus,
   fieldset[disabled] .btn-warning.focus {
     background-color: #f0ad4e;
     border-color: #f0ad4e; }
-  .btn-warning.disabled:hover,
-  .btn-warning:disabled:hover,
+  .btn-warning.disabled:hover, .btn-warning:disabled:hover,
   fieldset[disabled] .btn-warning:hover {
     background-color: #f0ad4e;
     border-color: #f0ad4e; }
@@ -1937,10 +1890,7 @@ fieldset[disabled] a.btn {
   color: #fff;
   background-color: #d9534f;
   border-color: #d9534f; }
-  .btn-danger:focus,
-  .btn-danger.focus,
-  .btn-danger:active,
-  .btn-danger.active,
+  .btn-danger:focus, .btn-danger.focus, .btn-danger:active, .btn-danger.active,
   .open > .btn-danger.dropdown-toggle {
     color: #fff;
     background-color: #c9302c;
@@ -1949,20 +1899,15 @@ fieldset[disabled] a.btn {
     color: #fff;
     background-color: #c9302c;
     border-color: #c12e2a; }
-  .btn-danger:active,
-  .btn-danger.active,
+  .btn-danger:active, .btn-danger.active,
   .open > .btn-danger.dropdown-toggle {
     background-image: none; }
-  .btn-danger.disabled:focus,
-  .btn-danger.disabled.focus,
-  .btn-danger:disabled:focus,
-  .btn-danger:disabled.focus,
+  .btn-danger.disabled:focus, .btn-danger.disabled.focus, .btn-danger:disabled:focus, .btn-danger:disabled.focus,
   fieldset[disabled] .btn-danger:focus,
   fieldset[disabled] .btn-danger.focus {
     background-color: #d9534f;
     border-color: #d9534f; }
-  .btn-danger.disabled:hover,
-  .btn-danger:disabled:hover,
+  .btn-danger.disabled:hover, .btn-danger:disabled:hover,
   fieldset[disabled] .btn-danger:hover {
     background-color: #d9534f;
     border-color: #d9534f; }
@@ -1972,10 +1917,7 @@ fieldset[disabled] a.btn {
   background-image: none;
   background-color: transparent;
   border-color: #0275d8; }
-  .btn-primary-outline:focus,
-  .btn-primary-outline.focus,
-  .btn-primary-outline:active,
-  .btn-primary-outline.active,
+  .btn-primary-outline:focus, .btn-primary-outline.focus, .btn-primary-outline:active, .btn-primary-outline.active,
   .open > .btn-primary-outline.dropdown-toggle {
     color: #fff;
     background-color: #0275d8;
@@ -1984,15 +1926,11 @@ fieldset[disabled] a.btn {
     color: #fff;
     background-color: #0275d8;
     border-color: #0275d8; }
-  .btn-primary-outline.disabled:focus,
-  .btn-primary-outline.disabled.focus,
-  .btn-primary-outline:disabled:focus,
-  .btn-primary-outline:disabled.focus,
+  .btn-primary-outline.disabled:focus, .btn-primary-outline.disabled.focus, .btn-primary-outline:disabled:focus, .btn-primary-outline:disabled.focus,
   fieldset[disabled] .btn-primary-outline:focus,
   fieldset[disabled] .btn-primary-outline.focus {
     border-color: #43a7fd; }
-  .btn-primary-outline.disabled:hover,
-  .btn-primary-outline:disabled:hover,
+  .btn-primary-outline.disabled:hover, .btn-primary-outline:disabled:hover,
   fieldset[disabled] .btn-primary-outline:hover {
     border-color: #43a7fd; }
 
@@ -2001,10 +1939,7 @@ fieldset[disabled] a.btn {
   background-image: none;
   background-color: transparent;
   border-color: #ccc; }
-  .btn-secondary-outline:focus,
-  .btn-secondary-outline.focus,
-  .btn-secondary-outline:active,
-  .btn-secondary-outline.active,
+  .btn-secondary-outline:focus, .btn-secondary-outline.focus, .btn-secondary-outline:active, .btn-secondary-outline.active,
   .open > .btn-secondary-outline.dropdown-toggle {
     color: #fff;
     background-color: #ccc;
@@ -2013,15 +1948,11 @@ fieldset[disabled] a.btn {
     color: #fff;
     background-color: #ccc;
     border-color: #ccc; }
-  .btn-secondary-outline.disabled:focus,
-  .btn-secondary-outline.disabled.focus,
-  .btn-secondary-outline:disabled:focus,
-  .btn-secondary-outline:disabled.focus,
+  .btn-secondary-outline.disabled:focus, .btn-secondary-outline.disabled.focus, .btn-secondary-outline:disabled:focus, .btn-secondary-outline:disabled.focus,
   fieldset[disabled] .btn-secondary-outline:focus,
   fieldset[disabled] .btn-secondary-outline.focus {
     border-color: white; }
-  .btn-secondary-outline.disabled:hover,
-  .btn-secondary-outline:disabled:hover,
+  .btn-secondary-outline.disabled:hover, .btn-secondary-outline:disabled:hover,
   fieldset[disabled] .btn-secondary-outline:hover {
     border-color: white; }
 
@@ -2030,10 +1961,7 @@ fieldset[disabled] a.btn {
   background-image: none;
   background-color: transparent;
   border-color: #5bc0de; }
-  .btn-info-outline:focus,
-  .btn-info-outline.focus,
-  .btn-info-outline:active,
-  .btn-info-outline.active,
+  .btn-info-outline:focus, .btn-info-outline.focus, .btn-info-outline:active, .btn-info-outline.active,
   .open > .btn-info-outline.dropdown-toggle {
     color: #fff;
     background-color: #5bc0de;
@@ -2042,15 +1970,11 @@ fieldset[disabled] a.btn {
     color: #fff;
     background-color: #5bc0de;
     border-color: #5bc0de; }
-  .btn-info-outline.disabled:focus,
-  .btn-info-outline.disabled.focus,
-  .btn-info-outline:disabled:focus,
-  .btn-info-outline:disabled.focus,
+  .btn-info-outline.disabled:focus, .btn-info-outline.disabled.focus, .btn-info-outline:disabled:focus, .btn-info-outline:disabled.focus,
   fieldset[disabled] .btn-info-outline:focus,
   fieldset[disabled] .btn-info-outline.focus {
     border-color: #b0e1ef; }
-  .btn-info-outline.disabled:hover,
-  .btn-info-outline:disabled:hover,
+  .btn-info-outline.disabled:hover, .btn-info-outline:disabled:hover,
   fieldset[disabled] .btn-info-outline:hover {
     border-color: #b0e1ef; }
 
@@ -2059,10 +1983,7 @@ fieldset[disabled] a.btn {
   background-image: none;
   background-color: transparent;
   border-color: #5cb85c; }
-  .btn-success-outline:focus,
-  .btn-success-outline.focus,
-  .btn-success-outline:active,
-  .btn-success-outline.active,
+  .btn-success-outline:focus, .btn-success-outline.focus, .btn-success-outline:active, .btn-success-outline.active,
   .open > .btn-success-outline.dropdown-toggle {
     color: #fff;
     background-color: #5cb85c;
@@ -2071,15 +1992,11 @@ fieldset[disabled] a.btn {
     color: #fff;
     background-color: #5cb85c;
     border-color: #5cb85c; }
-  .btn-success-outline.disabled:focus,
-  .btn-success-outline.disabled.focus,
-  .btn-success-outline:disabled:focus,
-  .btn-success-outline:disabled.focus,
+  .btn-success-outline.disabled:focus, .btn-success-outline.disabled.focus, .btn-success-outline:disabled:focus, .btn-success-outline:disabled.focus,
   fieldset[disabled] .btn-success-outline:focus,
   fieldset[disabled] .btn-success-outline.focus {
     border-color: #a3d7a3; }
-  .btn-success-outline.disabled:hover,
-  .btn-success-outline:disabled:hover,
+  .btn-success-outline.disabled:hover, .btn-success-outline:disabled:hover,
   fieldset[disabled] .btn-success-outline:hover {
     border-color: #a3d7a3; }
 
@@ -2088,10 +2005,7 @@ fieldset[disabled] a.btn {
   background-image: none;
   background-color: transparent;
   border-color: #f0ad4e; }
-  .btn-warning-outline:focus,
-  .btn-warning-outline.focus,
-  .btn-warning-outline:active,
-  .btn-warning-outline.active,
+  .btn-warning-outline:focus, .btn-warning-outline.focus, .btn-warning-outline:active, .btn-warning-outline.active,
   .open > .btn-warning-outline.dropdown-toggle {
     color: #fff;
     background-color: #f0ad4e;
@@ -2100,15 +2014,11 @@ fieldset[disabled] a.btn {
     color: #fff;
     background-color: #f0ad4e;
     border-color: #f0ad4e; }
-  .btn-warning-outline.disabled:focus,
-  .btn-warning-outline.disabled.focus,
-  .btn-warning-outline:disabled:focus,
-  .btn-warning-outline:disabled.focus,
+  .btn-warning-outline.disabled:focus, .btn-warning-outline.disabled.focus, .btn-warning-outline:disabled:focus, .btn-warning-outline:disabled.focus,
   fieldset[disabled] .btn-warning-outline:focus,
   fieldset[disabled] .btn-warning-outline.focus {
     border-color: #f8d9ac; }
-  .btn-warning-outline.disabled:hover,
-  .btn-warning-outline:disabled:hover,
+  .btn-warning-outline.disabled:hover, .btn-warning-outline:disabled:hover,
   fieldset[disabled] .btn-warning-outline:hover {
     border-color: #f8d9ac; }
 
@@ -2117,10 +2027,7 @@ fieldset[disabled] a.btn {
   background-image: none;
   background-color: transparent;
   border-color: #d9534f; }
-  .btn-danger-outline:focus,
-  .btn-danger-outline.focus,
-  .btn-danger-outline:active,
-  .btn-danger-outline.active,
+  .btn-danger-outline:focus, .btn-danger-outline.focus, .btn-danger-outline:active, .btn-danger-outline.active,
   .open > .btn-danger-outline.dropdown-toggle {
     color: #fff;
     background-color: #d9534f;
@@ -2129,15 +2036,11 @@ fieldset[disabled] a.btn {
     color: #fff;
     background-color: #d9534f;
     border-color: #d9534f; }
-  .btn-danger-outline.disabled:focus,
-  .btn-danger-outline.disabled.focus,
-  .btn-danger-outline:disabled:focus,
-  .btn-danger-outline:disabled.focus,
+  .btn-danger-outline.disabled:focus, .btn-danger-outline.disabled.focus, .btn-danger-outline:disabled:focus, .btn-danger-outline:disabled.focus,
   fieldset[disabled] .btn-danger-outline:focus,
   fieldset[disabled] .btn-danger-outline.focus {
     border-color: #eba5a3; }
-  .btn-danger-outline.disabled:hover,
-  .btn-danger-outline:disabled:hover,
+  .btn-danger-outline.disabled:hover, .btn-danger-outline:disabled:hover,
   fieldset[disabled] .btn-danger-outline:hover {
     border-color: #eba5a3; }
 
@@ -2145,25 +2048,18 @@ fieldset[disabled] a.btn {
   font-weight: normal;
   color: #0275d8;
   border-radius: 0; }
-  .btn-link,
-  .btn-link:active,
-  .btn-link.active,
-  .btn-link:disabled,
+  .btn-link, .btn-link:active, .btn-link.active, .btn-link:disabled,
   fieldset[disabled] .btn-link {
     background-color: transparent; }
-  .btn-link,
-  .btn-link:focus,
-  .btn-link:active {
+  .btn-link, .btn-link:focus, .btn-link:active {
     border-color: transparent; }
   .btn-link:hover {
     border-color: transparent; }
-  .btn-link:focus,
-  .btn-link:hover {
+  .btn-link:focus, .btn-link:hover {
     color: #014c8c;
     text-decoration: underline;
     background-color: transparent; }
-  .btn-link:disabled:focus,
-  .btn-link:disabled:hover,
+  .btn-link:disabled:focus, .btn-link:disabled:hover,
   fieldset[disabled] .btn-link:focus,
   fieldset[disabled] .btn-link:hover {
     color: #818a91;
@@ -2274,8 +2170,7 @@ input[type="button"].btn-block {
 .card-inverse .card-blockquote > footer {
   color: rgba(255, 255, 255, 0.65); }
 
-.card-inverse .card-link:focus,
-.card-inverse .card-link:hover {
+.card-inverse .card-link:focus, .card-inverse .card-link:hover {
   color: #fff; }
 
 .card-blockquote {
@@ -2383,16 +2278,13 @@ input[type="button"].btn-block {
     .pagination > li:last-child > span {
       border-bottom-right-radius: 0.25rem;
       border-top-right-radius: 0.25rem; }
-  .pagination > li > a:focus,
-  .pagination > li > a:hover,
+  .pagination > li > a:focus, .pagination > li > a:hover,
   .pagination > li > span:focus,
   .pagination > li > span:hover {
     color: #014c8c;
     background-color: #eceeef;
     border-color: #ddd; }
-  .pagination > .active > a,
-  .pagination > .active > a:focus,
-  .pagination > .active > a:hover,
+  .pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover,
   .pagination > .active > span,
   .pagination > .active > span:focus,
   .pagination > .active > span:hover {
@@ -2401,9 +2293,7 @@ input[type="button"].btn-block {
     cursor: default;
     background-color: #0275d8;
     border-color: #0275d8; }
-  .pagination > .disabled > span,
-  .pagination > .disabled > span:focus,
-  .pagination > .disabled > span:hover,
+  .pagination > .disabled > span, .pagination > .disabled > span:focus, .pagination > .disabled > span:hover,
   .pagination > .disabled > a,
   .pagination > .disabled > a:focus,
   .pagination > .disabled > a:hover {
@@ -2450,8 +2340,7 @@ input[type="button"].btn-block {
   margin-bottom: 1rem;
   text-align: center;
   list-style: none; }
-  .pager:before,
-  .pager:after {
+  .pager:before, .pager:after {
     content: " ";
     display: table; }
   .pager:after {
@@ -2465,13 +2354,10 @@ input[type="button"].btn-block {
       background-color: #fff;
       border: 1px solid #ddd;
       border-radius: 15px; }
-    .pager li > a:focus,
-    .pager li > a:hover {
+    .pager li > a:focus, .pager li > a:hover {
       text-decoration: none;
       background-color: #eceeef; }
-  .pager .disabled > a,
-  .pager .disabled > a:focus,
-  .pager .disabled > a:hover {
+  .pager .disabled > a, .pager .disabled > a:focus, .pager .disabled > a:hover {
     color: #818a91;
     cursor: not-allowed;
     background-color: #fff; }
@@ -2490,7 +2376,7 @@ input[type="button"].btn-block {
 
 .label {
   display: inline-block;
-  padding: 0.25em 0.4em;
+  padding: .25em .4em;
   font-size: 75%;
   font-weight: bold;
   line-height: 1;
@@ -2505,8 +2391,7 @@ input[type="button"].btn-block {
     position: relative;
     top: -1px; }
 
-a.label:focus,
-a.label:hover {
+a.label:focus, a.label:hover {
   color: #fff;
   text-decoration: none;
   cursor: pointer; }
@@ -2518,38 +2403,32 @@ a.label:hover {
 
 .label-default {
   background-color: #818a91; }
-  .label-default[href]:focus,
-  .label-default[href]:hover {
+  .label-default[href]:focus, .label-default[href]:hover {
     background-color: #687077; }
 
 .label-primary {
   background-color: #0275d8; }
-  .label-primary[href]:focus,
-  .label-primary[href]:hover {
+  .label-primary[href]:focus, .label-primary[href]:hover {
     background-color: #025aa5; }
 
 .label-success {
   background-color: #5cb85c; }
-  .label-success[href]:focus,
-  .label-success[href]:hover {
+  .label-success[href]:focus, .label-success[href]:hover {
     background-color: #449d44; }
 
 .label-info {
   background-color: #5bc0de; }
-  .label-info[href]:focus,
-  .label-info[href]:hover {
+  .label-info[href]:focus, .label-info[href]:hover {
     background-color: #31b0d5; }
 
 .label-warning {
   background-color: #f0ad4e; }
-  .label-warning[href]:focus,
-  .label-warning[href]:hover {
+  .label-warning[href]:focus, .label-warning[href]:hover {
     background-color: #ec971f; }
 
 .label-danger {
   background-color: #d9534f; }
-  .label-danger[href]:focus,
-  .label-danger[href]:hover {
+  .label-danger[href]:focus, .label-danger[href]:hover {
     background-color: #c9302c; }
 
 @keyframes progress-bar-stripes {
@@ -2585,7 +2464,7 @@ a.label:hover {
   border-top-right-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem; }
 
-@media screen and (min-width: 0 \0) {
+@media screen and (min-width: 0\0) {
   .progress {
     background-color: #eee;
     border-radius: 0.25rem; }
@@ -2613,7 +2492,7 @@ a.label:hover {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-size: 1rem 1rem; }
 
-@media screen and (min-width: 0 \0) {
+@media screen and (min-width: 0\0) {
   .progress-bar-striped {
     background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
     background-size: 1rem 1rem; } }
@@ -2624,7 +2503,7 @@ a.label:hover {
 .progress-animated[value]::-moz-progress-bar {
   animation: progress-bar-stripes 2s linear infinite; }
 
-@media screen and (min-width: 0 \0) {
+@media screen and (min-width: 0\0) {
   .progress-animated .progress-bar-striped {
     animation: progress-bar-stripes 2s linear infinite; } }
 
@@ -2634,7 +2513,7 @@ a.label:hover {
 .progress-success[value]::-moz-progress-bar {
   background-color: #5cb85c; }
 
-@media screen and (min-width: 0 \0) {
+@media screen and (min-width: 0\0) {
   .progress-success .progress-bar {
     background-color: #5cb85c; } }
 
@@ -2644,7 +2523,7 @@ a.label:hover {
 .progress-info[value]::-moz-progress-bar {
   background-color: #5bc0de; }
 
-@media screen and (min-width: 0 \0) {
+@media screen and (min-width: 0\0) {
   .progress-info .progress-bar {
     background-color: #5bc0de; } }
 
@@ -2654,7 +2533,7 @@ a.label:hover {
 .progress-warning[value]::-moz-progress-bar {
   background-color: #f0ad4e; }
 
-@media screen and (min-width: 0 \0) {
+@media screen and (min-width: 0\0) {
   .progress-warning .progress-bar {
     background-color: #f0ad4e; } }
 
@@ -2664,7 +2543,7 @@ a.label:hover {
 .progress-danger[value]::-moz-progress-bar {
   background-color: #d9534f; }
 
-@media screen and (min-width: 0 \0) {
+@media screen and (min-width: 0\0) {
   .progress-danger .progress-bar {
     background-color: #d9534f; } }
 
@@ -2701,7 +2580,7 @@ a.label:hover {
 .list-group-item {
   position: relative;
   display: block;
-  padding: 0.75rem 1.25rem;
+  padding: .75rem 1.25rem;
   margin-bottom: -.0625rem;
   background-color: #fff;
   border: 0.0625rem solid #ddd; }
@@ -2725,49 +2604,36 @@ button.list-group-item {
   a.list-group-item .list-group-item-heading,
   button.list-group-item .list-group-item-heading {
     color: #333; }
-  a.list-group-item:focus,
-  a.list-group-item:hover,
+  a.list-group-item:focus, a.list-group-item:hover,
   button.list-group-item:focus,
   button.list-group-item:hover {
     color: #555;
     text-decoration: none;
     background-color: #f5f5f5; }
 
-.list-group-item.disabled,
-.list-group-item.disabled:focus,
-.list-group-item.disabled:hover {
+.list-group-item.disabled, .list-group-item.disabled:focus, .list-group-item.disabled:hover {
   color: #818a91;
   cursor: not-allowed;
   background-color: #eceeef; }
-  .list-group-item.disabled .list-group-item-heading,
-  .list-group-item.disabled:focus .list-group-item-heading,
-  .list-group-item.disabled:hover .list-group-item-heading {
+  .list-group-item.disabled .list-group-item-heading, .list-group-item.disabled:focus .list-group-item-heading, .list-group-item.disabled:hover .list-group-item-heading {
     color: inherit; }
-  .list-group-item.disabled .list-group-item-text,
-  .list-group-item.disabled:focus .list-group-item-text,
-  .list-group-item.disabled:hover .list-group-item-text {
+  .list-group-item.disabled .list-group-item-text, .list-group-item.disabled:focus .list-group-item-text, .list-group-item.disabled:hover .list-group-item-text {
     color: #818a91; }
 
-.list-group-item.active,
-.list-group-item.active:focus,
-.list-group-item.active:hover {
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
   z-index: 2;
   color: #fff;
   background-color: #0275d8;
   border-color: #0275d8; }
   .list-group-item.active .list-group-item-heading,
   .list-group-item.active .list-group-item-heading > small,
-  .list-group-item.active .list-group-item-heading > .small,
-  .list-group-item.active:focus .list-group-item-heading,
+  .list-group-item.active .list-group-item-heading > .small, .list-group-item.active:focus .list-group-item-heading,
   .list-group-item.active:focus .list-group-item-heading > small,
-  .list-group-item.active:focus .list-group-item-heading > .small,
-  .list-group-item.active:hover .list-group-item-heading,
+  .list-group-item.active:focus .list-group-item-heading > .small, .list-group-item.active:hover .list-group-item-heading,
   .list-group-item.active:hover .list-group-item-heading > small,
   .list-group-item.active:hover .list-group-item-heading > .small {
     color: inherit; }
-  .list-group-item.active .list-group-item-text,
-  .list-group-item.active:focus .list-group-item-text,
-  .list-group-item.active:hover .list-group-item-text {
+  .list-group-item.active .list-group-item-text, .list-group-item.active:focus .list-group-item-text, .list-group-item.active:hover .list-group-item-text {
     color: #a8d6fe; }
 
 .list-group-item-state {
@@ -2780,15 +2646,12 @@ button.list-group-item-state {
   a.list-group-item-state .list-group-item-heading,
   button.list-group-item-state .list-group-item-heading {
     color: inherit; }
-  a.list-group-item-state:focus,
-  a.list-group-item-state:hover,
+  a.list-group-item-state:focus, a.list-group-item-state:hover,
   button.list-group-item-state:focus,
   button.list-group-item-state:hover {
     color: #3c763d;
     background-color: #d0e9c6; }
-  a.list-group-item-state.active,
-  a.list-group-item-state.active:focus,
-  a.list-group-item-state.active:hover,
+  a.list-group-item-state.active, a.list-group-item-state.active:focus, a.list-group-item-state.active:hover,
   button.list-group-item-state.active,
   button.list-group-item-state.active:focus,
   button.list-group-item-state.active:hover {
@@ -2806,15 +2669,12 @@ button.list-group-item-state {
   a.list-group-item-state .list-group-item-heading,
   button.list-group-item-state .list-group-item-heading {
     color: inherit; }
-  a.list-group-item-state:focus,
-  a.list-group-item-state:hover,
+  a.list-group-item-state:focus, a.list-group-item-state:hover,
   button.list-group-item-state:focus,
   button.list-group-item-state:hover {
     color: #31708f;
     background-color: #c4e3f3; }
-  a.list-group-item-state.active,
-  a.list-group-item-state.active:focus,
-  a.list-group-item-state.active:hover,
+  a.list-group-item-state.active, a.list-group-item-state.active:focus, a.list-group-item-state.active:hover,
   button.list-group-item-state.active,
   button.list-group-item-state.active:focus,
   button.list-group-item-state.active:hover {
@@ -2832,15 +2692,12 @@ button.list-group-item-state {
   a.list-group-item-state .list-group-item-heading,
   button.list-group-item-state .list-group-item-heading {
     color: inherit; }
-  a.list-group-item-state:focus,
-  a.list-group-item-state:hover,
+  a.list-group-item-state:focus, a.list-group-item-state:hover,
   button.list-group-item-state:focus,
   button.list-group-item-state:hover {
     color: #8a6d3b;
     background-color: #faf2cc; }
-  a.list-group-item-state.active,
-  a.list-group-item-state.active:focus,
-  a.list-group-item-state.active:hover,
+  a.list-group-item-state.active, a.list-group-item-state.active:focus, a.list-group-item-state.active:hover,
   button.list-group-item-state.active,
   button.list-group-item-state.active:focus,
   button.list-group-item-state.active:hover {
@@ -2858,15 +2715,12 @@ button.list-group-item-state {
   a.list-group-item-state .list-group-item-heading,
   button.list-group-item-state .list-group-item-heading {
     color: inherit; }
-  a.list-group-item-state:focus,
-  a.list-group-item-state:hover,
+  a.list-group-item-state:focus, a.list-group-item-state:hover,
   button.list-group-item-state:focus,
   button.list-group-item-state:hover {
     color: #a94442;
     background-color: #ebcccc; }
-  a.list-group-item-state.active,
-  a.list-group-item-state.active:focus,
-  a.list-group-item-state.active:hover,
+  a.list-group-item-state.active, a.list-group-item-state.active:focus, a.list-group-item-state.active:hover,
   button.list-group-item-state.active,
   button.list-group-item-state.active:focus,
   button.list-group-item-state.active:hover {
@@ -2918,8 +2772,7 @@ button.list-group-item-state {
   color: #000;
   text-shadow: 0 1px 0 #fff;
   opacity: .2; }
-  .close:focus,
-  .close:hover {
+  .close:focus, .close:hover {
     color: #000;
     text-decoration: none;
     cursor: pointer;
@@ -2955,45 +2808,37 @@ button.close {
   opacity: 0; }
   .tooltip.in {
     opacity: 0.9; }
-  .tooltip.tooltip-top,
-  .tooltip.bs-tether-element-attached-bottom {
+  .tooltip.tooltip-top, .tooltip.bs-tether-element-attached-bottom {
     padding: 5px 0;
     margin-top: -3px; }
-    .tooltip.tooltip-top .tooltip-arrow,
-    .tooltip.bs-tether-element-attached-bottom .tooltip-arrow {
+    .tooltip.tooltip-top .tooltip-arrow, .tooltip.bs-tether-element-attached-bottom .tooltip-arrow {
       bottom: 0;
       left: 50%;
       margin-left: -5px;
       border-width: 5px 5px 0;
       border-top-color: #000; }
-  .tooltip.tooltip-right,
-  .tooltip.bs-tether-element-attached-left {
+  .tooltip.tooltip-right, .tooltip.bs-tether-element-attached-left {
     padding: 0 5px;
     margin-left: 3px; }
-    .tooltip.tooltip-right .tooltip-arrow,
-    .tooltip.bs-tether-element-attached-left .tooltip-arrow {
+    .tooltip.tooltip-right .tooltip-arrow, .tooltip.bs-tether-element-attached-left .tooltip-arrow {
       top: 50%;
       left: 0;
       margin-top: -5px;
       border-width: 5px 5px 5px 0;
       border-right-color: #000; }
-  .tooltip.tooltip-bottom,
-  .tooltip.bs-tether-element-attached-top {
+  .tooltip.tooltip-bottom, .tooltip.bs-tether-element-attached-top {
     padding: 5px 0;
     margin-top: 3px; }
-    .tooltip.tooltip-bottom .tooltip-arrow,
-    .tooltip.bs-tether-element-attached-top .tooltip-arrow {
+    .tooltip.tooltip-bottom .tooltip-arrow, .tooltip.bs-tether-element-attached-top .tooltip-arrow {
       top: 0;
       left: 50%;
       margin-left: -5px;
       border-width: 0 5px 5px;
       border-bottom-color: #000; }
-  .tooltip.tooltip-left,
-  .tooltip.bs-tether-element-attached-right {
+  .tooltip.tooltip-left, .tooltip.bs-tether-element-attached-right {
     padding: 0 5px;
     margin-left: -3px; }
-    .tooltip.tooltip-left .tooltip-arrow,
-    .tooltip.bs-tether-element-attached-right .tooltip-arrow {
+    .tooltip.tooltip-left .tooltip-arrow, .tooltip.bs-tether-element-attached-right .tooltip-arrow {
       top: 50%;
       right: 0;
       margin-top: -5px;
@@ -3043,69 +2888,57 @@ button.close {
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 0.3rem; }
-  .popover.popover-top,
-  .popover.bs-tether-element-attached-bottom {
+  .popover.popover-top, .popover.bs-tether-element-attached-bottom {
     margin-top: -10px; }
-    .popover.popover-top .popover-arrow,
-    .popover.bs-tether-element-attached-bottom .popover-arrow {
+    .popover.popover-top .popover-arrow, .popover.bs-tether-element-attached-bottom .popover-arrow {
       bottom: -11px;
       left: 50%;
       margin-left: -11px;
       border-top-color: rgba(0, 0, 0, 0.25);
       border-bottom-width: 0; }
-      .popover.popover-top .popover-arrow:after,
-      .popover.bs-tether-element-attached-bottom .popover-arrow:after {
+      .popover.popover-top .popover-arrow:after, .popover.bs-tether-element-attached-bottom .popover-arrow:after {
         bottom: 1px;
         margin-left: -10px;
         content: "";
         border-top-color: #fff;
         border-bottom-width: 0; }
-  .popover.popover-right,
-  .popover.bs-tether-element-attached-left {
+  .popover.popover-right, .popover.bs-tether-element-attached-left {
     margin-left: 10px; }
-    .popover.popover-right .popover-arrow,
-    .popover.bs-tether-element-attached-left .popover-arrow {
+    .popover.popover-right .popover-arrow, .popover.bs-tether-element-attached-left .popover-arrow {
       top: 50%;
       left: -11px;
       margin-top: -11px;
       border-right-color: rgba(0, 0, 0, 0.25);
       border-left-width: 0; }
-      .popover.popover-right .popover-arrow:after,
-      .popover.bs-tether-element-attached-left .popover-arrow:after {
+      .popover.popover-right .popover-arrow:after, .popover.bs-tether-element-attached-left .popover-arrow:after {
         bottom: -10px;
         left: 1px;
         content: "";
         border-right-color: #fff;
         border-left-width: 0; }
-  .popover.popover-bottom,
-  .popover.bs-tether-element-attached-top {
+  .popover.popover-bottom, .popover.bs-tether-element-attached-top {
     margin-top: 10px; }
-    .popover.popover-bottom .popover-arrow,
-    .popover.bs-tether-element-attached-top .popover-arrow {
+    .popover.popover-bottom .popover-arrow, .popover.bs-tether-element-attached-top .popover-arrow {
       top: -11px;
       left: 50%;
       margin-left: -11px;
       border-top-width: 0;
       border-bottom-color: rgba(0, 0, 0, 0.25); }
-      .popover.popover-bottom .popover-arrow:after,
-      .popover.bs-tether-element-attached-top .popover-arrow:after {
+      .popover.popover-bottom .popover-arrow:after, .popover.bs-tether-element-attached-top .popover-arrow:after {
         top: 1px;
         margin-left: -10px;
         content: "";
         border-top-width: 0;
         border-bottom-color: #fff; }
-  .popover.popover-left,
-  .popover.bs-tether-element-attached-right {
+  .popover.popover-left, .popover.bs-tether-element-attached-right {
     margin-left: -10px; }
-    .popover.popover-left .popover-arrow,
-    .popover.bs-tether-element-attached-right .popover-arrow {
+    .popover.popover-left .popover-arrow, .popover.bs-tether-element-attached-right .popover-arrow {
       top: 50%;
       right: -11px;
       margin-top: -11px;
       border-right-width: 0;
       border-left-color: rgba(0, 0, 0, 0.25); }
-      .popover.popover-left .popover-arrow:after,
-      .popover.bs-tether-element-attached-right .popover-arrow:after {
+      .popover.popover-left .popover-arrow:after, .popover.bs-tether-element-attached-right .popover-arrow:after {
         right: 1px;
         bottom: -10px;
         content: "";
@@ -3123,8 +2956,7 @@ button.close {
 .popover-content {
   padding: 9px 14px; }
 
-.popover-arrow,
-.popover-arrow:after {
+.popover-arrow, .popover-arrow:after {
   position: absolute;
   display: block;
   width: 0;
@@ -3139,8 +2971,7 @@ button.close {
   content: "";
   border-width: 10px; }
 
-.clearfix:before,
-.clearfix:after {
+.clearfix:before, .clearfix:after {
   content: " ";
   display: table; }
 
@@ -3168,8 +2999,7 @@ button.close {
   clip: rect(0, 0, 0, 0);
   border: 0; }
 
-.sr-only-focusable:active,
-.sr-only-focusable:focus {
+.sr-only-focusable:active, .sr-only-focusable:focus {
   position: static;
   width: auto;
   height: auto;
@@ -3266,36 +3096,31 @@ button.close {
 .text-primary {
   color: #0275d8; }
 
-a.text-primary:focus,
-a.text-primary:hover {
+a.text-primary:focus, a.text-primary:hover {
   color: #025aa5; }
 
 .text-success {
   color: #5cb85c; }
 
-a.text-success:focus,
-a.text-success:hover {
+a.text-success:focus, a.text-success:hover {
   color: #449d44; }
 
 .text-info {
   color: #5bc0de; }
 
-a.text-info:focus,
-a.text-info:hover {
+a.text-info:focus, a.text-info:hover {
   color: #31b0d5; }
 
 .text-warning {
   color: #f0ad4e; }
 
-a.text-warning:focus,
-a.text-warning:hover {
+a.text-warning:focus, a.text-warning:hover {
   color: #ec971f; }
 
 .text-danger {
   color: #d9534f; }
 
-a.text-danger:focus,
-a.text-danger:hover {
+a.text-danger:focus, a.text-danger:hover {
   color: #c9302c; }
 
 .bg-inverse {
@@ -3309,40 +3134,35 @@ a.text-danger:hover {
   color: #fff;
   background-color: #0275d8; }
 
-a.bg-primary:focus,
-a.bg-primary:hover {
+a.bg-primary:focus, a.bg-primary:hover {
   background-color: #025aa5; }
 
 .bg-success {
   color: #fff;
   background-color: #5cb85c; }
 
-a.bg-success:focus,
-a.bg-success:hover {
+a.bg-success:focus, a.bg-success:hover {
   background-color: #449d44; }
 
 .bg-info {
   color: #fff;
   background-color: #5bc0de; }
 
-a.bg-info:focus,
-a.bg-info:hover {
+a.bg-info:focus, a.bg-info:hover {
   background-color: #31b0d5; }
 
 .bg-warning {
   color: #fff;
   background-color: #f0ad4e; }
 
-a.bg-warning:focus,
-a.bg-warning:hover {
+a.bg-warning:focus, a.bg-warning:hover {
   background-color: #ec971f; }
 
 .bg-danger {
   color: #fff;
   background-color: #d9534f; }
 
-a.bg-danger:focus,
-a.bg-danger:hover {
+a.bg-danger:focus, a.bg-danger:hover {
   background-color: #c9302c; }
 
 .m-a-0 {
@@ -3660,7 +3480,7 @@ a.bg-danger:hover {
     left: -1.85714em; }
 
 .fa-border {
-  padding: 0.2em 0.25em 0.15em;
+  padding: .2em .25em .15em;
   border: solid 0.08em #eee;
   border-radius: .1em; }
 
@@ -5425,28 +5245,23 @@ a.bg-danger:hover {
 .fa-expeditedssl:before {
   content: ""; }
 
-.fa-battery-4:before,
-.component-battery-life-4:before,
+.fa-battery-4:before, .component-battery-life-4:before,
 .fa-battery-full:before {
   content: ""; }
 
-.fa-battery-3:before,
-.component-battery-life-3:before,
+.fa-battery-3:before, .component-battery-life-3:before,
 .fa-battery-three-quarters:before {
   content: ""; }
 
-.fa-battery-2:before,
-.component-battery-life-2:before,
+.fa-battery-2:before, .component-battery-life-2:before,
 .fa-battery-half:before {
   content: ""; }
 
-.fa-battery-1:before,
-.component-battery-life-1:before,
+.fa-battery-1:before, .component-battery-life-1:before,
 .fa-battery-quarter:before {
   content: ""; }
 
-.fa-battery-0:before,
-.component-battery-life-0:before,
+.fa-battery-0:before, .component-battery-life-0:before,
 .fa-battery-empty:before {
   content: ""; }
 
@@ -5706,7 +5521,7 @@ a.bg-danger:hover {
 .-text-crossed {
   text-decoration: line-through; }
 
-.-rounded, .profile, .map-container, .profile-container, .img-container, .img-container-small, .component-skill--javascript .component-skill-img, .component-skill--java .component-skill-img, .component-skill--c .component-skill-img, .component-skill--php .component-skill-img, .component-skill--html5 .component-skill-img, .component-skill--css3 .component-skill-img, .component-skill--angular .component-skill-img, .component-skill--eslint .component-skill-img, .component-skill--socket .component-skill-img,  .component-skill--react .component-skill-img, .component-skill--node .component-skill-img, .component-skill--android .component-skill-img, .component-skill--polymer .component-skill-img, .component-skill--jquery .component-skill-img, .component-skill--underscore .component-skill-img, .component-skill--bower .component-skill-img, .component-skill--babel .component-skill-img, .component-skill--yeoman .component-skill-img, .component-skill--gulp .component-skill-img, .component-skill--less .component-skill-img, .component-skill--sass .component-skill-img, .component-skill--grunt .component-skill-img, .component-skill--karma .component-skill-img, .component-skill--jenkins .component-skill-img, .component-skill--jade .component-skill-img, .component-skill--mocha .component-skill-img, .component-skill--github .component-skill-img, .component-skill--jekyll .component-skill-img, .component-skill--arduino .component-skill-img, .component-skill--spark .component-skill-img, .component-skill--bootstrap .component-skill-img, .component-skill--mongo .component-skill-img {
+.-rounded, .profile, .map-container, .profile-container, .img-container, .img-container-small, .component-skill--javascript .component-skill-img, .component-skill--java .component-skill-img, .component-skill--c .component-skill-img, .component-skill--php .component-skill-img, .component-skill--html5 .component-skill-img, .component-skill--css3 .component-skill-img, .component-skill--angular .component-skill-img, .component-skill--react .component-skill-img, .component-skill--eslint .component-skill-img, .component-skill--socket .component-skill-img, .component-skill--node .component-skill-img, .component-skill--android .component-skill-img, .component-skill--polymer .component-skill-img, .component-skill--jquery .component-skill-img, .component-skill--underscore .component-skill-img, .component-skill--bower .component-skill-img, .component-skill--babel .component-skill-img, .component-skill--yeoman .component-skill-img, .component-skill--gulp .component-skill-img, .component-skill--less .component-skill-img, .component-skill--sass .component-skill-img, .component-skill--grunt .component-skill-img, .component-skill--karma .component-skill-img, .component-skill--jenkins .component-skill-img, .component-skill--jade .component-skill-img, .component-skill--mocha .component-skill-img, .component-skill--github .component-skill-img, .component-skill--jekyll .component-skill-img, .component-skill--arduino .component-skill-img, .component-skill--spark .component-skill-img, .component-skill--bootstrap .component-skill-img, .component-skill--mongo .component-skill-img {
   border-radius: 50%; }
 
 .-inline {
@@ -5718,7 +5533,7 @@ a.bg-danger:hover {
 .-max-hpercent, .-max-percent, .profile {
   height: 100%; }
 
-.-max-wpercent {
+.-max-wpercent, .-max-percent, .profile {
   width: 100%; }
 
 .-clear-bezel {
@@ -5728,7 +5543,7 @@ a.bg-danger:hover {
 .-pointer {
   cursor: pointer; }
 
-.-small, .-small-1 {
+.-small, .-small-1, .normal__icon, .component-battery-life, .component-battery-life-0, .component-battery-life-1, .component-battery-life-2, .component-battery-life-3, .component-battery-life-4 {
   font-size: 80% !important; }
 
 .-small-2 {
@@ -5851,7 +5666,7 @@ section .content, #fixed-header .content {
   #fixed-header.visible {
     display: flex; }
 
-@-webkit-keyframes tick {
+@-webkit-keyframes $animation-name {
   from {
     opacity: 0;
     filter: alpha(opacity=0);
@@ -5865,7 +5680,7 @@ section .content, #fixed-header .content {
     filter: alpha(opacity=0);
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; } }
 
-@-moz-keyframes tick {
+@-moz-keyframes $animation-name {
   from {
     opacity: 0;
     filter: alpha(opacity=0);
@@ -5879,7 +5694,7 @@ section .content, #fixed-header .content {
     filter: alpha(opacity=0);
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; } }
 
-@-ms-keyframes tick {
+@-ms-keyframes $animation-name {
   from {
     opacity: 0;
     filter: alpha(opacity=0);
@@ -5893,7 +5708,7 @@ section .content, #fixed-header .content {
     filter: alpha(opacity=0);
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; } }
 
-@-o-keyframes tick {
+@-o-keyframes $animation-name {
   from {
     opacity: 0;
     filter: alpha(opacity=0);
@@ -5907,7 +5722,7 @@ section .content, #fixed-header .content {
     filter: alpha(opacity=0);
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; } }
 
-@keyframes tick {
+@keyframes $animation-name {
   from {
     opacity: 0;
     filter: alpha(opacity=0);
@@ -5921,7 +5736,7 @@ section .content, #fixed-header .content {
     filter: alpha(opacity=0);
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; } }
 
-@-webkit-keyframes arrow-down {
+@-webkit-keyframes $animation-name {
   from {
     opacity: 1;
     filter: alpha(opacity=100);
@@ -5939,7 +5754,7 @@ section .content, #fixed-header .content {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     top: 0; } }
 
-@-moz-keyframes arrow-down {
+@-moz-keyframes $animation-name {
   from {
     opacity: 1;
     filter: alpha(opacity=100);
@@ -5957,7 +5772,7 @@ section .content, #fixed-header .content {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     top: 0; } }
 
-@-ms-keyframes arrow-down {
+@-ms-keyframes $animation-name {
   from {
     opacity: 1;
     filter: alpha(opacity=100);
@@ -5975,7 +5790,7 @@ section .content, #fixed-header .content {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     top: 0; } }
 
-@-o-keyframes arrow-down {
+@-o-keyframes $animation-name {
   from {
     opacity: 1;
     filter: alpha(opacity=100);
@@ -5993,7 +5808,7 @@ section .content, #fixed-header .content {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     top: 0; } }
 
-@keyframes arrow-down {
+@keyframes $animation-name {
   from {
     opacity: 1;
     filter: alpha(opacity=100);
@@ -6011,7 +5826,7 @@ section .content, #fixed-header .content {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     top: 0; } }
 
-@-webkit-keyframes background {
+@-webkit-keyframes $animation-name {
   from {
     background-position: 0% 50%; }
   50% {
@@ -6019,7 +5834,7 @@ section .content, #fixed-header .content {
   to {
     background-position: 0% 50%; } }
 
-@-moz-keyframes background {
+@-moz-keyframes $animation-name {
   from {
     background-position: 0% 50%; }
   50% {
@@ -6027,7 +5842,7 @@ section .content, #fixed-header .content {
   to {
     background-position: 0% 50%; } }
 
-@-ms-keyframes background {
+@-ms-keyframes $animation-name {
   from {
     background-position: 0% 50%; }
   50% {
@@ -6035,7 +5850,7 @@ section .content, #fixed-header .content {
   to {
     background-position: 0% 50%; } }
 
-@-o-keyframes background {
+@-o-keyframes $animation-name {
   from {
     background-position: 0% 50%; }
   50% {
@@ -6043,7 +5858,7 @@ section .content, #fixed-header .content {
   to {
     background-position: 0% 50%; } }
 
-@keyframes background {
+@keyframes $animation-name {
   from {
     background-position: 0% 50%; }
   50% {
@@ -6051,7 +5866,7 @@ section .content, #fixed-header .content {
   to {
     background-position: 0% 50%; } }
 
-@-webkit-keyframes battery-tick {
+@-webkit-keyframes $animation-name {
   from {
     content: "\f243"; }
   50% {
@@ -6059,7 +5874,7 @@ section .content, #fixed-header .content {
   to {
     content: "\f243"; } }
 
-@-moz-keyframes battery-tick {
+@-moz-keyframes $animation-name {
   from {
     content: "\f243"; }
   50% {
@@ -6067,7 +5882,7 @@ section .content, #fixed-header .content {
   to {
     content: "\f243"; } }
 
-@-ms-keyframes battery-tick {
+@-ms-keyframes $animation-name {
   from {
     content: "\f243"; }
   50% {
@@ -6075,7 +5890,7 @@ section .content, #fixed-header .content {
   to {
     content: "\f243"; } }
 
-@-o-keyframes battery-tick {
+@-o-keyframes $animation-name {
   from {
     content: "\f243"; }
   50% {
@@ -6083,7 +5898,7 @@ section .content, #fixed-header .content {
   to {
     content: "\f243"; } }
 
-@keyframes battery-tick {
+@keyframes $animation-name {
   from {
     content: "\f243"; }
   50% {
@@ -6106,7 +5921,7 @@ section .content, #fixed-header .content {
 .list-menu .list-education a {
   border-bottom-color: #34495e; }
   .list-menu .list-education a:hover {
-    border-bottom-color: #7795b4; }
+    border-bottom-color: #7796b4; }
 
 .list-menu .list-projects a {
   border-bottom-color: #16a085; }
@@ -6309,7 +6124,7 @@ section.background {
   background-repeat: no-repeat;
   background-position: 50%; }
 
-.profile-container-styles, .map-container, .profile-container, .img-container, .img-container-small, .component-skill--javascript .component-skill-img, .component-skill--java .component-skill-img, .component-skill--c .component-skill-img, .component-skill--php .component-skill-img, .component-skill--html5 .component-skill-img, .component-skill--css3 .component-skill-img, .component-skill--angular .component-skill-img, .component-skill--eslint .component-skill-img, .component-skill--socket .component-skill-img, .component-skill--react .component-skill-img, .component-skill--node .component-skill-img, .component-skill--android .component-skill-img, .component-skill--polymer .component-skill-img, .component-skill--jquery .component-skill-img, .component-skill--underscore .component-skill-img, .component-skill--bower .component-skill-img, .component-skill--babel .component-skill-img, .component-skill--yeoman .component-skill-img, .component-skill--gulp .component-skill-img, .component-skill--less .component-skill-img, .component-skill--sass .component-skill-img, .component-skill--grunt .component-skill-img, .component-skill--karma .component-skill-img, .component-skill--jenkins .component-skill-img, .component-skill--jade .component-skill-img, .component-skill--mocha .component-skill-img, .component-skill--github .component-skill-img, .component-skill--jekyll .component-skill-img, .component-skill--arduino .component-skill-img, .component-skill--spark .component-skill-img, .component-skill--bootstrap .component-skill-img, .component-skill--mongo .component-skill-img {
+.profile-container-styles, .map-container, .profile-container, .img-container, .img-container-small, .component-skill--javascript .component-skill-img, .component-skill--java .component-skill-img, .component-skill--c .component-skill-img, .component-skill--php .component-skill-img, .component-skill--html5 .component-skill-img, .component-skill--css3 .component-skill-img, .component-skill--angular .component-skill-img, .component-skill--react .component-skill-img, .component-skill--eslint .component-skill-img, .component-skill--socket .component-skill-img, .component-skill--node .component-skill-img, .component-skill--android .component-skill-img, .component-skill--polymer .component-skill-img, .component-skill--jquery .component-skill-img, .component-skill--underscore .component-skill-img, .component-skill--bower .component-skill-img, .component-skill--babel .component-skill-img, .component-skill--yeoman .component-skill-img, .component-skill--gulp .component-skill-img, .component-skill--less .component-skill-img, .component-skill--sass .component-skill-img, .component-skill--grunt .component-skill-img, .component-skill--karma .component-skill-img, .component-skill--jenkins .component-skill-img, .component-skill--jade .component-skill-img, .component-skill--mocha .component-skill-img, .component-skill--github .component-skill-img, .component-skill--jekyll .component-skill-img, .component-skill--arduino .component-skill-img, .component-skill--spark .component-skill-img, .component-skill--bootstrap .component-skill-img, .component-skill--mongo .component-skill-img {
   border: 2px solid #D0CFCC;
   padding: 2px;
   -webkit-transition: 200ms all ease;
@@ -6322,7 +6137,7 @@ section.background {
   -ms-filter: brightness(90%);
   -o-filter: brightness(90%);
   filter: brightness(90%); }
-  .profile-container-styles:hover, .map-container:hover, .profile-container:hover, .img-container:hover, .img-container-small:hover, .component-skill--javascript .component-skill-img:hover, .component-skill--java .component-skill-img:hover, .component-skill--c .component-skill-img:hover, .component-skill--php .component-skill-img:hover, .component-skill--html5 .component-skill-img:hover, .component-skill--css3 .component-skill-img:hover, .component-skill--angular .component-skill-img: .component-skill--eslint .component-skill-img: .component-skill--socket .component-skill-img: .component-skill--react .component-skill-img:hover, .component-skill--node .component-skill-img:hover, .component-skill--android .component-skill-img:hover, .component-skill--polymer .component-skill-img:hover, .component-skill--jquery .component-skill-img:hover, .component-skill--underscore .component-skill-img:hover, .component-skill--bower .component-skill-img:hover, .component-skill--babel .component-skill-img:hover, .component-skill--yeoman .component-skill-img:hover, .component-skill--gulp .component-skill-img:hover, .component-skill--less .component-skill-img:hover, .component-skill--sass .component-skill-img:hover, .component-skill--grunt .component-skill-img:hover, .component-skill--karma .component-skill-img:hover, .component-skill--jenkins .component-skill-img:hover, .component-skill--jade .component-skill-img:hover, .component-skill--mocha .component-skill-img:hover, .component-skill--github .component-skill-img:hover, .component-skill--jekyll .component-skill-img:hover, .component-skill--arduino .component-skill-img:hover, .component-skill--spark .component-skill-img:hover, .component-skill--bootstrap .component-skill-img:hover, .component-skill--mongo .component-skill-img:hover {
+  .profile-container-styles:hover, .map-container:hover, .profile-container:hover, .img-container:hover, .img-container-small:hover, .component-skill--javascript .component-skill-img:hover, .component-skill--java .component-skill-img:hover, .component-skill--c .component-skill-img:hover, .component-skill--php .component-skill-img:hover, .component-skill--html5 .component-skill-img:hover, .component-skill--css3 .component-skill-img:hover, .component-skill--angular .component-skill-img:hover, .component-skill--react .component-skill-img:hover, .component-skill--eslint .component-skill-img:hover, .component-skill--socket .component-skill-img:hover, .component-skill--node .component-skill-img:hover, .component-skill--android .component-skill-img:hover, .component-skill--polymer .component-skill-img:hover, .component-skill--jquery .component-skill-img:hover, .component-skill--underscore .component-skill-img:hover, .component-skill--bower .component-skill-img:hover, .component-skill--babel .component-skill-img:hover, .component-skill--yeoman .component-skill-img:hover, .component-skill--gulp .component-skill-img:hover, .component-skill--less .component-skill-img:hover, .component-skill--sass .component-skill-img:hover, .component-skill--grunt .component-skill-img:hover, .component-skill--karma .component-skill-img:hover, .component-skill--jenkins .component-skill-img:hover, .component-skill--jade .component-skill-img:hover, .component-skill--mocha .component-skill-img:hover, .component-skill--github .component-skill-img:hover, .component-skill--jekyll .component-skill-img:hover, .component-skill--arduino .component-skill-img:hover, .component-skill--spark .component-skill-img:hover, .component-skill--bootstrap .component-skill-img:hover, .component-skill--mongo .component-skill-img:hover {
     -webkit-filter: brightness(100%);
     -moz-filter: brightness(100%);
     -ms-filter: brightness(100%);
@@ -6356,22 +6171,22 @@ section.background {
     width: 250px;
     height: 250px; } }
 
-.img-container-small, .component-skill--javascript .component-skill-img, .component-skill--java .component-skill-img, .component-skill--c .component-skill-img, .component-skill--php .component-skill-img, .component-skill--html5 .component-skill-img, .component-skill--css3 .component-skill-img, .component-skill--angular .component-skill-img, .component-skill--eslint .component-skill-img, .component-skill--socket .component-skill-img, .component-skill--react .component-skill-img, .component-skill--node .component-skill-img, .component-skill--android .component-skill-img, .component-skill--polymer .component-skill-img, .component-skill--jquery .component-skill-img, .component-skill--underscore .component-skill-img, .component-skill--bower .component-skill-img, .component-skill--babel .component-skill-img, .component-skill--yeoman .component-skill-img, .component-skill--gulp .component-skill-img, .component-skill--less .component-skill-img, .component-skill--sass .component-skill-img, .component-skill--grunt .component-skill-img, .component-skill--karma .component-skill-img, .component-skill--jenkins .component-skill-img, .component-skill--jade .component-skill-img, .component-skill--mocha .component-skill-img, .component-skill--github .component-skill-img, .component-skill--jekyll .component-skill-img, .component-skill--arduino .component-skill-img, .component-skill--spark .component-skill-img, .component-skill--bootstrap .component-skill-img, .component-skill--mongo .component-skill-img {
+.img-container-small, .component-skill--javascript .component-skill-img, .component-skill--java .component-skill-img, .component-skill--c .component-skill-img, .component-skill--php .component-skill-img, .component-skill--html5 .component-skill-img, .component-skill--css3 .component-skill-img, .component-skill--angular .component-skill-img, .component-skill--react .component-skill-img, .component-skill--eslint .component-skill-img, .component-skill--socket .component-skill-img, .component-skill--node .component-skill-img, .component-skill--android .component-skill-img, .component-skill--polymer .component-skill-img, .component-skill--jquery .component-skill-img, .component-skill--underscore .component-skill-img, .component-skill--bower .component-skill-img, .component-skill--babel .component-skill-img, .component-skill--yeoman .component-skill-img, .component-skill--gulp .component-skill-img, .component-skill--less .component-skill-img, .component-skill--sass .component-skill-img, .component-skill--grunt .component-skill-img, .component-skill--karma .component-skill-img, .component-skill--jenkins .component-skill-img, .component-skill--jade .component-skill-img, .component-skill--mocha .component-skill-img, .component-skill--github .component-skill-img, .component-skill--jekyll .component-skill-img, .component-skill--arduino .component-skill-img, .component-skill--spark .component-skill-img, .component-skill--bootstrap .component-skill-img, .component-skill--mongo .component-skill-img {
   border: none;
   padding: 0;
   display: inline-block; }
   @media (max-width: 33.99em) {
-    .img-container-small, .component-skill--javascript .component-skill-img, .component-skill--java .component-skill-img, .component-skill--c .component-skill-img, .component-skill--php .component-skill-img, .component-skill--html5 .component-skill-img, .component-skill--css3 .component-skill-img, .component-skill--angular .component-skill-img, .component-skill--eslint .component-skill-img, .component-skill--socket .component-skill-img, .component-skill--react .component-skill-img, .component-skill--node .component-skill-img, .component-skill--android .component-skill-img, .component-skill--polymer .component-skill-img, .component-skill--jquery .component-skill-img, .component-skill--underscore .component-skill-img, .component-skill--bower .component-skill-img, .component-skill--babel .component-skill-img, .component-skill--yeoman .component-skill-img, .component-skill--gulp .component-skill-img, .component-skill--less .component-skill-img, .component-skill--sass .component-skill-img, .component-skill--grunt .component-skill-img, .component-skill--karma .component-skill-img, .component-skill--jenkins .component-skill-img, .component-skill--jade .component-skill-img, .component-skill--mocha .component-skill-img, .component-skill--github .component-skill-img, .component-skill--jekyll .component-skill-img, .component-skill--arduino .component-skill-img, .component-skill--spark .component-skill-img, .component-skill--bootstrap .component-skill-img, .component-skill--mongo .component-skill-img {
+    .img-container-small, .component-skill--javascript .component-skill-img, .component-skill--java .component-skill-img, .component-skill--c .component-skill-img, .component-skill--php .component-skill-img, .component-skill--html5 .component-skill-img, .component-skill--css3 .component-skill-img, .component-skill--angular .component-skill-img, .component-skill--react .component-skill-img, .component-skill--eslint .component-skill-img, .component-skill--socket .component-skill-img, .component-skill--node .component-skill-img, .component-skill--android .component-skill-img, .component-skill--polymer .component-skill-img, .component-skill--jquery .component-skill-img, .component-skill--underscore .component-skill-img, .component-skill--bower .component-skill-img, .component-skill--babel .component-skill-img, .component-skill--yeoman .component-skill-img, .component-skill--gulp .component-skill-img, .component-skill--less .component-skill-img, .component-skill--sass .component-skill-img, .component-skill--grunt .component-skill-img, .component-skill--karma .component-skill-img, .component-skill--jenkins .component-skill-img, .component-skill--jade .component-skill-img, .component-skill--mocha .component-skill-img, .component-skill--github .component-skill-img, .component-skill--jekyll .component-skill-img, .component-skill--arduino .component-skill-img, .component-skill--spark .component-skill-img, .component-skill--bootstrap .component-skill-img, .component-skill--mongo .component-skill-img {
       width: 60px;
       height: 60px;
       float: left;
       margin-right: 10px; } }
   @media (min-width: 73em) {
-    .img-container-small, .component-skill--javascript .component-skill-img, .component-skill--java .component-skill-img, .component-skill--c .component-skill-img, .component-skill--php .component-skill-img, .component-skill--html5 .component-skill-img, .component-skill--css3 .component-skill-img, .component-skill--angular .component-skill-img, .component-skill--eslint .component-skill-img, .component-skill--socket .component-skill-img, .component-skill--react .component-skill-img, .component-skill--node .component-skill-img, .component-skill--android .component-skill-img, .component-skill--polymer .component-skill-img, .component-skill--jquery .component-skill-img, .component-skill--underscore .component-skill-img, .component-skill--bower .component-skill-img, .component-skill--babel .component-skill-img, .component-skill--yeoman .component-skill-img, .component-skill--gulp .component-skill-img, .component-skill--less .component-skill-img, .component-skill--sass .component-skill-img, .component-skill--grunt .component-skill-img, .component-skill--karma .component-skill-img, .component-skill--jenkins .component-skill-img, .component-skill--jade .component-skill-img, .component-skill--mocha .component-skill-img, .component-skill--github .component-skill-img, .component-skill--jekyll .component-skill-img, .component-skill--arduino .component-skill-img, .component-skill--spark .component-skill-img, .component-skill--bootstrap .component-skill-img, .component-skill--mongo .component-skill-img {
+    .img-container-small, .component-skill--javascript .component-skill-img, .component-skill--java .component-skill-img, .component-skill--c .component-skill-img, .component-skill--php .component-skill-img, .component-skill--html5 .component-skill-img, .component-skill--css3 .component-skill-img, .component-skill--angular .component-skill-img, .component-skill--react .component-skill-img, .component-skill--eslint .component-skill-img, .component-skill--socket .component-skill-img, .component-skill--node .component-skill-img, .component-skill--android .component-skill-img, .component-skill--polymer .component-skill-img, .component-skill--jquery .component-skill-img, .component-skill--underscore .component-skill-img, .component-skill--bower .component-skill-img, .component-skill--babel .component-skill-img, .component-skill--yeoman .component-skill-img, .component-skill--gulp .component-skill-img, .component-skill--less .component-skill-img, .component-skill--sass .component-skill-img, .component-skill--grunt .component-skill-img, .component-skill--karma .component-skill-img, .component-skill--jenkins .component-skill-img, .component-skill--jade .component-skill-img, .component-skill--mocha .component-skill-img, .component-skill--github .component-skill-img, .component-skill--jekyll .component-skill-img, .component-skill--arduino .component-skill-img, .component-skill--spark .component-skill-img, .component-skill--bootstrap .component-skill-img, .component-skill--mongo .component-skill-img {
       width: 60px;
       height: 60px; } }
   @media (min-width: 34em) {
-    .img-container-small, .component-skill--javascript .component-skill-img, .component-skill--java .component-skill-img, .component-skill--c .component-skill-img, .component-skill--php .component-skill-img, .component-skill--html5 .component-skill-img, .component-skill--css3 .component-skill-img, .component-skill--angular .component-skill-img, .component-skill--eslint .component-skill-img, .component-skill--socket .component-skill-img, .component-skill--react .component-skill-img, .component-skill--node .component-skill-img, .component-skill--android .component-skill-img, .component-skill--polymer .component-skill-img, .component-skill--jquery .component-skill-img, .component-skill--underscore .component-skill-img, .component-skill--bower .component-skill-img, .component-skill--babel .component-skill-img, .component-skill--yeoman .component-skill-img, .component-skill--gulp .component-skill-img, .component-skill--less .component-skill-img, .component-skill--sass .component-skill-img, .component-skill--grunt .component-skill-img, .component-skill--karma .component-skill-img, .component-skill--jenkins .component-skill-img, .component-skill--jade .component-skill-img, .component-skill--mocha .component-skill-img, .component-skill--github .component-skill-img, .component-skill--jekyll .component-skill-img, .component-skill--arduino .component-skill-img, .component-skill--spark .component-skill-img, .component-skill--bootstrap .component-skill-img, .component-skill--mongo .component-skill-img {
+    .img-container-small, .component-skill--javascript .component-skill-img, .component-skill--java .component-skill-img, .component-skill--c .component-skill-img, .component-skill--php .component-skill-img, .component-skill--html5 .component-skill-img, .component-skill--css3 .component-skill-img, .component-skill--angular .component-skill-img, .component-skill--react .component-skill-img, .component-skill--eslint .component-skill-img, .component-skill--socket .component-skill-img, .component-skill--node .component-skill-img, .component-skill--android .component-skill-img, .component-skill--polymer .component-skill-img, .component-skill--jquery .component-skill-img, .component-skill--underscore .component-skill-img, .component-skill--bower .component-skill-img, .component-skill--babel .component-skill-img, .component-skill--yeoman .component-skill-img, .component-skill--gulp .component-skill-img, .component-skill--less .component-skill-img, .component-skill--sass .component-skill-img, .component-skill--grunt .component-skill-img, .component-skill--karma .component-skill-img, .component-skill--jenkins .component-skill-img, .component-skill--jade .component-skill-img, .component-skill--mocha .component-skill-img, .component-skill--github .component-skill-img, .component-skill--jekyll .component-skill-img, .component-skill--arduino .component-skill-img, .component-skill--spark .component-skill-img, .component-skill--bootstrap .component-skill-img, .component-skill--mongo .component-skill-img {
       width: 30px;
       height: 30px; } }
 
@@ -6404,7 +6219,7 @@ a.not-clear {
   top: -1px;
   color: #666; }
 
-.skill-title, .component-skill--javascript .component-skill-title, .component-skill--java .component-skill-title, .component-skill--c .component-skill-title, .component-skill--php .component-skill-title, .component-skill--html5 .component-skill-title, .component-skill--css3 .component-skill-title, .component-skill--angular .component-skill-title, .component-skill--eslint .component-skill-title, .component-skill--socket .component-skill-title, .component-skill--react .component-skill-title, .component-skill--node .component-skill-title, .component-skill--android .component-skill-title, .component-skill--polymer .component-skill-title, .component-skill--jquery .component-skill-title, .component-skill--underscore .component-skill-title, .component-skill--bower .component-skill-title, .component-skill--babel .component-skill-title, .component-skill--yeoman .component-skill-title, .component-skill--gulp .component-skill-title, .component-skill--less .component-skill-title, .component-skill--sass .component-skill-title, .component-skill--grunt .component-skill-title, .component-skill--karma .component-skill-title, .component-skill--jenkins .component-skill-title, .component-skill--jade .component-skill-title, .component-skill--mocha .component-skill-title, .component-skill--github .component-skill-title, .component-skill--jekyll .component-skill-title, .component-skill--arduino .component-skill-title, .component-skill--spark .component-skill-title, .component-skill--bootstrap .component-skill-title, .component-skill--mongo .component-skill-title {
+.skill-title, .component-skill--javascript .component-skill-title, .component-skill--java .component-skill-title, .component-skill--c .component-skill-title, .component-skill--php .component-skill-title, .component-skill--html5 .component-skill-title, .component-skill--css3 .component-skill-title, .component-skill--angular .component-skill-title, .component-skill--react .component-skill-title, .component-skill--eslint .component-skill-title, .component-skill--socket .component-skill-title, .component-skill--node .component-skill-title, .component-skill--android .component-skill-title, .component-skill--polymer .component-skill-title, .component-skill--jquery .component-skill-title, .component-skill--underscore .component-skill-title, .component-skill--bower .component-skill-title, .component-skill--babel .component-skill-title, .component-skill--yeoman .component-skill-title, .component-skill--gulp .component-skill-title, .component-skill--less .component-skill-title, .component-skill--sass .component-skill-title, .component-skill--grunt .component-skill-title, .component-skill--karma .component-skill-title, .component-skill--jenkins .component-skill-title, .component-skill--jade .component-skill-title, .component-skill--mocha .component-skill-title, .component-skill--github .component-skill-title, .component-skill--jekyll .component-skill-title, .component-skill--arduino .component-skill-title, .component-skill--spark .component-skill-title, .component-skill--bootstrap .component-skill-title, .component-skill--mongo .component-skill-title {
   color: #777;
   position: relative;
   top: -8px; }
@@ -6480,6 +6295,16 @@ a.not-clear {
   background-position: 50%; }
 
 @media (min-width: 34em) {
+  .component-skill--react .component-skill-title:before {
+    content: "React"; } }
+
+.component-skill--react .component-skill-img {
+  background-image: url(/build/img/react-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+@media (min-width: 34em) {
   .component-skill--eslint .component-skill-title:before {
     content: "ESlint"; } }
 
@@ -6495,16 +6320,6 @@ a.not-clear {
 
 .component-skill--socket .component-skill-img {
   background-image: url(/build/img/socket-logo.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: 50%; }
-
-@media (min-width: 34em) {
-  .component-skill--react .component-skill-title:before {
-    content: "React"; } }
-
-.component-skill--react .component-skill-img {
-  background-image: url(/build/img/react-logo.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 50%; }
@@ -6750,8 +6565,7 @@ a.not-clear {
   margin-left: auto;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem; }
-  .container-max:before,
-  .container-max:after {
+  .container-max:before, .container-max:after {
     content: " ";
     display: table; }
   .container-max:after {

@@ -97,7 +97,7 @@ section.background {
 		@extend .flex--hcenter;
 	}
 	&.flex--md-center {
-		@media (max-width: 61.9em) { 
+		@media (max-width: 61.9em) {
 			@extend .flex--center;
 			width: 100%;
 		}
@@ -310,10 +310,10 @@ a.not-clear {
 	font-size: 1rem;
 }
 .normal__icon {
-	@extend .small-1;
+	@extend .-small-1;
 	position: relative;
 	top: -1px;
-	
+
 	color: #666;
 }
 
@@ -452,11 +452,11 @@ $component-battery-life: "component-battery-life";
   stroke-width: 5;
   stroke: #FFF;
   stroke-linecap: round;
-  
+
   animation: dash-3 3s linear infinite;
 }
 .path-2 {
-	animation: dash 3s linear infinite;	
+	animation: dash 3s linear infinite;
 }
 .path-3 {
 
