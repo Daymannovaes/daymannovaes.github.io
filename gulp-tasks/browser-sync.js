@@ -3,13 +3,13 @@
 var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
 
-gulp.task('browser-sync', function() {
-	var files = [
-		"index.html",
-		"js/**/*.js",
-		"css/**/*.css",
-		"img/**/*"
-	];
+function server() {
+  var files = [
+    "index.html",
+    "js/**/*.js",
+    "css/**/*.css",
+    "img/**/*"
+  ];
 
     browserSync.init(files, {
         server: {
@@ -17,4 +17,7 @@ gulp.task('browser-sync', function() {
         },
         startPath: "?me=true"
     });
-});
+}
+
+gulp.task('browser-sync', server);
+gulp.task('server', server);
