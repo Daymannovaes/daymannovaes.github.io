@@ -5666,7 +5666,7 @@ section .content, #fixed-header .content {
   #fixed-header.visible {
     display: flex; }
 
-@-webkit-keyframes $animation-name {
+@-webkit-keyframes tick {
   from {
     opacity: 0;
     filter: alpha(opacity=0);
@@ -5680,7 +5680,7 @@ section .content, #fixed-header .content {
     filter: alpha(opacity=0);
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; } }
 
-@-moz-keyframes $animation-name {
+@-moz-keyframes tick {
   from {
     opacity: 0;
     filter: alpha(opacity=0);
@@ -5694,7 +5694,7 @@ section .content, #fixed-header .content {
     filter: alpha(opacity=0);
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; } }
 
-@-ms-keyframes $animation-name {
+@-ms-keyframes tick {
   from {
     opacity: 0;
     filter: alpha(opacity=0);
@@ -5708,7 +5708,7 @@ section .content, #fixed-header .content {
     filter: alpha(opacity=0);
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; } }
 
-@-o-keyframes $animation-name {
+@-o-keyframes tick {
   from {
     opacity: 0;
     filter: alpha(opacity=0);
@@ -5722,7 +5722,7 @@ section .content, #fixed-header .content {
     filter: alpha(opacity=0);
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; } }
 
-@keyframes $animation-name {
+@keyframes tick {
   from {
     opacity: 0;
     filter: alpha(opacity=0);
@@ -5736,7 +5736,7 @@ section .content, #fixed-header .content {
     filter: alpha(opacity=0);
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; } }
 
-@-webkit-keyframes $animation-name {
+@-webkit-keyframes arrow-down {
   from {
     opacity: 1;
     filter: alpha(opacity=100);
@@ -5754,7 +5754,7 @@ section .content, #fixed-header .content {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     top: 0; } }
 
-@-moz-keyframes $animation-name {
+@-moz-keyframes arrow-down {
   from {
     opacity: 1;
     filter: alpha(opacity=100);
@@ -5772,7 +5772,7 @@ section .content, #fixed-header .content {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     top: 0; } }
 
-@-ms-keyframes $animation-name {
+@-ms-keyframes arrow-down {
   from {
     opacity: 1;
     filter: alpha(opacity=100);
@@ -5790,7 +5790,7 @@ section .content, #fixed-header .content {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     top: 0; } }
 
-@-o-keyframes $animation-name {
+@-o-keyframes arrow-down {
   from {
     opacity: 1;
     filter: alpha(opacity=100);
@@ -5808,7 +5808,7 @@ section .content, #fixed-header .content {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     top: 0; } }
 
-@keyframes $animation-name {
+@keyframes arrow-down {
   from {
     opacity: 1;
     filter: alpha(opacity=100);
@@ -5826,7 +5826,7 @@ section .content, #fixed-header .content {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     top: 0; } }
 
-@-webkit-keyframes $animation-name {
+@-webkit-keyframes background {
   from {
     background-position: 0% 50%; }
   50% {
@@ -5834,7 +5834,7 @@ section .content, #fixed-header .content {
   to {
     background-position: 0% 50%; } }
 
-@-moz-keyframes $animation-name {
+@-moz-keyframes background {
   from {
     background-position: 0% 50%; }
   50% {
@@ -5842,7 +5842,7 @@ section .content, #fixed-header .content {
   to {
     background-position: 0% 50%; } }
 
-@-ms-keyframes $animation-name {
+@-ms-keyframes background {
   from {
     background-position: 0% 50%; }
   50% {
@@ -5850,7 +5850,7 @@ section .content, #fixed-header .content {
   to {
     background-position: 0% 50%; } }
 
-@-o-keyframes $animation-name {
+@-o-keyframes background {
   from {
     background-position: 0% 50%; }
   50% {
@@ -5858,7 +5858,7 @@ section .content, #fixed-header .content {
   to {
     background-position: 0% 50%; } }
 
-@keyframes $animation-name {
+@keyframes background {
   from {
     background-position: 0% 50%; }
   50% {
@@ -5866,7 +5866,7 @@ section .content, #fixed-header .content {
   to {
     background-position: 0% 50%; } }
 
-@-webkit-keyframes $animation-name {
+@-webkit-keyframes battery-tick {
   from {
     content: "\f243"; }
   50% {
@@ -5874,7 +5874,7 @@ section .content, #fixed-header .content {
   to {
     content: "\f243"; } }
 
-@-moz-keyframes $animation-name {
+@-moz-keyframes battery-tick {
   from {
     content: "\f243"; }
   50% {
@@ -5882,7 +5882,7 @@ section .content, #fixed-header .content {
   to {
     content: "\f243"; } }
 
-@-ms-keyframes $animation-name {
+@-ms-keyframes battery-tick {
   from {
     content: "\f243"; }
   50% {
@@ -5890,7 +5890,7 @@ section .content, #fixed-header .content {
   to {
     content: "\f243"; } }
 
-@-o-keyframes $animation-name {
+@-o-keyframes battery-tick {
   from {
     content: "\f243"; }
   50% {
@@ -5898,7 +5898,7 @@ section .content, #fixed-header .content {
   to {
     content: "\f243"; } }
 
-@keyframes $animation-name {
+@keyframes battery-tick {
   from {
     content: "\f243"; }
   50% {
