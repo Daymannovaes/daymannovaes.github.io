@@ -9,7 +9,9 @@
     "babel-polyfill": "^6.0.16",
     "browser-sync": "^2.9.11",
     "gulp": "^3.9.0",
-    "gulp-babel": "^5.2.1",
-    "gulp-sass": "^2.0.4"
+    "gulp-babel": "^5.2.1"
+  },
+  "dependencies": {
+    "gulp-sass": "^4.0.2"
   }
 }

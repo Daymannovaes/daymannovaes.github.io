@@ -251,7 +251,7 @@ html {
 
 html {
   font-size: 16px;
-  -webkit-tap-highlight-color: transparent; }
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -6066,6 +6066,10 @@ section.background {
 
 .profile.img-mongoui {
   background-image: url(/build/img/mongoui.png);
+  background-size: cover; }
+
+.profile.img-tenfold {
+  background-image: url(/build/img/tenfold-logo.jpg);
   background-size: cover; }
 
 .profile.img-nebulab {

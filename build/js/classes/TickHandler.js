@@ -10,7 +10,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 			_classCallCheck(this, TickHandler);
 
 			this.queryElement = queryElement;
-			this.text = text;
+			this.texts = text instanceof Array ? text : [text];
 			this.context = context || document;
 			this.tickMs = tickMs || 60;
 
@@ -33,6 +33,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 			key: "$tick",
 			get: function get() {
 				return $(".tick", this.context);
+			}
+		}, {
+			key: "text",
+			get: function get() {
+				var randomIndex = Math.floor(Math.random() * this.texts.length);
+
+				return this.texts[randomIndex];
 			}
 		}, {
 			key: "_execute",

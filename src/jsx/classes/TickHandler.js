@@ -4,7 +4,7 @@
 	class TickHandler {
 		constructor(queryElement, text, context, tickMs) {
 			this.queryElement = queryElement;
-			this.text = text;
+			this.texts = text instanceof Array ? text : [text];
 			this.context = context || document;
 			this.tickMs = tickMs || 60;
 
@@ -25,6 +25,12 @@
 		get $tick() {
 			return $(".tick", this.context);
 		}
+
+        get text() {
+            var randomIndex = Math.floor(Math.random() * this.texts.length);
+
+            return this.texts[randomIndex];
+        }
 
 		get _execute() {
 			return function() {

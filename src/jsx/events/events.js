@@ -120,8 +120,9 @@
     	lastScrollTop = scrollTop;
 	};
 
+    var developerTexts = ["./developer", "CEO at Bussola.school", "Founder of Bussola.school"];
 	var Tick = {};
-	Tick.developer = new TickHandler("#developer-text", "./developer", $header);
+	Tick.developer = new TickHandler("#developer-text", developerTexts, $header);
 
 	// Scroll is defined in events/scroll.js
 	Scroll.writeDeveloper = new ScrollHandler(Tick.developer.element, Tick.developer.execute);

@@ -151,6 +151,10 @@ section.background {
 		background-image: url(/build/img/mongoui.png);
 		background-size: cover;
 	}
+	&.img-tenfold {
+		background-image: url(/build/img/tenfold-logo.jpg);
+		background-size: cover;
+	}
 	&.img-nebulab {
 		background-image: url(/build/img/nebulab-logo.png);
 		background-size: cover;
