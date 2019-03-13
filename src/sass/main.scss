@@ -472,6 +472,11 @@ $component-battery-life: "component-battery-life";
 	  animation: dash-3 3s linear infinite
 }
 
+#footer {
+    background: #ddd;
+    text-shadow: 0px 2px 1px white;
+}
+
 @keyframes dash {
   from {
     stroke-dashoffset: 20;

@@ -6641,6 +6641,10 @@ a.not-clear {
   stroke-dasharray: 1, 40;
   animation: dash-3 3s linear infinite; }
 
+#footer {
+  background: #ddd;
+  text-shadow: 0px 2px 1px white; }
+
 @keyframes dash {
   from {
     stroke-dashoffset: 20; }
